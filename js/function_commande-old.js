@@ -43,7 +43,7 @@ function CmdSioc(Val) {
 	var commande_DCS = "1="+Val
 	
 	CmdStack(commande_DCS)
-	console.log("Envoi au buffer de la commande ..", commande_DCS);
+	//console.log("Envoi au buffer de la commande ..", commande_DCS);
 }
 
 function CmdSiocDCS(Element) {
@@ -63,7 +63,7 @@ function CmdSiocDCS(Element) {
 		
 	var commande_DCS = "2="+ commande
 	CmdStack(commande_DCS)
-	console.log("Envoi au buffer de la commande ..", commande_DCS);
+	//console.log("Envoi au buffer de la commande ..", commande_DCS);
 
 }
 
@@ -77,7 +77,6 @@ function CmdSiocDCS2(Element) {
 	// On récupère la valeur de commande du capot correspondant au switch
 	// Le tableau de correspondance est indiquée dans la fonction Cmd_Capot()
 	var Capot = Cmd_Capot[Element]
-	var CapotC = Capot - 1
 	//console.log(Capot)
 	
 	// Une salve de Trois commandes est envoyé à DCS
@@ -89,7 +88,7 @@ function CmdSiocDCS2(Element) {
 	CmdDCSRaw(commande)
 	
 	// Fermeture du capot
-	CmdDCSRaw(CapotC)
+	CmdDCSRaw(Capot)
 		
 }
 
@@ -119,10 +118,10 @@ function Cmd_Capot_init(){
 	var Cmd_Capot = {
 		"F-EEG-G":"10400200",
 		"F-EEG-D":"10400400",
-		"F-Vanne-G":"10200901",
-		"F-Vanne-D":"10201001",
+		"F-Vanne-G":"10300700",
+		"F-Vanne-D":"10300900",
 		"F-Vanne-APU":"10301100",
-		"F-Vanne-X":"10201101",
+		"F-Vanne-X":"10301300",
 		"E-Bat-SWG":"10200600",
 		"E-Bat-SWD":"10200400",
 		"E-Grnd-SWDC":"10200200",
@@ -131,16 +130,5 @@ function Cmd_Capot_init(){
 	}
 	
 	return (Cmd_Capot);
-
-}
-
-function Door(){
-	// Si porte cockpit ouverte on ferme, else on ouvre
-	if (KaTZPit_data["Cockpit"]==1) {
-		CmdDCSRaw('11701501')
-		CmdDCSRaw('11701601')}
-	else {
-		CmdDCSRaw('11701500')
-		CmdDCSRaw('11701600')}
 
 }

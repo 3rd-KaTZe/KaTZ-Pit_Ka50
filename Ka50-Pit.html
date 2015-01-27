@@ -20,6 +20,8 @@
 	<!--Scripts library-->
     <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
 	<script type="text/javascript" src="js/serverws.js"></script>
+	
+	<script type="text/javascript" src="js/dataread.js"></script>
 	<script type="text/javascript" src="js/function_calcul.js"></script>
 	<script type="text/javascript" src="js/function_commande.js"></script>
 
@@ -27,11 +29,14 @@
 	<script type="text/javascript" src="js/pit_init.js"></script>
 	<script type="text/javascript" src="js/plane_init.js"></script>
 
-	<script type="text/javascript" src="js/panel_analog.js"></script>	
+	<script type="text/javascript" src="js/instrument.js"></script>
+	<script type="text/javascript" src="js/menu.js"></script>	
+	
 	<script type="text/javascript" src="js/panel_emergency.js"></script>
 	<script type="text/javascript" src="js/panel_moteur.js"></script>
 	<script type="text/javascript" src="js/panel_electric.js"></script>
-	<script type="text/javascript" src="js/panel_fuel.js"></script>
+	<script type="text/javascript" src="js/panel_fuel_oil.js"></script>
+	<script type="text/javascript" src="js/panel_instrument.js"></script>
 	<script type="text/javascript" src="js/panel_pilototo.js"></script>
 	<script type="text/javascript" src="js/panel_datalink.js"></script>
 	<script type="text/javascript" src="js/panel_navigation.js"></script>
@@ -77,7 +82,7 @@
 	<!-- Voyants de connection KaTZ-Link -->
 
 	<SPAN style="position: absolute; left: 20px; top: 420px">
-	<img src="images/z_Led-Rouge.gif" width="60" height="20" border="2" id="Led_Connect">
+	<img src="images/emergency/z_Led-Rouge.gif" width="60" height="20" border="2" id="Led_Connect">
 	</SPAN>
 
 	<!-- Zone d'affichage de l'adresse IP -->
@@ -92,124 +97,127 @@
 <!-- Panneau de selection des sub panels affichés -->
 <div id="Panel_Launcher">
 
-<img src="images/Launcher-Panel.gif" width="100" height="1050"   usemap="#Panel_Launcher"> 
+<img src="images/emergency/Launcher-Panel.gif" width="100" height="1050"   usemap="#Panel_Launcher"> 
 
 	<map name="Panel_Launcher">
 		
-		<area shape="rect" coords="10,20,90,80" href="javascript:Panel_Toggle('Vierge')">
-		<area shape="rect" coords="10,80,90,120" href="javascript:Panel_Toggle('Electric_DC')">
-		<area shape="rect" coords="10,120,90,180" href="javascript:Panel_Toggle('Vierge')">
-		<area shape="rect" coords="10,180,90,220" href="javascript:Panel_Toggle('Vierge')">
-		<area shape="rect" coords="10,220,90,280" href="javascript:Panel_Toggle('Vierge')">
-		<area shape="rect" coords="10,280,90,320" href="javascript:Panel_Toggle('Start')">		
-		<area shape="rect" coords="10,320,90,380" href="javascript:Panel_Toggle('Vierge')">		
-		<area shape="rect" coords="10,380,90,420" href="javascript:Panel_Toggle('Oil')">
-		<area shape="rect" coords="10,420,90,480" href="javascript:Panel_Toggle('Rotor')">
-		<area shape="rect" coords="10,480,90,520" href="javascript:Panel_Toggle('Vierge')">
-		<area shape="rect" coords="10,520,90,580" href="javascript:Panel_Toggle('Pilototo')">
-		<area shape="rect" coords="10,580,90,620" href="javascript:Panel_Toggle('Vierge')">
-		<area shape="rect" coords="10,620,90,680" href="javascript:Panel_Toggle('Vierge')">
-		<area shape="rect" coords="10,680,90,720" href="javascript:Panel_Toggle('Vierge')">
-		<area shape="rect" coords="10,720,90,780" href="javascript:Panel_Toggle('Vierge')">
-		<area shape="rect" coords="10,780,90,820" href="javascript:Panel_Toggle('Datalink')">
-		<area shape="rect" coords="10,820,90,880" href="javascript:Panel_Toggle('Target')">
-		<area shape="rect" coords="10,880,90,920" href="javascript:Panel_Toggle('Radio_360')">
-		<area shape="rect" coords="10,920,90,980" href="javascript:Panel_Toggle('Vierge')">
-		<area shape="rect" coords="10,980,90,1020" href="javascript:Panel_Toggle('Navigation')">
+		<area shape="rect" coords="10,20,90,80" href="javascript:menu_Toggle('Vierge')">
+		<area shape="rect" coords="10,80,90,120" href="javascript:menu_Toggle('Electric_DC')">
+		<area shape="rect" coords="10,120,90,180" href="javascript:menu_Toggle('Vierge')">
+		<area shape="rect" coords="10,180,90,220" href="javascript:menu_Toggle('Vierge')">
+		<area shape="rect" coords="10,220,90,280" href="javascript:menu_Toggle('Vierge')">
+		<area shape="rect" coords="10,280,90,320" href="javascript:menu_Toggle('Start')">		
+		<area shape="rect" coords="10,320,90,380" href="javascript:menu_Toggle('Vierge')">		
+		<area shape="rect" coords="10,380,90,420" href="javascript:menu_Toggle('Oil')">
+		<area shape="rect" coords="10,420,90,480" href="javascript:menu_Toggle('Rotor')">
+		<area shape="rect" coords="10,480,90,520" href="javascript:menu_Toggle('Vierge')">
+		<area shape="rect" coords="10,520,90,580" href="javascript:menu_Toggle('Pilototo')">
+		<area shape="rect" coords="10,580,90,620" href="javascript:menu_Toggle('Vierge')">
+		<area shape="rect" coords="10,620,90,680" href="javascript:menu_Toggle('Vierge')">
+		<area shape="rect" coords="10,680,90,720" href="javascript:menu_Toggle('Vierge')">
+		<area shape="rect" coords="10,720,90,780" href="javascript:menu_Toggle('Vierge')">
+		<area shape="rect" coords="10,780,90,820" href="javascript:menu_Toggle('Datalink')">
+		<area shape="rect" coords="10,820,90,880" href="javascript:menu_Toggle('Target')">
+		<area shape="rect" coords="10,880,90,920" href="javascript:menu_Toggle('Radio_360')">
+		<area shape="rect" coords="10,920,90,980" href="javascript:menu_Toggle('Vierge')">
+		<area shape="rect" coords="10,980,90,1020" href="javascript:menu_Toggle('Navigation')">
 
 	</map>
 
 </div>
 
 <!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
-
-<div id="Cadran_Vario">
-	<img src="images/analog/Vario.gif" width="300" height="300"  > 
-	
-	<!-- Aiguille -->
-	<SPAN style="position: absolute; left: 0px; top: 0px; width: 300px; height: 300px">
-	<img src="images/M_Aiguille.gif" width="300" height="300" id="AIG_Vario">
-	</SPAN>	
-    
-</div>
-
-<div id="Cadran_AirSpeed">
-	<img src="images/analog/AirSpeed.gif" width="300" height="300"  >  
-	
-	<!-- Aiguille -->
-	<SPAN style="position: absolute; left: 0px; top: 0px; width: 300px; height: 300px">
-	<img src="images/M_Aiguille.gif" width="300" height="300" id="AIG_Airspeed">
-	</SPAN>
-	
-</div>
-
-<div id="Cadran_Pitch">
-	<img src="images/analog/Pitch.gif" width="200" height="200"  >
-	
-	<!-- Aiguille -->
-	<SPAN style="position: absolute; left: 0px; top: 0px; width: 200px; height: 200px">
-	<img src="images/M_Aiguille.gif" width="200" height="200" id="AIG_Pitch">
-	</SPAN>		
-
-</div>
-
 <div id="Cadran_AltiRad">
 	<img src="images/analog/Alti-Rad.gif" width="300" height="300" > 
-
 		
 	<!-- Aiguille -->
 	<SPAN style="position: absolute; left: 0px; top: 0px; width: 300px; height: 300px">
-	<img src="images/M_Aiguille.gif" width="300" height="300" id="AIG_Altirad">
-	</SPAN>	
+	<img src="images/M_Aiguille.gif" width="300" height="300" id="AIG_Altirad">	</SPAN>	
 
 	<!-- Aiguille Index -->
 	<SPAN style="position: absolute; left: 0px; top: 0px; width: 300px; height: 300px">
-	<img src="images/analog/Altirad_Index.gif" width="300" height="300" id="INDX_Altirad">
-	</SPAN>
-	
-	
+	<img src="images/analog/Altirad_Index.gif" width="300" height="300" id="INDX_Altirad"> </SPAN>
+		
 </div>
+
 
 <div id="Cadran_RPM">
 	<img src="images/analog/rpm.gif" width="300" height="300"  > 
 
 	<!-- Aiguille -->
 	<SPAN style="position: absolute; left: 0px; top: 0px; width: 300px; height: 300px">
-	<img src="images/M_Aiguille.gif" width="300" height="300" id="AIG_RPM_Rot">
-	</SPAN>		
+	<img src="images/M_Aiguille.gif" width="300" height="300" id="AIG_RPM_Rot"> </SPAN>		
 
 </div>
+
+
+<div id="Cadran_Vario">
+	<img src="images/analog/Vario.gif" width="300" height="300"  > 
+	
+	<!-- Aiguille -->
+	<SPAN style="position: absolute; left: 0px; top: 0px; width: 300px; height: 300px">
+	<img src="images/M_Aiguille.gif" width="300" height="300" id="AIG_Vario"> </SPAN>	
+
+</div>
+
+
+<div id="Cadran_AirSpeed">
+	<img src="images/analog/AirSpeed.gif" width="300" height="300"  >  
+	
+	<!-- Aiguille -->
+	<SPAN style="position: absolute; left: 0px; top: 0px; width: 300px; height: 300px">
+	<img src="images/M_Aiguille.gif" width="300" height="300" id="AIG_Airspeed"> </SPAN>
+	
+</div>
+
+
+<div id="Cadran_Altitude">
+	<img src="images/analog/Altitude-Mi.gif" width="300" height="300"  >
+
+	<!-- Aiguille 0-1000 -->
+	<SPAN style="position: absolute; left: 0px; top: 0px; width: 300px; height: 300px">
+	<img src="images/M_Aiguille.gif" width="300" height="300" id="AIG_Altitude"> </SPAN>		
+	<!-- Aiguille 0-10000 -->
+	<SPAN style="position: absolute; left: 50px; top: 50px; width: 300px; height: 300px">
+	<img src="images/M_Aiguille.gif" width="200" height="200" id="AIG_Alti1000"> </SPAN>		
+
+</div>
+
+
+<div id="Cadran_Pitch">
+	<img src="images/analog/Pitch-Mi.gif" width="200" height="200"  >
+	
+	<!-- Aiguille -->
+	<SPAN style="position: absolute; left: 0px; top: 0px; width: 200px; height: 200px">
+	<img src="images/M_Aiguille.gif" width="200" height="200" id="AIG_Pitch"> </SPAN>		
+
+</div>
+
+
 
 <div id="Cadran_ADI">
 
 	<img src="images/analog/ADI.gif" width="400" height="400"  > 
-	
 
 	<!-- Pitch Top -->
 	<SPAN style="position: absolute; left: 60px; top: 64px; width: 280px; height: 140px">
-	<img src="images/analog/ADI-Top.gif" width="280" height="140" id="ADI_Pitch_T">
-	</SPAN>
+	<img src="images/analog/ADI-Top.gif" width="280" height="140" id="ADI_Pitch_T"> </SPAN>
 	
 	<!-- Pitch Center -->
 	<SPAN style="position: absolute; left: 60px; top: 189px; width: 280px; height: 4px">
-	<img src="images/analog/ADI-Center.gif" width="280" height="4" id="ADI_Pitch_C">
-	</SPAN>
+	<img src="images/analog/ADI-Center.gif" width="280" height="4" id="ADI_Pitch_C"> </SPAN>
 	
-
 	<!-- Bank -->
 	<SPAN style="position: absolute; left: 0px; top: 0px; width: 400px; height: 400px">
-	<img src="images/analog/ADI-Bank.gif" width="400" height="400" id="ADI_Bank">
-	</SPAN>
+	<img src="images/analog/ADI-Bank.gif" width="400" height="400" id="ADI_Bank"> </SPAN>
 	
 	<!-- Couronne -->
 	<SPAN style="position: absolute; left: 0px; top: 0px; width: 400px; height: 400px">
-	<img src="images/analog/ADI.gif" width="400" height="400"  > 
-	</SPAN>
+	<img src="images/analog/ADI.gif" width="400" height="400"  > </SPAN>
 
 	<!-- Bille -->
 	<SPAN style="position: absolute; left: 0px; top: -20px; width: 400px; height: 400px">
-	<img src="images/analog/ADI-Bille.gif" width="400" height="400" id="ADI_Bille">
-	</SPAN>
+	<img src="images/analog/ADI-Bille.gif" width="400" height="400" id="ADI_Bille"> </SPAN>
 
 	<!-- Taux de Pitch -->
 	<SPAN style="position: absolute; left: 160px; top: 100px; width: 80px; height: 40px ; background-color:#4682B4 ;border-style: solid;
@@ -220,34 +228,28 @@
 
 
 <div id="Cadran_HSI">
-	<img src="images/analog/HSI-outer.gif" width="400" height="425"  > 
+	<img src="images/analog/HSI-outer.gif" width="400" height="400"  > 
 	
 	<!-- Aiguille -->
 	<!-- HSI + switch Vario -->
-	<SPAN style="position: absolute; left: 57px; top: 43px; width: 275px; height: 275px">
-	<img src="images/N_HSI_Rosace.gif" width="275" height="275"   id="AN_Rosace">
-	</SPAN>
+	<SPAN style="position: absolute; left: 50px; top: 50px; width: 300px; height: 300px">
+	<img src="images/analog/N_HSI_Rosace.gif" width="300" height="300"   id="AN_Rosace"> </SPAN>
 
-	<SPAN style="position: absolute; left: 57px; top: 43px; width: 275px; height: 275px">
-	<img src="images/N_HSI_Way.gif" width="275" height="275"   id="AN_Way">
-	</SPAN>
+	<SPAN style="position: absolute; left: 50px; top: 50px; width: 300px; height: 300px">
+	<img src="images/analog/N_HSI_Way.gif" width="300" height="300"   id="AN_Way"> </SPAN>
 
-	<SPAN style="position: absolute; left: 57px; top: 43px; width: 275px; height: 275px">
-	<img src="images/N_HSI_Route.gif" width="275" height="275"   id="AN_Route">
-	</SPAN>
+	<SPAN style="position: absolute; left: 50px; top: 50px; width: 300px; height: 300px">
+	<img src="images/analog/N_HSI_Route.gif" width="300" height="300"   id="AN_Route"> </SPAN>
 	
-	<SPAN style="position: absolute; left: 20px; top: 15px; width: 50px; height: 30px ; background-color:lightgrey;color:#99FF99 ;font-size:1.2em" id="HSI_WP_dist">
-	</SPAN>
+	<!-- WP Distance et Direction -->
+	<SPAN style="position: absolute; left: 20px; top: 20px; width: 60px; height: 30px ; background-color:lightgrey;color:#99FF99 ;font-size:1.2em" id="HSI_WP_dist"> </SPAN>
 		
-	<SPAN style="position: absolute; left: 318px; top: 15px; width: 50px; height: 30px ; color:yellow ;  background-color:lightgrey;font-size:1.2em" id="HSI_Way">
-	</SPAN>
+	<SPAN style="position: absolute; left: 320px; top: 20px; width: 60px; height: 30px ; color:yellow ;  background-color:lightgrey;font-size:1.2em" id="HSI_Way"> </SPAN>
 	
-	<SPAN style="position: absolute; left: 20px; top: 340px; width: 50px; height: 30px ; background-color:lightgrey;color:#99FF99 ;font-size:1.2em" id="HSI_Route">
-	</SPAN>
-	
-	
-	<SPAN style="position: absolute; left: 318px; top: 340px; width: 50px; height: 30px ; color:yellow ;  background-color:lightgrey;font-size:1.2em" id="HSI_Bullseye">
-	</SPAN>
+		<!-- Bulls et Route -->
+	<SPAN style="position: absolute; left: 20px; top: 350px; width: 60px; height: 30px ; background-color:lightgrey;color:#99FF99 ;font-size:1.2em" id="HSI_Route"> </SPAN>
+		
+	<SPAN style="position: absolute; left: 320px; top: 350px; width: 60px; height: 30px ; color:yellow ;  background-color:lightgrey;font-size:1.2em" id="HSI_Bullseye"> </SPAN>
     
 </div>
 
@@ -256,30 +258,18 @@
 	
 	<!-- Aiguille -->
 	<SPAN style="position: absolute; left: 0px; top: 0px; width: 300px; height: 300px">
-	<img src="images/M_Aiguille_L.gif" width="300" height="300" id="AIG_RPM_Eng_L">
+	<img src="images/engine/M_Aiguille_L.gif" width="300" height="300" id="AIG_RPM_Eng_L">
 	</SPAN>	
 	
 	<!-- Aiguille -->
 	<SPAN style="position: absolute; left: 0px; top: 0px; width: 300px; height: 300px">
-	<img src="images/M_Aiguille_R.gif" width="300" height="300" id="AIG_RPM_Eng_R">
+	<img src="images/engine/M_Aiguille_R.gif" width="300" height="300" id="AIG_RPM_Eng_R">
 	</SPAN>	
 
 </div>
 
 
-<div id="Cadran_Altitude">
-	<img src="images/analog/Altitude.gif" width="300" height="300"  >
 
-	<!-- Aiguille 0-1000 -->
-	<SPAN style="position: absolute; left: 0px; top: 0px; width: 300px; height: 300px">
-	<img src="images/M_Aiguille.gif" width="300" height="300" id="AIG_Altitude">
-	</SPAN>		
-	<!-- Aiguille 0-10000 -->
-	<SPAN style="position: absolute; left: 50px; top: 50px; width: 300px; height: 300px">
-	<img src="images/M_Aiguille.gif" width="200" height="200" id="AIG_Alti1000">
-	</SPAN>		
-
-</div>
 
 
 <!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
@@ -409,7 +399,7 @@
 
 <div id="Panel_Navigation">
 
-	<img src="images/Navigation_Panel_50_D.gif" width="500" height="500"  usemap="#Panel_Navigation">
+	<img src="images/navigation/Navigation_Panel_50_D.gif" width="500" height="500"  usemap="#Panel_Navigation">
 
 	<!-- Mapping du bouton remise zero, et mn/sec -->
 	<map name="Panel_Navigation">
@@ -469,19 +459,19 @@
 
 	<!-- HSI + switch Vario -->
 	<SPAN style="position: absolute; left: 150px; top: 108px; width: 201px; height: 201px">
-	<img src="images/N_HSI_Rosace.gif" width="201" height="201"  id="AN_Rosace">
+	<img src="images/analog/N_HSI_Rosace.gif" width="201" height="201"  id="AN_Rosace">
 	</SPAN>
 
 	<SPAN style="position: absolute; left: 150px; top: 108px; width: 201px; height: 201px">
-	<img src="images/N_HSI_Way.gif" width="201" height="201"  id="AN_Way">
+	<img src="images/analog//N_HSI_Way.gif" width="201" height="201"  id="AN_Way">
 	</SPAN>
 
 	<SPAN style="position: absolute; left: 150px; top: 108px; width: 201px; height: 201px">
-	<img src="images/N_HSI_Route.gif" width="201" height="201"  id="AN_Route">
+	<img src="images/analog//N_HSI_Route.gif" width="201" height="201"  id="AN_Route">
 	</SPAN>
 
 	<SPAN style="position: absolute; left: 150px; top: 108px; width: 201px; height: 201px">
-	<img src="images/N_HSI_TgT.gif" width="201" height="201"  id="AN_TgT">
+	<img src="images/analog//N_HSI_TgT.gif" width="201" height="201"  id="AN_TgT">
 	</SPAN>
 
 	<SPAN style="position: absolute; left: 415px; top: 280px; width: 70px; height: 20px">
@@ -637,8 +627,7 @@
 	<SPAN style="position: absolute; left: 180px; top: 220px; width: 42px; height: 25px ; color:black; font-size:1.2em" id="Fuel_AV"> </SPAN>
 	<SPAN style="position: absolute; left: 180px; top: 330px; width: 42px; height: 25px ; color:black; font-size:1.2em" id="Fuel_AR"> </SPAN>
 	<SPAN style="position: absolute; left: 65px; top: 230px; width: 60px; height: 30px ; background-color:lightgrey; color:black; font-size:1.5em" id="Fuel_T" data-internal-id="10300501" > </SPAN>
-	<SPAN style="position: absolute; left: 323px; top: 230px; width: 60px; height: 30px ; background-color:lightgrey; color:#FF552A; font-size:1.5em" id="Conso"> </SPAN>
-
+	
 	<!-- Cut Off / Rotor Break -->
 	<SPAN style="position: absolute; left: 68px; top: 70px; width: 60px; height: 30px">
 	<img src="images/fuel/FV_Cutoff_On.gif" width="60" height="30"  id="FV-CutOff-G" data-internal-id="0" onclick="javascript:CmdSiocDCS('FV-CutOff-G')">

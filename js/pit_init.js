@@ -21,12 +21,12 @@ function paneldata_init(){
 		Start_V:55, Start_Sel:0, Start_Typ:0,
 		Fuel_AV:0, Fuel_AR:0, Conso:0, Fuel_V:555, Fuel_P:555, Fuel_PE:5555,
 		E_DC_V:55555, E_AC_V:5555,	E_DC_SW:55555555, E_AC_SW:55555, 
-		AP_KA1:5555, AP_KA2:555,
+		AP_KA1:5555, AP_KA2:555, TGT_KA:55555,
 		Cockpit:0, Train:555555, WheelBrk:0, BrakePress:0,
 		ARKUD:55500555,	ARK9_SW:55555, ARK9_F: 51506290, ARK9_Data:50005000, ARK9_T_Main:150, ARK9_T_Stby:150,
 		Doppler_d1:50005000, Doppler_d2:50005000, Doppler_f:555,
 		D15_drift:50005000, D15_drift_V:55, Sling_2D:50005000, Sling_3D:50005000, 
-		DLinkL1:0, DLinkL2:0, DLinkL3:0, Tgt_Btn:5555,
+		DLinkL1:0, DLinkL2:0, DLinkL3:0, Tgt_Btn:5555, Wpn_Ka:55555555, Wpn_Lamp:55, Wpn_Flag:55555,
 		Collectif:0,
 		LowAlt:0,
 		FL_mode:0, FL_main:0, FL_main_old:0,
@@ -55,8 +55,8 @@ function panel_On_init(){
 	console.log("Initialisation des panels affichés")
 
 var Panel_On = { Init:0, Breakers:0, Electric_DC:1, Electric_AC:0, APU:0, Oil:1, Start:1, Rotor:1, Analog_1:0, Analog_2:0, 
-	ARK_9:0, ARK_UD:0, Doppler:0, Radio_360:1, Fuel:0, Vierge:0, Navigation:0, Target:0,
-	Pilototo:1,Datalink:1}
+	ARK_9:0, ARK_UD:0, Doppler:0, Radio_360:1, Fuel:0, Vierge:0, Navigation:0, Target:0,Weapon:1,
+	Pilototo:1,Datalink:1, Abris:1}
 
 return (Panel_On);
 

@@ -70,6 +70,10 @@ function pit_main(){
 	
 	if (Panel_On["Navigation"]==1){panel_navigation_update(KaTZPit_data)}	
 	
+	if (Panel_On["Abris"]==1){panel_device_abris(KaTZPit_data)}	
+	
+	if (Panel_On["Weapon"]==1){panel_weapon_update(KaTZPit_data)}	
+	
 	CmdSend()
 }
 

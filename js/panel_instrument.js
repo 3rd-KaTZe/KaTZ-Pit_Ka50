@@ -22,9 +22,23 @@ function panel_instrument_flight(KaTZPit_data){
 		// Rotation HSI   --------------------------------------------------------------------------
 		var i_Cap = 360 - KaTZPit_data["Cap"]/10
 		var i_Way = (KaTZPit_data["Way"]/10)
-		var i_Route = (KaTZPit_data["Route"]/10)
+		var i_Route = (KaTZPit_data["Route"]/10 + i_Cap)
 	
 		instrument_HSI(i_Cap, i_Way, i_Route)	
+		
+		// Affichage Distance WP
+		document.getElementById('HSI_WP_dist').innerHTML = (KaTZPit_data["WP_dist"]/10).toFixed(0)
+		WP_dist
+		// Affichage Direction WP aiguille jaune
+		i_wp_dir = (KaTZPit_data["Way"]/10 + KaTZPit_data["Cap"]/10 ) % 360
+		document.getElementById('HSI_Way').innerHTML = i_wp_dir.toFixed(0)
+	
+		// Affichage Direction Bullseye 180° aiguille jaune
+		KaTZPit_data["Bullseye"] = (i_wp_dir +180) % 360
+		document.getElementById('HSI_Bullseye').innerHTML = KaTZPit_data["Bullseye"].toFixed(0)
+		
+		// Affichage Direction Route aiguille blanche
+		document.getElementById('HSI_Route').innerHTML = (KaTZPit_data["Route"]/10).toFixed(0)
 		
 		// Cadran Bille et Side Split  ---------------------------------------------------------------
 		var SpeedSplit = dataread_split_2(KaTZPit_data["EUP"])

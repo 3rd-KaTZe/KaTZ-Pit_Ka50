@@ -47,6 +47,9 @@ function menu_Toggle(panel){
 
 	if (Panel_On["Datalink"] == 0) {document.getElementById("Panel_Datalink").style.display = "none"}
 	else {document.getElementById("Panel_Datalink").style.display = "block"}
+	
+	if (Panel_On["Abris"] == 0) {document.getElementById("Panel_Abris").style.display = "none"}
+	else {document.getElementById("Panel_Abris").style.display = "block"}
 
 	if (Panel_On["Radio_360"] == 0) {document.getElementById("Panel_Radio").style.display = "none"}
 	else {document.getElementById("Panel_Radio").style.display = "block"}
@@ -58,8 +61,9 @@ function menu_Toggle(panel){
 	if (Panel_On["Electric_DC"] == 0) {document.getElementById("Panel_Electric").style.display = "none"}
 	else {document.getElementById("Panel_Electric").style.display = "block"}
 	
-	//if (Panel_On["Electric_AC"] == 0) {document.getElementById("Panel_Electric_AC").style.display = "none"}
-	//else {document.getElementById("Panel_Electric_AC").style.display = "block"}
+	if (Panel_On["Weapon"] == 0) {document.getElementById("Panel_Weapon").style.display = "none"}
+	else {document.getElementById("Panel_Weapon").style.display = "block"}
+	
 	
 	
 }	

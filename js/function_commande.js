@@ -117,16 +117,8 @@ function Cmd_Capot_init(){
 	console.log("Initialisation des données de switch")
 	
 	var Cmd_Capot = {
-		"F-EEG-G":"10400200",
-		"F-EEG-D":"10400400",
-		"F-Vanne-G":"10200901",
-		"F-Vanne-D":"10201001",
-		"F-Vanne-APU":"10301100",
-		"F-Vanne-X":"10201101",
-		"E-Bat-SWG":"10200600",
-		"E-Bat-SWD":"10200400",
-		"E-Grnd-SWDC":"10200200",
 		
+			
 								
 	}
 	

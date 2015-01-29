@@ -204,7 +204,7 @@ p {
 #Panel_Pilototo {
 	position: absolute;
 	top: 900px;
-	left: 1500px;
+	left: 20px;
 	/* Dimension 775 x 10			              */
 	font-family:arial, sans-serif;
 	font-size:100%;
@@ -255,44 +255,23 @@ p {
 
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-Panel_Gear_style {
+#Panel_Abris {
 	position: absolute;
-	top: 400px;
-	left: 100px;
-	/* Dimension 775 x 10			              */
-	font-family:arial, sans-serif;
-	font-size:100%;
-	color:white;
-	background-color:transparent;
-	text-align: center; 
-
+	top: 850px;
+	left: 1390px;
+	/* Dimension 500 x 180			              */
+	
 }
 
 
-Panel_ILS_style {
+#Panel_Weapon {
 	position: absolute;
-	top: 710px;
-	left: 572px;
-	/* Dimension 775 x 10			              */
-	font-family:arial, sans-serif;
-	font-size:100%;
-	color:white;
-	background-color:transparent;
-	text-align: center; 
-
+	top: 650px;
+	left: 1390px;
+	/* Dimension 500 x 200			              */
+	
 }
+
 
 
 

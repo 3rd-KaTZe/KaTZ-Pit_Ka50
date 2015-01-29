@@ -1,36 +1,35 @@
 // --------------------------------------------------------------------
-// Panel Fuel
+// Panel Fuel et Start
 // --------------------------------------------------------------------
 
 function panel_fuel_update(KaTZPit_data){
 	
-	// Calculateur de consommation et d'autonomie ------------------------------------
-
-		
-		
-	// Affichage quantites et consommation , range ----------------------------------------------
+	// Panneau de gestion fuel et de démarrage APU/Moteur
 	
+		// Affichage quantité fuel réservoir AV, AR, Total
 		document.getElementById('Fuel_AV').innerHTML = KaTZPit_data["Fuel_AV"]
 		document.getElementById('Fuel_AR').innerHTML = KaTZPit_data["Fuel_AR"]
 		document.getElementById('Fuel_T').innerHTML = KaTZPit_data["Fuel_AV"] + KaTZPit_data["Fuel_AR"]
-		document.getElementById('Conso').innerHTML = KaTZPit_data["Conso"]
+		
 
 			
 		
 	// Position des Vannes (Fonctionnement des voyants de vannes Droite et Gauche inversé)
+	// Pour la commande on utilise la commande de type 2 spécifique au KA50
+	// 3 ordres executes dans DCS ouverturecapot/basculeinter/fermeturecapot
 		if (dataread_posit(KaTZPit_data["Fuel_V"],2) ==0) {
 			$("#F-Vanne-G").attr('src','images/fuel/FV-Vanne_V_O.gif')
-			$("#F-Vanne-G").data('internal-id','10300600')}
+			$("#F-Vanne-G").data('internal-id','20300600')}
 		else {
 			$("#F-Vanne-G").attr('src','images/fuel/FV-Vanne_V_F.gif')
-			$("#F-Vanne-G").data('internal-id','10300601')}
+			$("#F-Vanne-G").data('internal-id','20300601')}
 			
 		if (dataread_posit(KaTZPit_data["Fuel_V"],1)==0) {
 			$("#F-Vanne-D").attr('src','images/fuel/FV-Vanne_V_O.gif')
-			$("#F-Vanne-D").data('internal-id','10300800')}
+			$("#F-Vanne-D").data('internal-id','20300800')}
 		else {
 			$("#F-Vanne-D").attr('src','images/fuel/FV-Vanne_V_F.gif')
-			$("#F-Vanne-D").data('internal-id','10300801')}
+			$("#F-Vanne-D").data('internal-id','20300801')}
 			
 		//if (KaTZPit_data["APU_V_Fuel"] ==1) {
 		//	$("#F-Vanne-APU").attr('src','images/fuel/FV-Vanne_V_O.gif')
@@ -41,10 +40,10 @@ function panel_fuel_update(KaTZPit_data){
 			
 		if (dataread_posit(KaTZPit_data["Fuel_V"],3) ==1) {
 			$("#F-Vanne-X").attr('src','images/fuel/FV-Vanne_H_O.gif')
-			$("#F-Vanne-X").data('internal-id','10301200')}
+			$("#F-Vanne-X").data('internal-id','20301200')}
 		else {
 			$("#F-Vanne-X").attr('src','images/fuel/FV-Vanne_H_F.gif')
-			$("#F-Vanne-X").data('internal-id','10301201')}
+			$("#F-Vanne-X").data('internal-id','20301201')}
 
 	// Voyant des Cut Off et du frein de Rotor
 		if (dataread_posit(KaTZPit_data["COff"],2)  ==1) {
@@ -117,13 +116,12 @@ function panel_fuel_update(KaTZPit_data){
 		EngRpm = dataread_split_2(KaTZPit_data["Eng_rpm"])
 		document.getElementById('F-RPM-G').innerHTML = (EngRpm[1]/10).toFixed(0)
 		document.getElementById('F-RPM-D').innerHTML = (EngRpm[0]/10).toFixed(0)
-		//document.getElementById('F-RPM-G').innerHTML = KaTZPit_data["RPM_L"]
-		//document.getElementById('F-RPM-D').innerHTML = KaTZPit_data["RPM_R"]
+		
 		document.getElementById('F-RPM-RO').innerHTML = KaTZPit_data["RPM_Rot"]
 		
 	// Températures	APU
 
-		document.getElementById('F-DEG-APU').innerHTML = KaTZPit_data["APU_Data"]
+		document.getElementById('F-DEG-APU').innerHTML = dataread_split_2(KaTZPit_data["APU_Data"])[0]
 		
 	// Voyants de l'APU
 	// On va lire la valeur de chaque voyant dans la chaine "APU_Voyants"
@@ -132,12 +130,12 @@ function panel_fuel_update(KaTZPit_data){
 		// Ignition		
 		if (dataread_posit(KaTZPit_data["APU_Voyants"],1) ==1) {
 			$("#F-Vanne-APU").attr('src','images/fuel/FV-Vanne_V_O.gif')
-			$("#F-Vanne-APU").data('internal-id','10301000')
+			$("#F-Vanne-APU").data('internal-id','20301000')
 			$("#F-APU-Fuel").fadeIn()} 
 
 		else {
 			$("#F-Vanne-APU").attr('src','images/fuel/FV-Vanne_V_F.gif')
-			$("#F-Vanne-APU").data('internal-id','10301001')
+			$("#F-Vanne-APU").data('internal-id','20301001')
 			$("#F-APU-Fuel").fadeOut()}
 
 
@@ -194,29 +192,30 @@ function panel_fuel_update(KaTZPit_data){
 		
 		Start_Switch(sel,typ)
 
-	// Eeg Moteur
-		if (dataread_posit(KaTZPit_data["E_AC_V"],4)  ==1) {
+	// EEG Moteur
+		if (dataread_posit(KaTZPit_data["E_AC_V"],6)  ==1) {
 			$("#F-EEG-G").attr('src','images/fuel/FV_EEG.gif')
-			$("#F-EEG-G").data('internal-id','10400100')}
+			$("#F-EEG-G").data('internal-id','20400100')}
 		else {
 			$("#F-EEG-G").attr('src','images/fuel/FV_EEG_Off.gif')
-			$("#F-EEG-G").data('internal-id','10400101')}
+			$("#F-EEG-G").data('internal-id','20400101')}
 			
 		if (dataread_posit(KaTZPit_data["E_AC_V"],5)  ==1) {
 			$("#F-EEG-D").attr('src','images/fuel/FV_EEG.gif')
-			$("#F-EEG-D").data('internal-id','10400300')}
+			$("#F-EEG-D").data('internal-id','20400300')}
 		else {
 			$("#F-EEG-D").attr('src','images/fuel/FV_EEG_Off.gif')
-			$("#F-EEG-D").data('internal-id','10400301')}
+			$("#F-EEG-D").data('internal-id','20400301')}
 		
 }
 		
 
 		
 function panel_oil_update(KaTZPit_data){		
-	// TEMPORAIRE OIL PANEL
-		//  OIL PANEL
-	// Affichage température couleur rouge si < 35°C , Vert = OK
+	
+	// PANEL affichage temp Exaust et Huile Moteur/Transmission
+	
+		// Affichage température huile moteur couleur rouge si < 30°C , Vert = OK
 		var Eng_O_d = dataread_split_2(KaTZPit_data["Eng_Oil_deg"])
 		document.getElementById('O-Deg-G').innerHTML = Eng_O_d[1]
 		if (Eng_O_d[1] < 30){document.getElementById('O-Deg-G').style.color = 'red'}
@@ -225,13 +224,14 @@ function panel_oil_update(KaTZPit_data){
 		document.getElementById('O-Deg-D').innerHTML = Eng_O_d[0]
 		if (Eng_O_d[0] < 30){document.getElementById('O-Deg-D').style.color = 'red'}
 		else {document.getElementById('O-Deg-D').style.color = 'green'}
-	
+		
+		// Affichage température huile transmission couleur rouge si < -15°C , Vert = OK
 		var GB_O_d = dataread_split_2(KaTZPit_data["GB_Oil_deg"])
 		document.getElementById('O-Deg-GB').innerHTML = GB_O_d[0]
 		if (GB_O_d[0] < -15){document.getElementById('O-Deg-GB').style.color = 'red'}
 		else {document.getElementById('O-Deg-GB').style.color = 'green'}
 
-	// Affichage pressions couleur rouge si < 2.0 kg/cm² , Vert = OK
+		// Affichage pressions couleur rouge si < 2.0 kg/cm² , Vert = OK
 		var Eng_O_p = dataread_split_2(KaTZPit_data["Eng_Oil_pre"])
 		document.getElementById('O-Pre-G').innerHTML = ((Eng_O_p[1])/10).toFixed(1)
 		if (Eng_O_p[1] < 20){document.getElementById('O-Pre-G').style.color = 'red'}
@@ -246,15 +246,10 @@ function panel_oil_update(KaTZPit_data){
 		if (GB_O_p[0] < 5){document.getElementById('O-Pre-GB').style.color = 'red'}
 		else {document.getElementById('O-Pre-GB').style.color = 'green'}
 		
+		// Affichage température echappement moteur 
 		var Temp_Eng = dataread_split_2(KaTZPit_data["Eng_temp"])
 		document.getElementById('O-Deg-EG').innerHTML = Temp_Eng[1]
 		document.getElementById('O-Deg-ED').innerHTML = Temp_Eng[0]
-
-
-		//document.getElementById('O-Deg-EG').innerHTML = KaTZPit_data["Eng_L_deg"]
-		//document.getElementById('O-Deg-ED').innerHTML = KaTZPit_data["Eng_R_deg"]
-		
-
 
 }
 

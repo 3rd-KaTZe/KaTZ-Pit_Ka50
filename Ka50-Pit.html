@@ -32,6 +32,7 @@
 	<script type="text/javascript" src="js/instrument.js"></script>
 	<script type="text/javascript" src="js/menu.js"></script>	
 	
+	<script type="text/javascript" src="js/panel_device.js"></script>
 	<script type="text/javascript" src="js/panel_emergency.js"></script>
 	<script type="text/javascript" src="js/panel_moteur.js"></script>
 	<script type="text/javascript" src="js/panel_electric.js"></script>
@@ -112,11 +113,11 @@
 		<area shape="rect" coords="10,420,90,480" href="javascript:menu_Toggle('Rotor')">
 		<area shape="rect" coords="10,480,90,520" href="javascript:menu_Toggle('Vierge')">
 		<area shape="rect" coords="10,520,90,580" href="javascript:menu_Toggle('Pilototo')">
-		<area shape="rect" coords="10,580,90,620" href="javascript:menu_Toggle('Vierge')">
+		<area shape="rect" coords="10,580,90,620" href="javascript:menu_Toggle('Abris')">
 		<area shape="rect" coords="10,620,90,680" href="javascript:menu_Toggle('Vierge')">
 		<area shape="rect" coords="10,680,90,720" href="javascript:menu_Toggle('Vierge')">
-		<area shape="rect" coords="10,720,90,780" href="javascript:menu_Toggle('Vierge')">
-		<area shape="rect" coords="10,780,90,820" href="javascript:menu_Toggle('Datalink')">
+		<area shape="rect" coords="10,720,90,780" href="javascript:menu_Toggle('Datalink')">
+		<area shape="rect" coords="10,780,90,820" href="javascript:menu_Toggle('Weapon')">
 		<area shape="rect" coords="10,820,90,880" href="javascript:menu_Toggle('Target')">
 		<area shape="rect" coords="10,880,90,920" href="javascript:menu_Toggle('Radio_360')">
 		<area shape="rect" coords="10,920,90,980" href="javascript:menu_Toggle('Vierge')">
@@ -242,14 +243,14 @@
 	<img src="images/analog/N_HSI_Route.gif" width="300" height="300"   id="AN_Route"> </SPAN>
 	
 	<!-- WP Distance et Direction -->
-	<SPAN style="position: absolute; left: 20px; top: 20px; width: 60px; height: 30px ; background-color:lightgrey;color:#99FF99 ;font-size:1.2em" id="HSI_WP_dist"> </SPAN>
+	<SPAN style="position: absolute; left: 20px; top: 20px; width: 60px; height: 30px ; color:#99FF99 ;font-size:1.5em; text-align:right" id="HSI_WP_dist"> </SPAN>
 		
-	<SPAN style="position: absolute; left: 320px; top: 20px; width: 60px; height: 30px ; color:yellow ;  background-color:lightgrey;font-size:1.2em" id="HSI_Way"> </SPAN>
+	<SPAN style="position: absolute; left: 320px; top: 20px; width: 60px; height: 30px ; color:yellow ;  font-size:1.5em; text-align:center" id="HSI_Way"> </SPAN>
 	
-		<!-- Bulls et Route -->
-	<SPAN style="position: absolute; left: 20px; top: 350px; width: 60px; height: 30px ; background-color:lightgrey;color:#99FF99 ;font-size:1.2em" id="HSI_Route"> </SPAN>
-		
-	<SPAN style="position: absolute; left: 320px; top: 350px; width: 60px; height: 30px ; color:yellow ;  background-color:lightgrey;font-size:1.2em" id="HSI_Bullseye"> </SPAN>
+	<!-- Bulls et Route -->
+	<SPAN style="position: absolute; left: 20px; top: 350px; width: 60px; height: 30px ; color:yellow ;font-size:1.5em; text-align:center" id="HSI_Bullseye"> </SPAN>
+	
+	<SPAN style="position: absolute; left: 320px; top: 350px; width: 60px; height: 30px ; color:white ;font-size:1.5em; text-align:center" id="HSI_Route"> </SPAN>
     
 </div>
 
@@ -641,16 +642,16 @@
 
 	<!-- Position Vannes -->
 	<SPAN style="position: absolute; left: 71px; top: 106px; width: 50px; height: 30px">
-	<img src="images/fuel/FV-Vanne_V_O.gif" width="50" height="30"  id="F-Vanne-G" data-internal-id="0" onclick="javascript:CmdSiocDCS2('F-Vanne-G')">
+	<img src="images/fuel/FV-Vanne_V_O.gif" width="50" height="30"  id="F-Vanne-G" data-internal-id="0" onclick="javascript:CmdSiocDCS('F-Vanne-G')">
 	</SPAN> 
 	<SPAN style="position: absolute; left: 279px; top: 106px; width: 50px; height: 30px">
-	<img src="images/fuel/FV-Vanne_V_O.gif" width="50" height="30"  id="F-Vanne-D" data-internal-id="0" onclick="javascript:CmdSiocDCS2('F-Vanne-D')">
+	<img src="images/fuel/FV-Vanne_V_O.gif" width="50" height="30"  id="F-Vanne-D" data-internal-id="0" onclick="javascript:CmdSiocDCS('F-Vanne-D')">
 	</SPAN> 
 	<SPAN style="position: absolute; left: 174px; top: 132px; width: 50px; height: 30px">
-	<img src="images/fuel/FV-Vanne_H_O.gif" width="50" height="30"  id="F-Vanne-X" data-internal-id="0" onclick="javascript:CmdSiocDCS2('F-Vanne-X')">
+	<img src="images/fuel/FV-Vanne_H_O.gif" width="50" height="30"  id="F-Vanne-X" data-internal-id="0" onclick="javascript:CmdSiocDCS('F-Vanne-X')">
 	</SPAN> 
 	<SPAN style="position: absolute; left: 420px; top: 85px; width: 50px; height: 30px">
-	<img src="images/fuel/FV-Vanne_V_O.gif" width="50" height="30"  id="F-Vanne-APU" data-internal-id="0" onclick="javascript:CmdSiocDCS2('F-Vanne-APU')">
+	<img src="images/fuel/FV-Vanne_V_O.gif" width="50" height="30"  id="F-Vanne-APU" data-internal-id="0" onclick="javascript:CmdSiocDCS('F-Vanne-APU')">
 	</SPAN> 
 	
 	<!-- Pompes Carburant -->
@@ -699,11 +700,14 @@
 	<SPAN style="position: absolute; left: 465px; top: 245px; width: 60px; height: 30px">
 	<img src="images/fuel/FV_START.gif" width="60" height="30"  id="F-Start-ON" data-internal-id="0" onclick="javascript:CmdSiocDCS('F-Start-ON')">
 	</SPAN>
+	
+	
+		<!-- Commande EEG type 2 -->
 	<SPAN style="position: absolute; left: 410px; top: 340px; width: 60px; height: 30px">
-	<img src="images/fuel/FV_EEG.gif" width="60" height="30"  id="F-EEG-G" data-internal-id="0" onclick="javascript:CmdSiocDCS2('F-EEG-G')">
+	<img src="images/fuel/FV_EEG.gif" width="60" height="30"  id="F-EEG-G" data-internal-id="0" onclick="javascript:CmdSiocDCS('F-EEG-G')">
 	</SPAN>
 	<SPAN style="position: absolute; left: 520px; top: 340px; width: 60px; height: 30px">
-	<img src="images/fuel/FV_EEG.gif" width="60" height="30"  id="F-EEG-D" data-internal-id="0" onclick="javascript:CmdSiocDCS2('F-EEG-D')">
+	<img src="images/fuel/FV_EEG.gif" width="60" height="30"  id="F-EEG-D" data-internal-id="0" onclick="javascript:CmdSiocDCS('F-EEG-D')">
 	</SPAN>
 	<SPAN style="position: absolute; left: 420px; top: 210px; width: 40px; height: 10px">
 	<img src="images/z_Led-Blanche.gif" width="40" height="10"  id="F-SVC" data-internal-id="40401200">
@@ -931,7 +935,94 @@
 
 </div>
 
+<div id="Panel_Abris">
 
+	<img src="images/device/Abris.gif" width="500" height="180"  usemap="#Abris_P">
+
+	<map name="Abris_P">
+
+			<!-- Start / Off -->
+			<area shape="rect" coords="10,15,70,45" href="javascript:CmdDCSRaw('10900901')">
+			<area shape="rect" coords="10,145,70,175" href="javascript:CmdDCSRaw('10900900')">
+			
+			<!-- Bouton 1,2,3,4,5 -->
+			<area shape="rect" coords="70,55,140,125" href="javascript:CmdDCSRaw('50900101')">
+			<area shape="rect" coords="155,55,225,125" href="javascript:CmdDCSRaw('50900201')">
+			<area shape="rect" coords="240,55,310,125" href="javascript:CmdDCSRaw('50900301')">
+			<area shape="rect" coords="325,55,395,125" href="javascript:CmdDCSRaw('50900401')">
+			<area shape="rect" coords="410,55,480,125" href="javascript:CmdDCSRaw('50900501')">
+	</map> 
+	
+	<!-- Selecteur On/Off -->
+	<SPAN style="position: absolute; left: -4px; top: 58px; width: 80px; height: 80px">
+	<img src="images/Switch-Metal-D3.gif" width="80" height="80" id="On_Abris">
+	</SPAN>
+	
+</div>	
+
+<div id="Panel_Weapon">
+
+	<img src="images/weapon/Silhouette.gif" width="500" height="200" >
+	
+	<!-- Voyant selection weapon -->
+	<SPAN style="position: absolute; left: 36px; top: 20px; width: 30px; height: 30px">
+	<img src="images/weapon/Btn-Rd_vert.gif" width="30" height="30"  id="WPN-Sel1">
+	</SPAN>
+	
+	<SPAN style="position: absolute; left: 126px; top: 20px; width: 30px; height: 30px">
+	<img src="images/weapon/Btn-Rd_vert.gif" width="30" height="30"  id="WPN-Sel2">
+	</SPAN>
+	
+	<SPAN style="position: absolute; left: 346px; top: 20px; width: 30px; height: 30px">
+	<img src="images/weapon/Btn-Rd_vert.gif" width="30" height="30"  id="WPN-Sel3">
+	</SPAN>
+	
+	<SPAN style="position: absolute; left: 436px; top: 20px; width: 30px; height: 30px">
+	<img src="images/weapon/Btn-Rd_vert.gif" width="30" height="30"  id="WPN-Sel4">
+	</SPAN>
+	
+	<!-- Voyant presence weapon -->
+	<SPAN style="position: absolute; left: 35px; top: 98px; width: 30px; height: 30px">
+	<img src="images/weapon/Btn-Rd_jaune.gif" width="30" height="30"  id="WPN-Pre1">
+	</SPAN>
+	
+	<SPAN style="position: absolute; left: 125px; top: 100px; width: 30px; height: 30px">
+	<img src="images/weapon/Btn-Rd_jaune.gif" width="30" height="30"  id="WPN-Pre2">
+	</SPAN>
+	
+	<SPAN style="position: absolute; left: 345px; top: 100px; width: 30px; height: 30px">
+	<img src="images/weapon/Btn-Rd_jaune.gif" width="30" height="30"  id="WPN-Pre3">
+	</SPAN>
+	
+	<SPAN style="position: absolute; left: 435px; top: 98px; width: 30px; height: 30px">
+	<img src="images/weapon/Btn-Rd_jaune.gif" width="30" height="30"  id="WPN-Pre4">
+	</SPAN>
+	
+	<!-- Voyant train -->
+	<SPAN style="position: absolute; left: 156px; top: 144px; width: 50px; height: 50px">
+	<img src="images/weapon/Btn-Train_vert.gif" width="50" height="50"  id="Gear_L">
+	</SPAN>
+	
+	<SPAN style="position: absolute; left: 224px; top: 145px; width: 50px; height: 50px">
+	<img src="images/weapon/Btn-Train_vert.gif" width="50" height="50"  id="Gear_C">
+	</SPAN>
+	
+	<SPAN style="position: absolute; left: 292px; top: 144px; width: 50px; height: 50px">
+	<img src="images/weapon/Btn-Train_vert.gif" width="50" height="50"  id="Gear_R">
+	</SPAN>
+	
+	<!-- Voyant Master Arm -->
+	<SPAN style="position: absolute; left: 19px; top: 154px; width: 80px; height: 30px">
+	<img src="images/weapon/Master.gif" width="80" height="30"  id="WPN-Master">
+	</SPAN>
+	
+	<!-- Voyant Cannon -->
+	<SPAN style="position: absolute; left: 400px; top: 154px; width: 80px; height: 30px">
+	<img src="images/weapon/Cannon.gif" width="80" height="30"  id="WPN-Cannon">
+	</SPAN>
+
+
+</div>	
   
 </body>
 </html>

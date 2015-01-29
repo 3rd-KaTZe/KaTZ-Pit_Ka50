@@ -9,20 +9,20 @@ function panel_electric_update(KaTZPit_data){
 	if (dataread_posit(KaTZPit_data["E_DC_SW"],1) ==1){
 			$("#EV-Bat-G").attr('src','images/electric/E_Battery-SW.gif')
 			$("#E-Bat-SWG").attr('src','images/electric/E_SW-OnDC.gif')
-			$("#E-Bat-SWG").data('internal-id','10200500')}
+			$("#E-Bat-SWG").data('internal-id','20200500')}
 		else {
 			$("#EV-Bat-G").attr('src','images/electric/E_Off-V.gif')
 			$("#E-Bat-SWG").attr('src','images/electric/E_SW-Off.gif')
-			$("#E-Bat-SWG").data('internal-id','10200501')}
+			$("#E-Bat-SWG").data('internal-id','20200501')}
 			
 	if (dataread_posit(KaTZPit_data["E_DC_SW"],2) ==1) {
 			$("#EV-Bat-D").attr('src','images/electric/E_Battery-SW.gif')
 			$("#E-Bat-SWD").attr('src','images/electric/E_SW-OnDC.gif')
-			$("#E-Bat-SWD").data('internal-id','10200300')}
+			$("#E-Bat-SWD").data('internal-id','20200300')}
 		else {
 			$("#EV-Bat-D").attr('src','images/electric/E_Off-V.gif')
 			$("#E-Bat-SWD").attr('src','images/electric/E_SW-Off.gif')
-			$("#E-Bat-SWD").data('internal-id','10200301')}		
+			$("#E-Bat-SWD").data('internal-id','20200301')}		
 	
 		
 	// Inverter DC/AC et son switch de mode de fonctionnement (On/Auto/off) ----------------------------------------------
@@ -41,14 +41,14 @@ function panel_electric_update(KaTZPit_data){
 	
 	// Ground DC et Switch On/off , 2-Way-Switch + Capot) ---------------------------------------------------------------------------------------
 	if (dataread_posit(KaTZPit_data["E_DC_V"],4) ==1) {$("#EV-Grnd-DC").attr('src','images/electric/E_Ground-DC-SW.gif')}
-	else 							{$("#EV-Grnd-DC").attr('src','images/electric/E_Off-H.gif')}
+	else 	{$("#EV-Grnd-DC").attr('src','images/electric/E_Off-H.gif')}
 	
 	if (dataread_posit(KaTZPit_data["E_DC_SW"],7) ==1) {
 			$("#E-Grnd-SWDC").attr('src','images/electric/E_SW-OnDC.gif')
-			$("#E-Grnd-SWDC").data('internal-id','10200100')}
+			$("#E-Grnd-SWDC").data('internal-id','20200100')}
 	else {
 			$("#E-Grnd-SWDC").attr('src','images/electric/E_SW-Off.gif')
-			$("#E-Grnd-SWDC").data('internal-id','10200101')}	
+			$("#E-Grnd-SWDC").data('internal-id','20200101')}	
 
 	// Ground AC et Switch On/off , 2-Way-Switch) ---------------------------------------------------------------------------------------
 	if (dataread_posit(KaTZPit_data["E_AC_V"],3) ==1)  {$("#EV-Grnd-AC").attr('src','images/electric/E_Ground-AC-SW.gif')}

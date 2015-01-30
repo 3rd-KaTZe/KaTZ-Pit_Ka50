@@ -26,7 +26,8 @@ function paneldata_init(){
 		ARKUD:55500555,	ARK9_SW:55555, ARK9_F: 51506290, ARK9_Data:50005000, ARK9_T_Main:150, ARK9_T_Stby:150,
 		Doppler_d1:50005000, Doppler_d2:50005000, Doppler_f:555,
 		D15_drift:50005000, D15_drift_V:55, Sling_2D:50005000, Sling_3D:50005000, 
-		DLinkL1:0, DLinkL2:0, DLinkL3:0, Tgt_Btn:5555, Wpn_Ka:55555555, Wpn_Lamp:55, Wpn_Flag:55555,
+		DLinkL1:0, DLinkL2:0, DLinkL3:0, Tgt_Btn:5555, Wpn_Ka:55555555, Wpn_Lamp:55, Wpn_Flag:55555,Wpn_Ammo:50005000,
+		UV26_1:50005000,Abris1:50005000,Abris2:50005000,Abris3:50005000,
 		Collectif:0,
 		LowAlt:0,
 		FL_mode:0, FL_main:0, FL_main_old:0,
@@ -158,6 +159,22 @@ function weapon_name_type(){
 		4155082:"Fum",4155083:"Fum",4155084:"Fum",4155085:"Fum",4155086:"Fum",4155066:"Fum",
 	}
 	return (Weapon_type);
+}
+
+function abris_menu_init(){
+
+	console.log("Initialisation des données de menu de l'abris")
+	
+	var abris_menu = {
+	0:"OFF",1:"ACTIV",2:"ADD",3:"ADD LIN",4:"ADD PNT",5:"ARC",6:"AUTO",7:"CALC",8:"CANCEL",9:"CLEAR",
+	10:"CTRL",11:"DELETE",12:"DRAW",13:"EDIT",14:"ENTER",15:"ERBL",16:"FPL",17:"GNSS",18:"HSI",19:"INFO",
+	20:"LOAD",21:"MAP",22:"MARKER",23:"MENU",24:"MOVE",25:"NAME",26:"NAV",27:"NE",28:"REST",29:"OPTION",
+	30:"PLAN",31:"PLAN",32:"SAVE",33:"SCALE -",34:"SCALE +",35:"SEARCH",36:"SELECT",37:"SETUP",38:"SUSP",39:"SYST",
+	40:"TEST",41:"TGT VS",42:"TO",43:"TYPE",44:"USER",45:"VNAV",46:"VNAV TO",47:"WPT"}
+	
+	
+	return (abris_menu);
+
 }
 
 

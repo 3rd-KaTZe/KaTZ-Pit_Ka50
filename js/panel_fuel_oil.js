@@ -149,12 +149,12 @@ function panel_fuel_update(KaTZPit_data){
 		if (dataread_posit(KaTZPit_data["APU_Voyants"],3) ==1) {
 			$("#F-APU-ON").attr('src','images/fuel/FV_APU_ON.gif')
 			// Bouton Start type press bouton 1000>0000
-			$("#F-APU-ON").data('internal-id','30400701')}
+			$("#F-APU-ON").data('internal-id','50400701')}
 
 		else {
 			// Bouton Stop type press bouton 1000>0000
 			$("#F-APU-ON").attr('src','images/fuel/FV_APU_Off.gif')
-			$("#F-APU-ON").data('internal-id','30400701')}
+			$("#F-APU-ON").data('internal-id','50400701')}
 		
 		
 		//if (KaTZPit_data["APU_V_1"] ==1) {$("#F-APU-Fuel").fadeIn()} else {$("#F-APU-Fuel").fadeOut()}
@@ -165,11 +165,11 @@ function panel_fuel_update(KaTZPit_data){
 		if (dataread_posit(KaTZPit_data["Start_V"],1) == 1) {
 			$("#F-Start-ON").attr('src','images/fuel/FV_START.gif')
 			// Bouton Start type press bouton 1000>0000
-			$("#F-Start-ON").data('internal-id','30400601')}
+			$("#F-Start-ON").data('internal-id','50400601')}
 		else {
 			// Bouton Stop type press bouton 1000>0000
 			$("#F-Start-ON").attr('src','images/fuel/FV_START_off.gif')
-			$("#F-Start-ON").data('internal-id','30400501')}
+			$("#F-Start-ON").data('internal-id','50400501')}
 
 		// Alarme si collectif est levé pour éviter demmarage
 		//if (KaTZPit_data["RPM_L"] >70	|| KaTZPit_data["RPM_R"] >70) {

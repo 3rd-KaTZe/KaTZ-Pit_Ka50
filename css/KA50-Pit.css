@@ -260,13 +260,17 @@ p {
 	top: 850px;
 	left: 1390px;
 	/* Dimension 500 x 180			              */
+	font-family:arial, sans-serif;
+	font-size:120%;
+	color:white;
+	text-align: center;
 	
 }
 
 
 #Panel_Weapon {
 	position: absolute;
-	top: 650px;
+	top: 550px;
 	left: 1390px;
 	/* Dimension 500 x 200			              */
 	

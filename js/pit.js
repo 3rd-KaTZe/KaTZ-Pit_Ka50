@@ -87,6 +87,7 @@ function Pit_Start(plane){
 	RWY_data = RWY_init();
 	FL_data = fl_mode_init();
 	Weapon_data = weapon_name_type()
+	Abris_Menu = abris_menu_init()
 	
 	// Initialisation des capots de switch
 	Cmd_Capot = Cmd_Capot_init()

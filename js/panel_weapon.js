@@ -26,6 +26,10 @@ function panel_weapon_update(KaTZPit_data){
 	
 	// Voyant Cannon
 	if (dataread_posit(KaTZPit_data["Wpn_Lamp"],2) ==1) {$("#WPN-Cannon").fadeIn()} else {$("#WPN-Cannon").fadeOut()}
+	
+	// Affichage Ammo restantes
+	document.getElementById('Ammo_remain').innerHTML = dataread_split_2(KaTZPit_data["Wpn_Ammo"])[1]
+	document.getElementById('Ammo_rnds').innerHTML = dataread_split_2(KaTZPit_data["Wpn_Ammo"])[0]
 
 
 }

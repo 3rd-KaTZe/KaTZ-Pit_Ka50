@@ -22,14 +22,32 @@ function panel_weapon_update(KaTZPit_data){
 	if (dataread_posit(KaTZPit_data["Train"],1) ==1) {$("#Gear_R").fadeIn()} else {$("#Gear_R").fadeOut()}
 	
 	// Voyant Master Arm
-	if (dataread_posit(KaTZPit_data["Wpn_Lamp"],1) ==1) {$("#WPN-Master").fadeIn()} else {$("#WPN-Master").fadeOut()}
+	if (dataread_posit(KaTZPit_data["Wpn_SW_1"],1) ==1) {$("#WPN-Master").fadeIn()} else {$("#WPN-Master").fadeOut()}
 	
 	// Voyant Cannon
-	if (dataread_posit(KaTZPit_data["Wpn_Lamp"],2) ==1) {$("#WPN-Cannon").fadeIn()} else {$("#WPN-Cannon").fadeOut()}
+	if (dataread_posit(KaTZPit_data["Wpn_SW_1"],2) ==1) {$("#WPN-Cannon").fadeIn()} else {$("#WPN-Cannon").fadeOut()}
 	
 	// Affichage Ammo restantes
 	document.getElementById('Ammo_remain').innerHTML = dataread_split_2(KaTZPit_data["Wpn_Ammo"])[1]
 	document.getElementById('Ammo_rnds').innerHTML = dataread_split_2(KaTZPit_data["Wpn_Ammo"])[0]
+	
+	// Switch Man/auto
+	if (dataread_posit(KaTZPit_data["Wpn_SW_1"],6) ==1) {$("#Wpn_Man").attr('src','images/Switch-Metal-U3.gif')} 
+	else {$("#Wpn_Man").attr('src','images/Switch-Metal-D3.gif')}
+	
+	// Switch Long/Med/Short
+	if (dataread_posit(KaTZPit_data["Wpn_SW_1"],5) ==2) {$("#Wpn_Burst").attr('src','images/Switch-Metal-U3.gif')} 
+	if (dataread_posit(KaTZPit_data["Wpn_SW_1"],5) ==1) {$("#Wpn_Burst").attr('src','images/Switch-Metal-L3.gif')} 
+	if (dataread_posit(KaTZPit_data["Wpn_SW_1"],5) ==0) {$("#Wpn_Burst").attr('src','images/Switch-Metal-D3.gif')} 
+	
+	// Switch He/Api
+	if (dataread_posit(KaTZPit_data["Wpn_SW_1"],4) ==1) {$("#Wpn_Ammo").attr('src','images/Switch-Metal-U3.gif')} 
+	else {$("#Wpn_Ammo").attr('src','images/Switch-Metal-D3.gif')}
+	// Switch Low/High
+	if (dataread_posit(KaTZPit_data["Wpn_SW_1"],3) ==1) {$("#Wpn_Rof").attr('src','images/Switch-Metal-U3.gif')} 
+	else {$("#Wpn_Rof").attr('src','images/Switch-Metal-D3.gif')}
+	
+	
 
 
 }

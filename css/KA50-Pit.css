@@ -43,7 +43,7 @@ p {
 
 #Panel_Connection_Emergency {
 	position: absolute;
-	top: 10px;
+	top: 220px;
 	left: 10px;
 	/* Dimension 100 x 775			              */
 	font-family:arial, sans-serif;
@@ -92,7 +92,8 @@ p {
 #Cadran_Pitch {
 	position: absolute;
 	top: 900px;
-	left: 500px;
+	left: 540px;
+	/* left: 500px; */
 	/* Dimension 400 x 400			              */
 }
 
@@ -139,7 +140,7 @@ p {
 #Panel_Datalink {
 	position: absolute;
 	top: 010px;
-	left: 120px;
+	left: 340px;
 	/* Dimension 320 x 200			              */
 	font-family:arial, sans-serif;
 	font-size:100%;
@@ -164,8 +165,8 @@ p {
 
 #Panel_Radio {
 	position: absolute;
-	top: 850px;
-	left: 2010px;
+	top: 10px;
+	left: 10px;
 	/* Dimension 775 x 10			              */
 	font-family:arial, sans-serif;
 	font-size:100%;
@@ -203,8 +204,8 @@ p {
 
 #Panel_Pilototo {
 	position: absolute;
-	top: 900px;
-	left: 20px;
+	top: 950px;
+	left: 120px;
 	/* Dimension 775 x 10			              */
 	font-family:arial, sans-serif;
 	font-size:100%;
@@ -244,8 +245,8 @@ p {
 
 #Panel_Electric {
 	position: absolute;
-	top: 420px;
-	left: 2010px;
+	top: 10px;
+	left: 2600px;
 	/* Dimension 400 x 400			              */
 	font-family:arial, sans-serif;
 	font-size:100%;
@@ -258,7 +259,7 @@ p {
 #Panel_Abris {
 	position: absolute;
 	top: 850px;
-	left: 1390px;
+	left: 2010px;
 	/* Dimension 500 x 180			              */
 	font-family:arial, sans-serif;
 	font-size:120%;
@@ -270,8 +271,8 @@ p {
 
 #Panel_Weapon {
 	position: absolute;
-	top: 550px;
-	left: 1390px;
+	top: 010px;
+	left: 2010px;
 	/* Dimension 500 x 200			              */
 	
 }

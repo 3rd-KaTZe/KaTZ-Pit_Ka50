@@ -26,7 +26,7 @@ function paneldata_init(){
 		ARKUD:55500555,	ARK9_SW:55555, ARK9_F: 51506290, ARK9_Data:50005000, ARK9_T_Main:150, ARK9_T_Stby:150,
 		Doppler_d1:50005000, Doppler_d2:50005000, Doppler_f:555,
 		D15_drift:50005000, D15_drift_V:55, Sling_2D:50005000, Sling_3D:50005000, 
-		DLinkL1:0, DLinkL2:0, DLinkL3:0, Tgt_Btn:5555, Wpn_Ka:55555555, Wpn_Lamp:55, Wpn_Flag:55555,Wpn_Ammo:50005000,
+		DLinkL1:0, DLinkL2:0, DLinkL3:0, Tgt_Btn:5555, Wpn_Ka:55555555, Wpn_Lamp:55, Wpn_Flag:55555,Wpn_Ammo:50005000,Wpn_SW_1:555555,
 		UV26_1:50005000,Abris1:50005000,Abris2:50005000,Abris3:50005000,
 		Collectif:0,
 		LowAlt:0,
@@ -55,7 +55,7 @@ function panel_On_init(){
 
 	console.log("Initialisation des panels affichés")
 
-var Panel_On = { Init:0, Breakers:0, Electric_DC:1, Electric_AC:0, APU:0, Oil:1, Start:1, Rotor:1, Analog_1:0, Analog_2:0, 
+var Panel_On = { Init:0, Breakers:0, Electric_DC:0, Electric_AC:0, APU:0, Oil:1, Start:0, Rotor:1, Analog_1:0, Analog_2:0, 
 	ARK_9:0, ARK_UD:0, Doppler:0, Radio_360:1, Fuel:0, Vierge:0, Navigation:0, Target:0,Weapon:1,
 	Pilototo:1,Datalink:1, Abris:1}
 

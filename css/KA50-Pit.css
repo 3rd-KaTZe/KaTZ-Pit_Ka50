@@ -258,7 +258,7 @@ p {
 
 #Panel_Abris {
 	position: absolute;
-	top: 850px;
+	top: 880px;
 	left: 2010px;
 	/* Dimension 500 x 180			              */
 	font-family:arial, sans-serif;
@@ -277,6 +277,13 @@ p {
 	
 }
 
+#Panel_UV26 {
+	position: absolute;
+	top: 010px;
+	left: 2510px;
+	/* Dimension 500 x 200			              */
+	
+}
 
 
 

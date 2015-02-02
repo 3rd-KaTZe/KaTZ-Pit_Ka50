@@ -68,9 +68,27 @@ function panel_uv26_update(KaTZPit_data){
 	if (dataread_posit(KaTZPit_data["UV26_Flag"],1) ==1) {$("#UV_SW_LR").attr('src','images/Switch-Metal-U3.gif')} 
 	if (dataread_posit(KaTZPit_data["UV26_Flag"],1) ==0) {$("#UV_SW_LR").attr('src','images/Switch-Metal-L3.gif')} 
 	
+	// Switch On / Off
+	if (dataread_posit(KaTZPit_data["UV26_Flag"],5) ==1) {
+		// Affichage du switch en position on (pas encore implémenté sur KA)
+		//$("#UV_SW_On").attr('src','images/Switch-Metal-R3.gif')
+		// Allumage de l'affichage digital
+		document.getElementById("UV26_flare").style.display = "block"
+		// Affichage Flare restantes
+		document.getElementById('UV26_flare').innerHTML = dataread_split_2(KaTZPit_data["UV26_Data"])[0]
+		
+	
+} 
+	else {
+		// Affichage du switch en position off (pas encore implémenté sur KA)
+		// $("#UV_SW_On").attr('src','images/Switch-Metal-L3.gif')
+		// Extinction de l'affichage digital
+		document.getElementById("UV26_flare").style.display = "none"
+	}
+	
 	
 	// Affichage Flare restantes
-	document.getElementById('UV26_flare').innerHTML = dataread_split_2(KaTZPit_data["UV26_Data"])[0]
+	//document.getElementById('UV26_flare').innerHTML = dataread_split_2(KaTZPit_data["UV26_Data"])[0]
 	
 
 }

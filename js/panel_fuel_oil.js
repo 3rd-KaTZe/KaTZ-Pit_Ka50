@@ -7,9 +7,9 @@ function panel_fuel_update(KaTZPit_data){
 	// Panneau de gestion fuel et de démarrage APU/Moteur
 	
 		// Affichage quantité fuel réservoir AV, AR, Total
-		document.getElementById('Fuel_AV').innerHTML = KaTZPit_data["Fuel_AV"]
-		document.getElementById('Fuel_AR').innerHTML = KaTZPit_data["Fuel_AR"]
-		document.getElementById('Fuel_T').innerHTML = KaTZPit_data["Fuel_AV"] + KaTZPit_data["Fuel_AR"]
+		document.getElementById('Fuel_AV').innerHTML = KaTZPit_data["Fuel_1"]
+		document.getElementById('Fuel_AR').innerHTML = KaTZPit_data["Fuel_2"]
+		document.getElementById('Fuel_T').innerHTML = KaTZPit_data["Fuel_1"] + KaTZPit_data["Fuel_2"]
 		
 
 			

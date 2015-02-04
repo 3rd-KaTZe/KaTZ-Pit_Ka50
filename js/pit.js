@@ -73,6 +73,8 @@ function pit_main(){
 	if (Panel_On["Abris"]==1){panel_device_abris(KaTZPit_data)}	
 	
 	if (Panel_On["Weapon"]==1){panel_weapon_update(KaTZPit_data)}	
+
+	if (Panel_On["UV26"]==1){panel_uv26_update(KaTZPit_data)}	
 	
 	CmdSend()
 }

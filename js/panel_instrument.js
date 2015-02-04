@@ -27,7 +27,7 @@ function panel_instrument_flight(KaTZPit_data){
 		instrument_HSI(i_Cap, i_Way, i_Route)	
 		
 		// Affichage Distance WP
-		document.getElementById('HSI_WP_dist').innerHTML = (KaTZPit_data["WP_dist"]/10).toFixed(0)
+		document.getElementById('HSI_WP_dist').innerHTML = (KaTZPit_data["WP_dist"]).toFixed(0)
 		WP_dist
 		// Affichage Direction WP aiguille jaune
 		i_wp_dir = (KaTZPit_data["Way"]/10 + KaTZPit_data["Cap"]/10 ) % 360

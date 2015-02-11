@@ -98,7 +98,7 @@
 <!-- Panneau de selection des sub panels affichés -->
 <div id="Panel_Launcher">
 
-<img src="images/emergency/Launcher-Panel.gif" width="100" height="1050"   usemap="#Panel_Launcher"> 
+<img src="images/emergency/Launcher-Panel.png" width="100" height="1050"   usemap="#Panel_Launcher"> 
 
 	<map name="Panel_Launcher">
 		
@@ -118,7 +118,7 @@
 		<area shape="rect" coords="10,680,90,720" href="javascript:menu_Toggle('Vierge')">
 		<area shape="rect" coords="10,720,90,780" href="javascript:menu_Toggle('Vierge')">
 		<area shape="rect" coords="10,780,90,820" href="javascript:menu_Toggle('Vierge')">
-		<area shape="rect" coords="10,820,90,880" href="javascript:menu_Toggle('Target')">
+		<area shape="rect" coords="10,820,90,880" href="javascript:menu_Toggle('Doc')">
 		<area shape="rect" coords="10,880,90,920" href="javascript:menu_Toggle('Radio_360')">
 		<area shape="rect" coords="10,920,90,980" href="javascript:menu_Toggle('Vierge')">
 		<area shape="rect" coords="10,980,90,1020" href="javascript:menu_Toggle('Navigation')">
@@ -1114,6 +1114,37 @@
 	<img src="images/Switch-Metal-L3.gif" width="80" height="80" id="UV_SW_Num"> </SPAN>
 	
 </div>
+
+<div id="Panel_Doc">
+
+	<img src="doc/Doc_Menu.png" width="600" height="800" usemap="#Doc_P"> 
+	
+	<map name="Doc_P">
+
+			<!-- Check List -->
+			<area shape="rect" coords="10,160,100,200" href="javascript:menu_Affiche(1)">
+			<area shape="rect" coords="10,200,100,240" href="javascript:menu_Affiche(2)">
+			<area shape="rect" coords="10,240,100,280" href="javascript:menu_Affiche(3)">
+			<area shape="rect" coords="10,280,100,320" href="javascript:menu_Affiche(4)">
+			<area shape="rect" coords="10,320,100,360" href="javascript:menu_Affiche(5)">
+			
+			<!-- Brief Mission -->
+			<area shape="rect" coords="10,400,100,430" href="javascript:menu_Affiche(6)">
+			<area shape="rect" coords="10,430,100,470" href="javascript:menu_Affiche(7)">
+			
+			<!-- Photo Mission -->
+			<area shape="rect" coords="10,470,100,510" href="javascript:menu_Affiche(8)">
+			<area shape="rect" coords="10,510,100,550" href="javascript:menu_Affiche(9)">
+			
+			<!-- Document Nav -->
+			<area shape="rect" coords="10,585,100,625" href="javascript:menu_Affiche(11)">
+			
+	</map> 
+	
+	<SPAN style="position: absolute; left: 110px; top: 155px; width: 800px; height: 600px" usemap="#Doc_Aff_P">
+	<img src="doc/Doc_Affiche_0.png" width="800" height="600" id="Doc_Affiche"> </SPAN>
+	
+</div>	
 
 </body>
 </html>

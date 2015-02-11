@@ -58,7 +58,7 @@ p {
 
 	position: absolute;
 	top: 10px;
-	left: 1900px;
+	left: 1950px;
 	/* Dimension 100 x 775			              */
 	font-family:arial, sans-serif;
 	font-size:100%;
@@ -271,19 +271,27 @@ p {
 
 #Panel_Weapon {
 	position: absolute;
-	top: 010px;
-	left: 2010px;
+	top: 620px;
+	left: 1200px;
 	/* Dimension 500 x 200			              */
 	
 }
 
 #Panel_UV26 {
 	position: absolute;
-	top: 010px;
-	left: 2510px;
+	top: 620px;
+	left: 1700px;
 	/* Dimension 500 x 200			              */
 	
 }
+#Panel_Doc {
+	position: absolute;
+	top: 100px;
+	left: 2100px;
+	/* Dimension 500 x 200			              */
+	
+}
+
 
 
 

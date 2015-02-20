@@ -152,6 +152,33 @@
 
 </div>
 
+<div id="Cadran_Clock">
+	<img src="images/analog/Clock-RU.png" width="330" height="330" usemap="#Clock_P"> 
+
+	<map name="Clock_P">
+		<area shape="circle" coords="290,290,30" href="javascript:CmdDCSRaw('52900401')">
+	</map> 
+	
+	<!-- Aiguille 	-->
+	<SPAN style="position: absolute; left: 150px; top: 0px; width: 30px; height: 330px">
+	<img src="images/analog/Clock-RU-AIG-hr.png" width="30" height="330" id="AIG_Clock_hr"> </SPAN>	
+	<SPAN style="position: absolute; left: 150px; top: 0px; width: 30px; height: 330px">
+	<img src="images/analog/Clock-RU-AIG-mn.png" width="30" height="330" id="AIG_Clock_mn"> </SPAN>		
+	<SPAN style="position: absolute; left: 150px; top: 0px; width: 30px; height: 330px">
+	<img src="images/analog/Clock-RU-AIG-sec.png" width="30" height="330" id="AIG_Clock_sec"> </SPAN>
+	
+	<SPAN style="position: absolute; left: 150px; top: 165px; width: 30px; height: 120px">
+	<img src="images/analog/Clock-RU-AIG-mn-chrono.png" width="30" height="120" id="AIG_Chrono_mn"> </SPAN>	
+	<SPAN style="position: absolute; left: 150px; top: 165px; width: 30px; height: 120px">
+	<img src="images/analog/Clock-RU-AIG-Sec-chrono.png" width="30" height="120" id="AIG_Chrono_sec"> </SPAN>			
+	
+	<SPAN style="position: absolute; left: 150px; top: 45px; width: 30px; height: 120px">
+	<img src="images/analog/Clock-RU-AIG-hr-flt.png" width="30" height="120" id="AIG_FLT_hr"> </SPAN>	
+	<SPAN style="position: absolute; left: 150px; top: 45px; width: 30px; height: 120px">
+	<img src="images/analog/Clock-RU-AIG-mn-chrono.png" width="30" height="120" id="AIG_FLT_mn"> </SPAN>			
+
+</div>
+
 
 <div id="Cadran_Vario">
 	<img src="images/analog/Vario-mi.gif" width="300" height="300"  > 
@@ -335,8 +362,8 @@
 	<SPAN style="position: absolute; left: 255px; top: 75px; width: 50px; height: 50px">
 	<img src="images/z_Led-Bouton_Vert.gif" width="50" height="50"  id="Dlink_All" data-internal-id="0" onclick="javascript:CmdSiocDCS('Dlink_All')">
 	</SPAN>
-	<SPAN style="position: absolute; left: 45px; top: 135px; width: 50px; height: 50px">
-	<!-- <img src="images/z_Led-Bouton_Vert.gif" width="50" height="50"  id="Vierge" data-internal-id="0" onclick="javascript:CmdSiocDCS('Vierge')">
+	<!-- <SPAN style="position: absolute; left: 45px; top: 135px; width: 50px; height: 50px">
+	<img src="images/z_Led-Bouton_Vert.gif" width="50" height="50"  id="Vierge" data-internal-id="0" onclick="javascript:CmdSiocDCS('Vierge')">
 	</SPAN> -->
 	<SPAN style="position: absolute; left: 105px; top: 135px; width: 50px; height: 50px">
 	<img src="images/z_Led-Bouton_Jaune.gif" width="50" height="50"  id="Clear" data-internal-id="0" onclick="javascript:CmdSiocDCS('Clear')">
@@ -347,8 +374,6 @@
 	<SPAN style="position: absolute; left: 225px; top: 135px; width: 50px; height: 50px">
 	<img src="images/z_Led-Bouton_Jaune.gif" width="50" height="50"  id="Send_Mem" data-internal-id="0" onclick="javascript:CmdSiocDCS('Send_Mem')">
 	</SPAN>
-
-	
 
 </div>
 

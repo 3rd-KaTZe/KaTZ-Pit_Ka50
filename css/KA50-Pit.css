@@ -92,7 +92,7 @@ p {
 #Cadran_Pitch {
 	position: absolute;
 	top: 900px;
-	left: 540px;
+	left: 500px;
 	/* left: 500px; */
 	/* Dimension 400 x 400			              */
 }
@@ -100,6 +100,13 @@ p {
 #Cadran_RPM {
 	position: absolute;
 	top: 570px;
+	left: 120px;
+	/* Dimension 400 x 400			              */
+}
+
+#Cadran_Clock {
+	position: absolute;
+	top: 890px;
 	left: 120px;
 	/* Dimension 400 x 400			              */
 }
@@ -212,7 +219,7 @@ p {
 #Panel_Pilototo {
 	position: absolute;
 	top: 950px;
-	left: 120px;
+	left: 1200px;
 	/* Dimension 775 x 10			              */
 	font-family:arial, sans-serif;
 	font-size:100%;
@@ -278,8 +285,8 @@ p {
 
 #Panel_Weapon {
 	position: absolute;
-	top: 650px;
-	left: 1300px;
+	top: 420px;
+	left: 2010px;
 	/* Dimension 500 x 200			              */
 	
 }
@@ -287,7 +294,7 @@ p {
 #Panel_UV26 {
 	position: absolute;
 	top: 420px;
-	left: 2010px;
+	left: 2520px;
 	/* Dimension 500 x 200			              */
 	
 }

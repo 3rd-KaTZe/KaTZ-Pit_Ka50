@@ -137,6 +137,13 @@ p {
 	/* Dimension 400 x 400			              */
 }
 
+#Cadran_EngExTemp{
+	position: absolute;
+	top: 250px;
+	left: 1250px;
+	/* Dimension 400 x 400			              */
+}
+
 #Panel_Datalink {
 	position: absolute;
 	top: 010px;

@@ -43,7 +43,7 @@ function panel_pilototo_update(KaTZPit_data){
 	
 	if (dataread_posit(KaTZPit_data["AP_KA2"],1) ==1) {$("#PA-Hover").fadeIn()} else {$("#PA-Hover").fadeOut()}	
 	if (dataread_posit(KaTZPit_data["AP_KA2"],2) ==1) {$("#PA-Descent").fadeIn()} else {$("#PA-Descent").fadeOut()}	
-	if (dataread_posit(KaTZPit_data["Wpn_Flag"],5) ==1) {$("#PA-TgtTurn").fadeIn()} else {$("#PA-TgtTurn").fadeOut()}	
+	if (dataread_posit(KaTZPit_data["AP_KA2"],3) ==1) {$("#PA-TgtTurn").fadeIn()} else {$("#PA-TgtTurn").fadeOut()}	
 
 	
 }

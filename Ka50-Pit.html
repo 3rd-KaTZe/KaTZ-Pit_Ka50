@@ -144,7 +144,7 @@
 
 
 <div id="Cadran_RPM">
-	<img src="images/analog/rpm.gif" width="300" height="300"  > 
+	<img src="images/engine/EngRpm27.png" width="300" height="300"  > 
 
 	<!-- Aiguille -->
 	<SPAN style="position: absolute; left: 0px; top: 0px; width: 300px; height: 300px">
@@ -154,7 +154,7 @@
 
 
 <div id="Cadran_Vario">
-	<img src="images/analog/Vario.gif" width="300" height="300"  > 
+	<img src="images/analog/Vario-mi.gif" width="300" height="300"  > 
 	
 	<!-- Aiguille -->
 	<SPAN style="position: absolute; left: 0px; top: 0px; width: 300px; height: 300px">
@@ -255,8 +255,34 @@
     
 </div>
 
+<div id="Cadran_EngExTemp">
+	<img src="images/engine/Eng_ExTemp.gif" width="300" height="300"  >  
+	
+	<!-- Aiguille L-->
+	<SPAN style="position: absolute; left: 23px; top: 80px; width: 100px; height: 100px">
+	<img src="images/engine/F_Aiguille.gif" width="130" height="130" id="Eng_ExTemp_L">
+	</SPAN>
+	
+	<!-- Aiguille R-->
+	<SPAN style="position: absolute; left: 149px; top: 80px; width: 100px; height: 100px">
+	<img src="images/engine/F_Aiguille.gif" width="130" height="130" id="Eng_ExTemp_R">
+	</SPAN>
+
+	<!-- Aiguilles Température Mini -->
+	<SPAN style="position: absolute; left: 48px; top: 170px; width: 80px; height: 80px">
+	<img src="images/engine/MT_Aiguille.png" width="80" height="80" border="0" id="AM_TEM_mL">
+	</SPAN>
+
+	<SPAN style="position: absolute; left: 174px; top: 170px; width: 80px; height: 80px">
+	<img src="images/engine/MT_Aiguille.png" width="80" height="80" border="0" id="AM_TEM_mR">
+	</SPAN>
+	
+
+	
+</div>
+
 <div id="Cadran_RPM2">
-	<img src="images/analog/rpm.gif" width="300" height="300"  > 
+	<img src="images/engine/EngRpm27.png" width="300" height="300"  > 
 	
 	<!-- Aiguille -->
 	<SPAN style="position: absolute; left: 0px; top: 0px; width: 300px; height: 300px">
@@ -267,6 +293,8 @@
 	<SPAN style="position: absolute; left: 0px; top: 0px; width: 300px; height: 300px">
 	<img src="images/engine/M_Aiguille_R.gif" width="300" height="300" id="AIG_RPM_Eng_R">
 	</SPAN>	
+	
+
 
 </div>
 
@@ -278,7 +306,7 @@
 <div id="Panel_Datalink">
 
 
-	<img src="images/panel/DataLink_Panel_D.gif" width="320" height="200"  > 
+	<img src="images/panel/DataLink_Panel.png" width="320" height="200"  > 
 	
 	<SPAN style="position: absolute; left: 45px; top: 15px; width: 50px; height: 50px">
 	<img src="images/z_Led-Bouton_Vert.gif" width="50" height="50"  id="Dlink_T1" data-internal-id="0" onclick="javascript:CmdSiocDCS('Dlink_T1')">
@@ -308,8 +336,8 @@
 	<img src="images/z_Led-Bouton_Vert.gif" width="50" height="50"  id="Dlink_All" data-internal-id="0" onclick="javascript:CmdSiocDCS('Dlink_All')">
 	</SPAN>
 	<SPAN style="position: absolute; left: 45px; top: 135px; width: 50px; height: 50px">
-	<img src="images/z_Led-Bouton_Vert.gif" width="50" height="50"  id="Vierge" data-internal-id="0" onclick="javascript:CmdSiocDCS('Vierge')">
-	</SPAN>
+	<!-- <img src="images/z_Led-Bouton_Vert.gif" width="50" height="50"  id="Vierge" data-internal-id="0" onclick="javascript:CmdSiocDCS('Vierge')">
+	</SPAN> -->
 	<SPAN style="position: absolute; left: 105px; top: 135px; width: 50px; height: 50px">
 	<img src="images/z_Led-Bouton_Jaune.gif" width="50" height="50"  id="Clear" data-internal-id="0" onclick="javascript:CmdSiocDCS('Clear')">
 	</SPAN>
@@ -339,7 +367,7 @@
 
 <div id="Panel_Rotor">
 
-	<img src="images/rotor/Rotor-Panel_D.gif" width="500" height="200"  > 
+	<img src="images/rotor/Rotor-Panel.png" width="500" height="200"  > 
 	
 	<SPAN style="position: absolute; left: 125px; top: 150px; width: 75px; height: 40px ; font-size:1.5em" id="Test_val"> </SPAN>
 	
@@ -377,7 +405,7 @@
 <!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
 <div id="Panel_Oil">
 
-	<img src="images/panel/Temp-Panel_50_D.gif" width="400" height="200"  > 
+	<img src="images/panel/Temp-Panel_50.png" width="400" height="200"  > 
 
 	
 
@@ -487,7 +515,7 @@
 <div id="Panel_Pilototo">
 
 
-	<img src="images/pilototo/Pilototo_Panel_50_D.gif" width="400" height="140"  > 
+	<img src="images/pilototo/Autopilot_Panel_50.png" width="400" height="140"  > 
 
 	
 
@@ -536,7 +564,7 @@
 <!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
 <div id="Panel_Electric">
 
-	<img src="images/electric/Electric_Panel_50.gif" width="400" height="400"  usemap="#Panel_Elec"> 
+	<img src="images/electric/Electric_Panel_50.png" width="400" height="400"  usemap="#Panel_Elec"> 
 
 		
 	<!-- Etat Batteries Left Right -->
@@ -604,7 +632,7 @@
 <!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
 <div id="Panel_Start">
 
-	<img src="images/fuel/Fuel-Panel_50.gif" width="600" height="400"  usemap="#Panel_Fuel"> 
+	<img src="images/fuel/Fuel-Panel_50.png" width="600" height="400"  usemap="#Panel_Fuel"> 
 
 	<!-- Mapping du bouton de lecture de niveau de fuel (13005101) -->
 	<!-- Switch de Type de demarrage et de Selection de moteur -->
@@ -938,7 +966,7 @@
 
 <div id="Panel_Abris">
 
-	<img src="images/device/Abris.gif" width="500" height="180"  usemap="#Abris_P">
+	<img src="images/device/Abris.png" width="500" height="180"  usemap="#Abris_P">
 
 	<map name="Abris_P">
 
@@ -971,7 +999,7 @@
 
 <div id="Panel_Weapon">
 
-	<img src="images/weapon/Weapon_Panel.gif" width="500" height="480" usemap="#Weapon_P">
+	<img src="images/weapon/Weapon_Panel.png" width="500" height="480" usemap="#Weapon_P">
 
 	<map name="Weapon_P">
 
@@ -1070,7 +1098,7 @@
 
 <div id="Panel_UV26">
 
-	<img src="images/weapon/UV26.gif" width="250" height="480" usemap="#UV26_P">
+	<img src="images/weapon/UV26.png" width="250" height="480" usemap="#UV26_P">
 
 	<map name="UV26_P">
 

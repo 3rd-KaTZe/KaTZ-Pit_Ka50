@@ -542,24 +542,29 @@
 
 	<img src="images/pilototo/Autopilot_Panel_50.png" width="400" height="140"  > 
 
-	
-
 	<!-- Voyant Auto Pilote -->
-	<SPAN style="position: absolute; left: 15px; top: 15px; width: 50px; height: 50px">
-	<img src="images/pilototo/PA_Bank.gif" width="50" height="50"  id="PA-Bank" data-internal-id="0" onclick="javascript:CmdSiocDCS('PA-Bank')">
-	</SPAN>
+	<SPAN style="position: absolute; left: 15px; top: 15px; width: 50px; height: 50px ">
+	<img src="images/pilototo/PA_Bank.gif" width="50" height="50"  id="PA-Bank" usemap="#P_Bank"> 
+	<map name="P_Bank">	<area shape="rect" coords="0,0,50,50" href="javascript:CmdDCSRaw(53300101)"> </map> </SPAN>
+	
+	
 	<SPAN style="position: absolute; left: 75px; top: 15px; width: 50px; height: 50px">
-	<img src="images/pilototo/PA_Pitch.gif" width="50" height="50"  id="PA-Pitch" data-internal-id="0" onclick="javascript:CmdSiocDCS('PA-Pitch')">
-	</SPAN>
+	<img src="images/pilototo/PA_Pitch.gif" width="50" height="50"  id="PA-Pitch" usemap="#P_Pitch">
+	<map name="P_Pitch">	<area shape="rect" coords="0,0,50,50" href="javascript:CmdDCSRaw(53300301)"> </map> </SPAN>
+	
 	<SPAN style="position: absolute; left: 15px; top: 75px; width: 50px; height: 50px">
-	<img src="images/pilototo/PA_Hdg.gif" width="50" height="50"  id="PA-Hdg" data-internal-id="0" onclick="javascript:CmdSiocDCS('PA-Hdg')">
-	</SPAN>
+	<img src="images/pilototo/PA_Hdg.gif" width="50" height="50"  id="PA-Hdg" usemap="#P_Hdg">
+	<map name="P_Hdg">	<area shape="rect" coords="0,0,50,50" href="javascript:CmdDCSRaw(53300201)"> </map> </SPAN>
+	
 	<SPAN style="position: absolute; left: 75px; top: 75px; width: 50px; height: 50px">
-	<img src="images/pilototo/PA_Alt.gif" width="50" height="50"  id="PA-Alt" data-internal-id="0" onclick="javascript:CmdSiocDCS('PA-Alt')">
-	</SPAN>
+	<img src="images/pilototo/PA_Alt.gif" width="50" height="50"  id="PA-Alt" usemap="#P_Alt">
+	<map name="P_Alt">	<area shape="rect" coords="0,0,50,50" href="javascript:CmdDCSRaw(53300401)"> </map> </SPAN>
+	
 	<SPAN style="position: absolute; left: 170px; top: 15px; width: 50px; height: 50px">
-	<img src="images/pilototo/PA_FD.gif" width="50" height="50"  id="PA-FD" data-internal-id="0" onclick="javascript:CmdSiocDCS('PA-FD')">
-	</SPAN>
+	<img src="images/pilototo/PA_FD.gif" width="50" height="50"  id="PA-FD" usemap="#P_FD">
+	<map name="P_FD">	<area shape="rect" coords="0,0,50,50" href="javascript:CmdDCSRaw(53300501)"> </map> </SPAN>
+	
+	
 	<SPAN style="position: absolute; left: 335px; top: 15px; width: 50px; height: 50px">
 	<img src="images/pilototo/P_Hover-v.gif" width="50" height="50"  id="PA-Hover">
 	</SPAN>

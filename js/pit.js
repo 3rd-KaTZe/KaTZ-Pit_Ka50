@@ -85,6 +85,8 @@ function pit_main(){
 
 	if (Panel_On["UV26"]==1){panel_uv26_update(KaTZPit_data)}	
 	
+	if (Panel_On["PVI800"]==1){panel_pvi_update(KaTZPit_data)}	
+	
 	CmdSend()
 }
 

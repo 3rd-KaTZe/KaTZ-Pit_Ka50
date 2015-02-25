@@ -42,6 +42,7 @@
 	<script type="text/javascript" src="js/panel_datalink.js"></script>
 	<script type="text/javascript" src="js/panel_navigation.js"></script>
 	<script type="text/javascript" src="js/panel_weapon.js"></script>
+	<script type="text/javascript" src="js/panel_pvi.js"></script>
 	<script type="text/javascript" src="js/panel_radio.js"></script>
 	<script type="text/javascript" src="js/panel_target.js"></script>
 	
@@ -1213,9 +1214,6 @@
 		<area shape="rect" coords="0,110,45,150" href="javascript:CmdDCSRaw('14800200')">-->
 	</map> 
 	
-	
-	
-
 	<!-- Selecteur Eclairage Intérieur Dome -->
 	<SPAN style="position: absolute; left: 27px; top: 70px; width: 40px; height: 100px">
 	<img src="images/switch/Switch-Metal-D4.png" width="40" height="100" id="E_Dome_L" usemap="#Dome_L"> </SPAN>
@@ -1320,7 +1318,153 @@
 	<SPAN style="position: absolute; left: 110px; top: 155px; width: 800px; height: 600px" usemap="#Doc_Aff_P">
 	<img src="doc/Doc_Affiche_0.png" width="800" height="600" id="Doc_Affiche"> </SPAN>
 	
-</div>	
+</div>
+
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+
+<div id="Panel_PVI800">
+
+	<img src="images/navigation/PVI800.png" width="400" height="750" usemap="#PVI800_P"> 
+	
+	<map name="PVI800_P">
+
+			<!-- Clavier du PVI 800 -->
+			<!-- Ligne 1 -->
+			<area shape="rect" coords="15,190,85,260" href="javascript:CmdDCSRaw('52001101')">
+			<area shape="rect" coords="90,190,160,260" href="javascript:CmdDCSRaw('52000201')">
+			<area shape="rect" coords="165,190,235,260" href="javascript:CmdDCSRaw('52000301')">
+			<area shape="rect" coords="240,190,310,260" href="javascript:CmdDCSRaw('52000401')">
+			<area shape="rect" coords="315,190,385,260" href="javascript:CmdDCSRaw('52001201')">
+			
+			<!-- Ligne 2-->
+			<area shape="rect" coords="15,265,85,335" href="javascript:CmdDCSRaw('52001301')">
+			<area shape="rect" coords="90,265,160,335" href="javascript:CmdDCSRaw('52000501')">
+			<area shape="rect" coords="165,265,235,335" href="javascript:CmdDCSRaw('52000601')">
+			<area shape="rect" coords="240,265,310,335" href="javascript:CmdDCSRaw('52000701')">
+			<area shape="rect" coords="315,265,385,335" href="javascript:CmdDCSRaw('52001401')">
+			
+			<!-- Ligne 3-->
+			<area shape="rect" coords="15,340,85,410" href="javascript:CmdDCSRaw('52001501')">
+			<area shape="rect" coords="90,340,160,410" href="javascript:CmdDCSRaw('52000801')">
+			<area shape="rect" coords="165,340,235,410" href="javascript:CmdDCSRaw('52000901')">
+			<area shape="rect" coords="240,340,310,410" href="javascript:CmdDCSRaw('52001001')">
+			<area shape="rect" coords="315,340,385,410" href="javascript:CmdDCSRaw('52001601')">
+			
+			<!-- Ligne 4-->
+			<area shape="rect" coords="15,415,85,485" href="javascript:CmdDCSRaw('52001701')">
+			<area shape="rect" coords="90,415,160,485" href="javascript:CmdDCSRaw('52001801')">
+			<area shape="rect" coords="165,415,235,485" href="javascript:CmdDCSRaw('52000101')">
+			<area shape="rect" coords="240,415,310,485" href="javascript:CmdDCSRaw('52001901')">
+			<area shape="rect" coords="315,415,385,485" href="javascript:CmdDCSRaw('52002001')">
+			
+			<!-- Ligne 5-->
+			<area shape="rect" coords="15,490,85,560" href="javascript:CmdDCSRaw('52002101')">
+			<area shape="rect" coords="90,490,160,560" href="javascript:CmdDCSRaw('52002201')">
+			<area shape="rect" coords="165,490,235,560" href="javascript:CmdDCSRaw('52002301')">
+			<area shape="rect" coords="240,490,310,560" href="javascript:CmdDCSRaw('52002401')">
+			<area shape="rect" coords="315,490,385,560" href="javascript:CmdDCSRaw('52002501')">
+			
+			<!-- Selecteur du PVI-->
+			<area shape="circle" coords="30,680,20" href="javascript:CmdDCSRaw('42002600')">
+			<area shape="circle" coords="30,640,20" href="javascript:CmdDCSRaw('42002601')">
+			<area shape="circle" coords="70,610,20" href="javascript:CmdDCSRaw('42002602')">
+			<area shape="circle" coords="130,590,20" href="javascript:CmdDCSRaw('42002603')">
+			<area shape="circle" coords="200,610,20" href="javascript:CmdDCSRaw('42002604')">
+			<area shape="circle" coords="220,640,20" href="javascript:CmdDCSRaw('42002605')">
+			<area shape="circle" coords="230,680,20" href="javascript:CmdDCSRaw('42002606')">
+			
+	</map> 
+	
+	<!-- Molette du Selecteur du PVI -->
+	<SPAN style="position: absolute; left: 107px; top: 602px; width: 60px; height: 150px">
+	<img src="images/navigation/Selecteur_demi.gif" width="60" height="150" id="Selec_pvi">
+	</SPAN>
+	
+	<!-- Selecteur Inu/Update -->
+	<SPAN style="position: absolute; left: 266px; top: 610px; width: 40px; height: 100px">
+	<img src="images/switch/Switch-Metal-D4.png" width="40" height="100" id="SW_pvi_inu" usemap="#pvi_inu"> </SPAN>
+	<map name="pvi_inu">	
+	<area shape="rect" coords="0,0,40,49"  href="javascript:CmdDCSRaw('12002801')"> 
+	<area shape="rect" coords="0,50,40,100"  href="javascript:CmdDCSRaw('12002800')"> 
+	</map>
+	</SPAN>
+	
+	<!-- Selecteur D-Link On/Off Update -->
+	<SPAN style="position: absolute; left: 332px; top: 610px; width: 40px; height: 100px">
+	<img src="images/switch/Switch-Metal-D4.png" width="40" height="100" id="SW_pvi_dlink" usemap="#pvi_dlink"> </SPAN>
+	<map name="pvi_dlink">	
+	<area shape="rect" coords="0,0,40,49"  href="javascript:CmdDCSRaw('12501601')"> 
+	<area shape="rect" coords="0,50,40,100"  href="javascript:CmdDCSRaw('12501600')"> 
+	</map>
+	</SPAN>
+	
+	<SPAN style="position: absolute; left: 25px; top: 232px; width: 50px; height: 16px">
+	<img src="images/navigation/Led_Btn_Vert.png" width="50" height="16" id="pvi_315">
+	</SPAN>
+	<SPAN style="position: absolute; left: 325px; top: 232px; width: 50px; height: 16px">
+	<img src="images/navigation/Led_Btn_Vert.png" width="50" height="16" id="pvi_519">
+	</SPAN>
+	
+	<SPAN style="position: absolute; left: 25px; top: 307px; width: 50px; height: 16px">
+	<img src="images/navigation/Led_Btn_Vert.png" width="50" height="16" id="pvi_316">
+	</SPAN>
+	<SPAN style="position: absolute; left: 325px; top: 307px; width: 50px; height: 16px">
+	<img src="images/navigation/Led_Btn_Vert.png" width="50" height="16" id="pvi_520">
+	</SPAN>
+	
+	<SPAN style="position: absolute; left: 25px; top: 382px; width: 50px; height: 16px">
+	<img src="images/navigation/Led_Btn_Vert.png" width="50" height="16" id="pvi_317">
+	</SPAN>
+	<SPAN style="position: absolute; left: 325px; top: 382px; width: 50px; height: 16px">
+	<img src="images/navigation/Led_Btn_Vert.png" width="50" height="16" id="pvi_521">
+	</SPAN>
+	
+	<SPAN style="position: absolute; left: 25px; top: 457px; width: 50px; height: 16px">
+	<img src="images/navigation/Led_Btn_Vert.png" width="50" height="16" id="pvi_318">
+	</SPAN>
+	<SPAN style="position: absolute; left: 100px; top: 457px; width: 50px; height: 16px">
+	<img src="images/navigation/Led_Btn_Jaune.png" width="50" height="16" id="pvi_313">
+	</SPAN>
+	<SPAN style="position: absolute; left: 250px; top: 457px; width: 50px; height: 16px">
+	<img src="images/navigation/Led_Btn_Jaune.png" width="50" height="16" id="pvi_314">
+	</SPAN>
+	<SPAN style="position: absolute; left: 325px; top: 457px; width: 50px; height: 16px">
+	<img src="images/navigation/Led_Btn_Vert.png" width="50" height="16" id="pvi_522">
+	</SPAN>
+	
+	
+	
+	<SPAN style="position: absolute; left: 25px; top: 532px; width: 50px; height: 16px">
+	<img src="images/navigation/Led_Btn_Vert.png" width="50" height="16" id="pvi_319">
+	</SPAN>
+	<SPAN style="position: absolute; left: 100px; top: 532px; width: 50px; height: 16px">
+	<img src="images/navigation/Led_Btn_Vert.png" width="50" height="16" id="pvi_320">
+	</SPAN>
+	<SPAN style="position: absolute; left: 175px; top: 532px; width: 50px; height: 16px">
+	<img src="images/navigation/Led_Btn_Vert.png" width="50" height="16" id="pvi_321">
+	</SPAN>
+	<SPAN style="position: absolute; left: 250px; top: 532px; width: 50px; height: 16px">
+	<img src="images/navigation/Led_Btn_Vert.png" width="50" height="16" id="pvi_322">
+	</SPAN>
+	<SPAN style="position: absolute; left: 325px; top: 532px; width: 50px; height: 16px">
+	<img src="images/navigation/Led_Btn_Vert.png" width="50" height="16" id="pvi_323">
+	</SPAN>
+
+	<!-- Affichage Ligne 1 -->
+	<SPAN style="position: absolute; left: 30px; top: 50px; width: 250px; height: 50px ; color:red; text-align:right; font-size:400%" id="PVI_T1"> </SPAN>
+	<SPAN style="position: absolute; left: 30px; top: 120px; width: 250px; height: 50px ; color:red; text-align:right; font-size:400%" id="PVI_T2"> </SPAN>
+	<SPAN style="position: absolute; left: 340px; top: 50px; width: 40px; height: 50px ; color:red; text-align:right; font-size:400%" id="PVI_T3"> </SPAN>
+	<SPAN style="position: absolute; left: 340px; top: 120px; width: 40px; height: 50px ; color:red; text-align:right; font-size:400%" id="PVI_T4"> </SPAN>
+	
+	
+	
+	
+	
+	
+	
+</div>		
+
+
 
 </body>
 </html>

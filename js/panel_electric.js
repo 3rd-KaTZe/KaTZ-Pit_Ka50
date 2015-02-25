@@ -84,3 +84,36 @@ function panel_electric_update(KaTZPit_data){
 		
 
 }
+
+function panel_electric_light(KaTZPit_data){
+
+		// Selecteur Dome L
+		if (dataread_posit(KaTZPit_data["E_NavLight"],6) ==1) {$("#E_Dome_L").attr('src','images/switch/Switch-Metal-U4.png')}	
+		if (dataread_posit(KaTZPit_data["E_NavLight"],6) ==0) {$("#E_Dome_L").attr('src','images/switch/Switch-Metal-D4.png')}	
+		
+		// Selecteur Panel Instrument
+		if (dataread_posit(KaTZPit_data["E_NavLight"],5) ==1) {$("#E_Panel_L").attr('src','images/switch/Switch-Metal-U4.png')}	
+		if (dataread_posit(KaTZPit_data["E_NavLight"],5) ==0) {$("#E_Panel_L").attr('src','images/switch/Switch-Metal-D4.png')}	
+		
+		// Selecteur Nav Light
+		if (dataread_posit(KaTZPit_data["E_NavLight"],4) ==3) {$("#E_Nav_L").attr('src','images/switch/Switch-Metal-U4.png')}	
+		else if (dataread_posit(KaTZPit_data["E_NavLight"],4) ==0) {$("#E_Nav_L").attr('src','images/switch/Switch-Metal-C4V.png')}	
+		else {$("#E_Nav_L").attr('src','images/switch/Switch-Metal-D4.png')}
+		
+		// Selecteur Form Light
+		if (dataread_posit(KaTZPit_data["E_NavLight"],3) ==3) {$("#E_Form_L").attr('src','images/switch/Switch-Metal-U4.png')}	
+		else if (dataread_posit(KaTZPit_data["E_NavLight"],3) ==0) {$("#E_Form_L").attr('src','images/switch/Switch-Metal-C4V.png')}	
+		else  {$("#E_Form_L").attr('src','images/switch/Switch-Metal-D4.png')}
+		
+		// Selecteur Blade Tip , Strobe
+		if (dataread_posit(KaTZPit_data["E_NavLight"],1) ==1) {$("#E_Beacon_L").attr('src','images/switch/Switch-Metal-U4.png')} else {$("#E_Beacon_L").attr('src','images/switch/Switch-Metal-D4.png')}
+		if (dataread_posit(KaTZPit_data["E_NavLight"],2) ==1) {$("#E_Blade_L").attr('src','images/switch/Switch-Metal-U4.png')} else {$("#E_Blade_L").attr('src','images/switch/Switch-Metal-D4.png')}	
+		
+		// Voyant Feux de Recherche 1ere condition = on, ou off >> 2eme condition = main ou backup
+		if (dataread_posit(KaTZPit_data["E_NavLight"],8) ==1 && dataread_posit(KaTZPit_data["E_NavLight"],7)==0) {$("#E_Landing_L").attr('src','images/switch/Switch-Metal-U4.png')}	
+		if (dataread_posit(KaTZPit_data["E_NavLight"],8) ==0) {$("#E_Landing_L").attr('src','images/switch/Switch-Metal-C4V.png')}	
+		if (dataread_posit(KaTZPit_data["E_NavLight"],8) ==1 && dataread_posit(KaTZPit_data["E_NavLight"],7)==1) {$("#E_Landing_L").attr('src','images/switch/Switch-Metal-D4.png')}
+
+
+
+}

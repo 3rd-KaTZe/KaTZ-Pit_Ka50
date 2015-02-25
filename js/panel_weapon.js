@@ -59,7 +59,7 @@ function panel_uv26_update(KaTZPit_data){
 	if (dataread_posit(KaTZPit_data["UV26_Flag"],3) ==1) {$("#UV26_Right").fadeIn()} else {$("#UV26_Right").fadeOut()}
 	
 	
-	// Switch Man/auto
+	// Switch Quant/Num
 	if (dataread_posit(KaTZPit_data["UV26_Flag"],2) ==1) {$("#UV_SW_Num").attr('src','images/Switch-Metal-R3.gif')} 
 	else {$("#UV_SW_Num").attr('src','images/Switch-Metal-L3.gif')}
 	
@@ -70,8 +70,8 @@ function panel_uv26_update(KaTZPit_data){
 	
 	// Switch On / Off
 	if (dataread_posit(KaTZPit_data["UV26_Flag"],5) ==1) {
-		// Affichage du switch en position on (pas encore implémenté sur KA)
-		//$("#UV_SW_On").attr('src','images/Switch-Metal-R3.gif')
+		
+		$("#UV_SW_On").attr('src','images/Switch-Metal-R3.gif')
 		// Allumage de l'affichage digital
 		document.getElementById("UV26_flare").style.display = "block"
 		// Affichage Flare restantes
@@ -81,7 +81,7 @@ function panel_uv26_update(KaTZPit_data){
 } 
 	else {
 		// Affichage du switch en position off (pas encore implémenté sur KA)
-		// $("#UV_SW_On").attr('src','images/Switch-Metal-L3.gif')
+		$("#UV_SW_On").attr('src','images/Switch-Metal-L3.gif')
 		// Extinction de l'affichage digital
 		document.getElementById("UV26_flare").style.display = "none"
 	}

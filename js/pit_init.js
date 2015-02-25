@@ -7,7 +7,7 @@ function panel_On_init(){
 
 	console.log("Initialisation des panels affichés")
 
-var Panel_On = { Init:0, Breakers:0, Electric_DC:1, Electric_AC:0, APU:0, Oil:1, Start:1, Rotor:1, Analog_1:0, Analog_2:0, 
+var Panel_On = { Init:0, Breakers:0, Light:1, Electric_DC:1, Electric_AC:0, APU:0, Oil:1, Start:1, Rotor:1, Analog_1:0, Analog_2:0, 
 	ARK_9:0, ARK_UD:0, Doppler:0, Radio_360:1, Fuel:0, Vierge:0, Navigation:0, Target:0, Weapon:1, UV26:1,
 	Pilototo:1,Datalink:1, Abris:1, Doc:0}
 
@@ -29,7 +29,7 @@ function paneldata_init(){
 		RPM_Rot:0, Pitch_Rot:1, Eng_Oil_deg:50005000, GB_Oil_deg:50005000, Eng_Oil_pre:50005000, GB_Oil_pre:50005000,
 		APU_Data:50005000, APU_Voyants:5555, APU_Typ:0,
 		Start_V:55, Start_Sel:0, Start_Typ:0,
-		Fuel_AV:0, Fuel_AR:0, Conso:0, Fuel_V:555, Fuel_P:555, Fuel_PE:5555,
+		Fuel_1:0, Fuel_2:0, Conso:0, Fuel_V:555, Fuel_P:555, Fuel_PE:5555,
 		E_DC_V:55555, E_AC_V:5555,	E_DC_SW:55555555, E_AC_SW:55555, 
 		AP_KA1:5555, AP_KA2:555, TGT_KA:55555,
 		Cockpit:0, Train:555555, WheelBrk:0, BrakePress:0,

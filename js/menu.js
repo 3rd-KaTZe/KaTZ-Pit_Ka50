@@ -28,6 +28,9 @@ function menu_Toggle(panel){
 	
 	Panel_On[panel] = (Panel_On[panel]+1) % 2
 	console.log(panel," = ",Panel_On[panel])
+
+	if (Panel_On["Light"] == 0) {document.getElementById("Panel_Light").style.display = "none"}
+	else {document.getElementById("Panel_Light").style.display = "block"}
 	
 	//if (Panel_On["APU"] == 0) {document.getElementById("Panel_APU").style.display = "none"}
 	//else {document.getElementById("Panel_APU").style.display = "block"}

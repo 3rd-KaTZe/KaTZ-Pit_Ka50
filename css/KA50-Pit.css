@@ -91,21 +91,21 @@ p {
 
 #Cadran_RPM {
 	position: absolute;
-	top: 570px;
+	top: 550px;
 	left: 120px;
 	/* Dimension 400 x 400			              */
 }
 
 #Cadran_Altitude {
 	position: absolute;
-	top: 570px;
+	top: 550px;
 	left: 430px;
 	/* Dimension 400 x 400			              */
 }
 
 #Cadran_Clock {
 	position: absolute;
-	top: 890px;
+	top: 870px;
 	left: 120px;
 	/* Dimension 400 x 400			              */
 }
@@ -121,8 +121,8 @@ p {
 
 #Cadran_ADI {
 	position: absolute;
-	top: 350px;
-	left: 700px;
+	top: 330px;
+	left: 720px;
 	/* Dimension 400 x 400			              */
 	text-align: center; 
 }
@@ -130,29 +130,29 @@ p {
 
 #Cadran_HSI {
 	position: absolute;
-	top: 820px;
-	left: 700px;
+	top: 780px;
+	left: 720px;
 	/* Dimension 400 x 400			              */
 }
 
 #Cadran_EngExTemp{
 	position: absolute;
 	top: 220px;
-	left: 1600px;
+	left: 1580px;
 	/* Dimension 400 x 400			              */
 }
 
 #Cadran_RPM2 {
 	position: absolute;
-	top: 520px;
-	left: 1600px;
+	top: 540px;
+	left: 1580px;
 	/* Dimension 400 x 400			              */
 }
 
 #Cadran_Fuel {
 	position: absolute;
-	top: 820px;
-	left: 1630px;
+	top: 860px;
+	left: 1610px;
 	/* Dimension 400 x 400			              */
 }
 
@@ -225,8 +225,8 @@ p {
 
 #Panel_Pilototo {
 	position: absolute;
-	top: 1080px;
-	left: 1620px;
+	top: 1000px;
+	left: 1150px;
 	/* Dimension 775 x 10			              */
 	font-family:arial, sans-serif;
 	font-size:100%;
@@ -289,19 +289,28 @@ p {
 	
 }
 
+#Panel_PVI800 {
+	position: absolute;
+	top: 240px;
+	left: 1150px;
+	/* Dimension 500 x 180			              */
+	font-family:arial, sans-serif;
+		
+}
+
 
 #Panel_Weapon {
 	position: absolute;
-	top: 740px;
-	left: 1110px;
+	top: 630px;
+	left: 2010px;
 	/* Dimension 500 x 200			              */
 	
 }
 
 #Panel_UV26 {
 	position: absolute;
-	top: 640px;
-	left: 2600px;
+	top: 630px;
+	left: 2520px;
 	/* Dimension 500 x 200			              */
 	
 }

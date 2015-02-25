@@ -55,6 +55,10 @@ function pit_main(){
 	// SYSTEM PANEL ------------------------------------------------------
 	
 	// Lancement des subroutines en fonction des panneaux affichés dans le KaKZ_Pit
+
+	// Switch Eclairage
+	if (Panel_On["Light"]==1){panel_electric_light(KaTZPit_data)}	
+
 	// Electric Panel
 	if (Panel_On["Electric_DC"]==1) {panel_electric_update(KaTZPit_data)}
 		

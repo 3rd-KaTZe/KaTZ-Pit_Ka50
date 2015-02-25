@@ -319,6 +319,25 @@ function instrument_EngTemp(left,right){
 	})
 }
 
+function instrument_FuelGauge(f,r){
+	var f_origine = -150
+	// La valeur a été convertie dans l'export, on recorrige
+	var f_gain = 0.375
+	
+	
+	$("#AIG_Fuel_F").css({
+		'-moz-transform':'rotate('+(f_origine+f_gain*f)+'deg)',
+		'-webkit-transform':'rotate('+(f_origine+f_gain*f)+'deg)',
+		'-ms-transform':'rotate('+(f_origine+f_gain*f)+'deg)',
+	})
+
+	$("#AIG_Fuel_R").css({
+		'-moz-transform':'rotate('+(f_origine+f_gain*r)+'deg)',
+		'-webkit-transform':'rotate('+(f_origine+f_gain*r)+'deg)',
+		'-ms-transform':'rotate('+(f_origine+f_gain*r)+'deg)',
+	})
+}
+
 function instrument_Vario(val){
 
 	

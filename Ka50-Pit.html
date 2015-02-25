@@ -103,11 +103,11 @@
 
 	<map name="Panel_Launcher">
 		
-		<area shape="rect" coords="10,20,90,80" href="javascript:menu_Toggle('Electric_DC')">
-		<area shape="rect" coords="10,80,90,120" href="javascript:menu_Toggle('Start')">
-		<area shape="rect" coords="10,120,90,180" href="javascript:menu_Toggle('Vierge')">
-		<area shape="rect" coords="10,180,90,220" href="javascript:menu_Toggle('Oil')">
-		<area shape="rect" coords="10,220,90,280" href="javascript:menu_Toggle('Rotor')">
+		<area shape="rect" coords="10,20,90,80" href="javascript:menu_Toggle('Light')">
+		<area shape="rect" coords="10,80,90,120" href="javascript:menu_Toggle('Vierge')">
+		<area shape="rect" coords="10,120,90,180" href="javascript:menu_Toggle('Electric_DC')">
+		<area shape="rect" coords="10,180,90,220" href="javascript:menu_Toggle('Start')">
+		<area shape="rect" coords="10,220,90,280" href="javascript:menu_Toggle('Vierge')">
 		<area shape="rect" coords="10,280,90,320" href="javascript:menu_Toggle('Vierge')">		
 		<area shape="rect" coords="10,320,90,380" href="javascript:menu_Toggle('Vierge')">		
 		<area shape="rect" coords="10,380,90,420" href="javascript:menu_Toggle('Pilototo')">
@@ -320,9 +320,24 @@
 	<SPAN style="position: absolute; left: 0px; top: 0px; width: 300px; height: 300px">
 	<img src="images/engine/M_Aiguille_R.gif" width="300" height="300" id="AIG_RPM_Eng_R">
 	</SPAN>	
+
 	
 
+</div>
 
+<div id="Cadran_Fuel">
+	<img src="images/engine/Fuel-Tank.png" width="250" height="250"  > 
+	
+	<!-- Aiguille -->
+	<SPAN style="position: absolute; left: 112px; top: 0px; width: 300px; height: 300px">
+	<img src="images/engine/FT_Aiguille_F.png" width="25" height="250" id="AIG_Fuel_F">
+	</SPAN>	
+	
+	<!-- Aiguille -->
+	<SPAN style="position: absolute; left: 112px; top: 0px; width: 300px; height: 300px">
+	<img src="images/engine/FT_Aiguille_R.png" width="25" height="250" id="AIG_Fuel_R">
+	</SPAN>	
+	
 </div>
 
 
@@ -994,6 +1009,8 @@
 
 </div>
 
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+
 <div id="Panel_Abris">
 
 	<img src="images/device/Abris.png" width="500" height="180"  usemap="#Abris_P">
@@ -1026,6 +1043,8 @@
 	
 	
 </div>	
+
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
 
 <div id="Panel_Weapon">
 
@@ -1125,6 +1144,7 @@
 
 </div>
 
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
 
 <div id="Panel_UV26">
 
@@ -1132,16 +1152,7 @@
 
 	<map name="UV26_P">
 
-								
-			<!-- Bouton Side Left-Right -->
-			<area shape="rect" coords="0,110,45,150" href="javascript:CmdDCSRaw('42200200')">
-			<area shape="rect" coords="45,110,90,150" href="javascript:CmdDCSRaw('42200201')">
-			<area shape="rect" coords="90,110,125,150" href="javascript:CmdDCSRaw('42200202')">
-			
-			<!-- Bouton Quant Num -->
-			<area shape="rect" coords="130,110,175,150" href="javascript:CmdDCSRaw('42200300')">
-			<area shape="rect" coords="200,110,250,150" href="javascript:CmdDCSRaw('42200301')">
-			
+						
 			<!-- Boutons Programme -->
 			<area shape="rect" coords="40,210,110,270" href="javascript:CmdDCSRaw('52200401')">
 			<area shape="rect" coords="140,210,210,270" href="javascript:CmdDCSRaw('52200601')">
@@ -1165,14 +1176,116 @@
 	<!-- Quantité Flare -->
 	<SPAN style="position: absolute; left: 40px; top: 40px; width: 140px; height: 70px ; color:red; text-align:right; font-size:400%" id="UV26_flare"> </SPAN>
 	
-	<!-- Selecteur Man/Auto-->
+	<!-- Selecteur Side , Quant/Num , On/OFF-->
 	<SPAN style="position: absolute; left: 30px; top: 132px; width: 80px; height: 80px">
-	<img src="images/Switch-Metal-L3.gif" width="80" height="80" id="UV_SW_LR"> </SPAN>
+	<img src="images/Switch-Metal-L3.gif" width="80" height="80" id="UV_SW_LR" usemap="#UV_LR"> </SPAN>
+	<map name="UV_LR">	
+	<area shape="rect" coords="0,0,32,40"  href="javascript:CmdDCSRaw('42200200')"> 
+	<area shape="rect" coords="33,0,66,40"  href="javascript:CmdDCSRaw('42200201')"> 
+	<area shape="rect" coords="66,0,100,40"  href="javascript:CmdDCSRaw('42200202')"> 
+	</map> </SPAN>
 	
 	<SPAN style="position: absolute; left: 140px; top: 132px; width: 80px; height: 80px">
-	<img src="images/Switch-Metal-L3.gif" width="80" height="80" id="UV_SW_Num"> </SPAN>
+	<img src="images/Switch-Metal-L3.gif" width="80" height="80" id="UV_SW_Num" usemap="#UV_Num"> </SPAN>
+	<map name="UV_Num">	
+	<area shape="rect" coords="0,0,49,40"  href="javascript:CmdDCSRaw('42200300')"> 
+	<area shape="rect" coords="50,0,100,40"  href="javascript:CmdDCSRaw('42200301')"> 
+	</map> </SPAN>
+	
+	<SPAN style="position: absolute; left: 85px; top: 407px; width: 80px; height: 80px">
+	<img src="images/Switch-Metal-L3.gif" width="80" height="80" id="UV_SW_On" usemap="#UV_On"> 
+	<map name="UV_On">	
+	<area shape="rect" coords="0,0,49,40"  href="javascript:CmdSiocDCS3('12201201','12201000','12201200')"> 
+	<area shape="rect" coords="50,0,100,40"  href="javascript:CmdSiocDCS3('12201201','12201001','12201200')"> 
+	</map> </SPAN>
+
 	
 </div>
+
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+
+<div id="Panel_Light">
+
+	<img src="images/light/Light_Panel.png" width="500" height="200" usemap="#Light_P">
+
+	<map name="Light_P">
+		<!-- Bouton Light off 
+		<area shape="rect" coords="0,110,45,150" href="javascript:CmdDCSRaw('14800200')">-->
+	</map> 
+	
+	
+	
+
+	<!-- Selecteur Eclairage Intérieur Dome -->
+	<SPAN style="position: absolute; left: 27px; top: 70px; width: 40px; height: 100px">
+	<img src="images/switch/Switch-Metal-D4.png" width="40" height="100" id="E_Dome_L" usemap="#Dome_L"> </SPAN>
+	<map name="Dome_L">	
+	<area shape="rect" coords="0,0,40,49"  href="javascript:CmdDCSRaw('15100901')"> 
+	<area shape="rect" coords="0,50,40,100"  href="javascript:CmdDCSRaw('15100900')"> 
+	</map>
+	</SPAN>
+	
+	<!-- Selecteur Eclairage Intérieur Panel -->
+	<SPAN style="position: absolute; left: 78px; top: 70px; width: 40px; height: 100px">
+	<img src="images/switch/Switch-Metal-D4.png" width="40" height="100" id="E_Panel_L" usemap="#Panel_L"> </SPAN>
+	<map name="Panel_L">	
+	<area shape="rect" coords="0,0,40,49"  href="javascript:CmdSiocDCS4('15100101','15100301','15100701','15100501')"> 
+	<area shape="rect" coords="0,50,40,100"  href="javascript:CmdSiocDCS4('15100100','15100300','15100700','15100500')"> 
+	</map>
+	</SPAN>
+	
+	<!-- Selecteur Nav Light -->
+	<SPAN style="position: absolute; left: 160px; top: 70px; width: 40px; height: 100px">
+	<img src="images/switch/Switch-Metal-C4V.png" width="40" height="100" id="E_Nav_L" usemap="#Nav_L"> </SPAN>
+	<map name="Nav_L">	
+	<area shape="rect" coords="0,0,40,32"  href="javascript:CmdDCSRaw('44500403')"> 
+	<area shape="rect" coords="0,33,40,66"  href="javascript:CmdDCSRaw('44500400')"> 
+	<area shape="rect" coords="0,67,40,100"  href="javascript:CmdDCSRaw('44500402')"> 
+	</map>
+	</SPAN>
+	
+	<!-- Selecteur Formation Light -->
+	<SPAN style="position: absolute; left: 215px; top: 70px; width: 40px; height: 100px">
+	<img src="images/switch/Switch-Metal-C4V.png" width="40" height="100" id="E_Form_L" usemap="#Form_L"> </SPAN>
+	<map name="Form_L">	
+	<area shape="rect" coords="0,0,40,32"  href="javascript:CmdDCSRaw('44500203')"> 
+	<area shape="rect" coords="0,33,40,66"  href="javascript:CmdDCSRaw('44500200')"> 
+	<area shape="rect" coords="0,67,40,100"  href="javascript:CmdDCSRaw('44500202')"> 
+	</map>
+	</SPAN>
+	
+	<!-- Selecteur Blade Tip -->
+	<SPAN style="position: absolute; left: 290px; top: 70px; width: 40px; height: 100px">
+	<img src="images/switch/Switch-Metal-D4.png" width="40" height="100" id="E_Blade_L" usemap="#Blade_L"> </SPAN>
+	<map name="Blade_L">	
+	<area shape="rect" coords="0,0,40,49"  href="javascript:CmdDCSRaw('14500101')"> 
+	<area shape="rect" coords="0,50,40,100"  href="javascript:CmdDCSRaw('14500100')"> 
+	</map>
+	</SPAN>
+	
+	<!-- Selecteur Beacon Light -->
+	<SPAN style="position: absolute; left: 340px; top: 70px; width: 40px; height: 100px">
+	<img src="images/switch/Switch-Metal-D4.png" width="40" height="100" id="E_Beacon_L" usemap="#Beacon_L"> </SPAN>
+	<map name="Beacon_L">	
+	<area shape="rect" coords="0,0,40,49"  href="javascript:CmdDCSRaw('14500301')"> 
+	<area shape="rect" coords="0,50,40,100"  href="javascript:CmdDCSRaw('14500300')"> 
+	</map>
+	</SPAN>
+
+	<!-- Selecteur Landing Lights -->
+	<SPAN style="position: absolute; left: 420px; top: 70px; width: 40px; height: 100px">
+	<img src="images/switch/Switch-Metal-C4V.png" width="40" height="100" id="E_Landing_L" usemap="#Landing_L"> </SPAN>
+	<map name="Landing_L">	
+	<area shape="rect" coords="0,0,40,32"  href="javascript:CmdSiocDCS3('14400101','14400200','0')"> 
+	<area shape="rect" coords="0,33,40,66"  href="javascript:CmdDCSRaw('14400100')"> 
+	<area shape="rect" coords="0,67,40,100"  href="javascript:CmdSiocDCS3('14400101','14400201','0')"> 
+	</map>
+	</SPAN>
+	
+	
+</div>
+
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
 
 <div id="Panel_Doc">
 

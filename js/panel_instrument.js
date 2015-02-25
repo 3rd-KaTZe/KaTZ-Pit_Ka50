@@ -84,6 +84,9 @@ function panel_instrument_engine(KaTZPit_data){
 		instrument_Pitch(KaTZPit_data["Pitch_Rot"])
 		instrument_RPM(KaTZPit_data["RPM_Rot"]/10)
 		
+		// Jauge de Fuel
+		instrument_FuelGauge(KaTZPit_data["Fuel_1"],KaTZPit_data["Fuel_2"])
+				
 }
 
 function panel_instrument_rotor(KaTZPit_data){		

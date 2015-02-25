@@ -28,6 +28,12 @@ function panel_pvi_update(KaTZPit_data){
 	
 	// Selecteur PVI
 	switch_PVI(dataread_posit(KaTZPit_data["Pvi800_6"],1)+5,1)
+	
+	// Affichage PVI
+	document.getElementById('PVI_T1').innerHTML = KaTZPit_data["Pvi800_1"]
+	document.getElementById('PVI_T2').innerHTML = KaTZPit_data["Pvi800_2"]
+	document.getElementById('PVI_T3').innerHTML = dataread_split_2(KaTZPit_data["Pvi800_3"])[1]
+	document.getElementById('PVI_T4').innerHTML = dataread_split_2(KaTZPit_data["Pvi800_3"])[0]
 		
 		
 }

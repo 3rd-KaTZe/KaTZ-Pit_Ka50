@@ -38,7 +38,7 @@ function paneldata_init(){
 		D15_drift:50005000, D15_drift_V:55, Sling_2D:50005000, Sling_3D:50005000, 
 		DLinkL1:0, DLinkL2:0, DLinkL3:0, Tgt_Btn:5555, Wpn_Ka:55555555, Wpn_Lamp:55, Wpn_Flag:55555,Wpn_Ammo:50005000,Wpn_SW_1:555555,
 		UV26_Data:50005000, UV26_Flag:5555, Abris1:50005000, Abris2:50005000, Abris3:50005000, 
-		Pvi800_1:0 , Pvi800_2:0, Pvi800_3:50005000, Pvi800_4:55555555 , Pvi800_5:5555555 , Pvi800_6:555,
+		Pvi800_1:0 , Pvi800_2:0, Pvi800_3:50005000, Pvi800_4:55555555 , Pvi800_5:5555555 , Pvi800_6:550,
 		Collectif:0,
 		LowAlt:0,
 		FL_mode:0, FL_main:0, FL_main_old:0,

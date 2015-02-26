@@ -396,8 +396,35 @@
 
 <!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
 
-
-
+<div id="Panel_DLINK_Select">
+	<img src="images/panel/Datalink-Select.png" width="400" height="200" usemap="#PVT800_P"> 
+	
+	<map name="PVT800_P">
+			<!-- Selecteur d'ID-->
+			<area shape="circle" coords="60,30,20" href="javascript:CmdDCSRaw('42501400')">
+			<area shape="circle" coords="100,40,20" href="javascript:CmdDCSRaw('42501401')">
+			<area shape="circle" coords="135,70,20" href="javascript:CmdDCSRaw('42501402')">
+			<area shape="circle" coords="145,120,20" href="javascript:CmdDCSRaw('42501403')">
+			
+			<!-- Selecteur DATA-->
+			<area shape="circle" coords="210,50,20" href="javascript:CmdDCSRaw('42501500')">
+			<area shape="circle" coords="280,30,20" href="javascript:CmdDCSRaw('42501501')">
+			<area shape="circle" coords="360,60,20" href="javascript:CmdDCSRaw('42501502')">
+			<area shape="circle" coords="370,120,20" href="javascript:CmdDCSRaw('42501503')">
+	</map> 
+	
+	
+	<!-- Molette du Selecteur du PVI -->
+	<SPAN style="position: absolute; left: 30px; top: 45px; width: 60px; height: 150px">
+	<img src="images/navigation/Selecteur_demi.gif" width="60" height="150" id="Selec_dlink_1">
+	</SPAN>
+	
+	<!-- Molette du Selecteur du PVI -->
+	<SPAN style="position: absolute; left: 250px; top: 45px; width: 60px; height: 150px">
+	<img src="images/navigation/Selecteur_demi.gif" width="60" height="150" id="Selec_dlink_2">
+	</SPAN>
+	
+	</div>		
 
 <!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
 
@@ -1207,16 +1234,11 @@
 
 <div id="Panel_Light">
 
-	<img src="images/light/Light_Panel.png" width="500" height="200" usemap="#Light_P">
+	<img src="images/light/Light_Panel.png" width="500" height="200">
 
-	<map name="Light_P">
-		<!-- Bouton Light off 
-		<area shape="rect" coords="0,110,45,150" href="javascript:CmdDCSRaw('14800200')">-->
-	</map> 
-	
-	<!-- Selecteur Eclairage Intérieur Dome -->
+		<!-- Selecteur Eclairage Intérieur Dome -->
 	<SPAN style="position: absolute; left: 27px; top: 70px; width: 40px; height: 100px">
-	<img src="images/switch/Switch-Metal-D4.png" width="40" height="100" id="E_Dome_L" usemap="#Dome_L"> </SPAN>
+	<img src="images/switch/Switch-Metal-D4.png" width="40" height="100" id="E_Dome_L" usemap="#Dome_L"> 
 	<map name="Dome_L">	
 	<area shape="rect" coords="0,0,40,49"  href="javascript:CmdDCSRaw('15100901')"> 
 	<area shape="rect" coords="0,50,40,100"  href="javascript:CmdDCSRaw('15100900')"> 
@@ -1225,7 +1247,7 @@
 	
 	<!-- Selecteur Eclairage Intérieur Panel -->
 	<SPAN style="position: absolute; left: 78px; top: 70px; width: 40px; height: 100px">
-	<img src="images/switch/Switch-Metal-D4.png" width="40" height="100" id="E_Panel_L" usemap="#Panel_L"> </SPAN>
+	<img src="images/switch/Switch-Metal-D4.png" width="40" height="100" id="E_Panel_L" usemap="#Panel_L"> 
 	<map name="Panel_L">	
 	<area shape="rect" coords="0,0,40,49"  href="javascript:CmdSiocDCS4('15100101','15100301','15100701','15100501')"> 
 	<area shape="rect" coords="0,50,40,100"  href="javascript:CmdSiocDCS4('15100100','15100300','15100700','15100500')"> 
@@ -1234,7 +1256,7 @@
 	
 	<!-- Selecteur Nav Light -->
 	<SPAN style="position: absolute; left: 160px; top: 70px; width: 40px; height: 100px">
-	<img src="images/switch/Switch-Metal-C4V.png" width="40" height="100" id="E_Nav_L" usemap="#Nav_L"> </SPAN>
+	<img src="images/switch/Switch-Metal-C4V.png" width="40" height="100" id="E_Nav_L" usemap="#Nav_L"> 
 	<map name="Nav_L">	
 	<area shape="rect" coords="0,0,40,32"  href="javascript:CmdDCSRaw('44500403')"> 
 	<area shape="rect" coords="0,33,40,66"  href="javascript:CmdDCSRaw('44500400')"> 
@@ -1244,7 +1266,7 @@
 	
 	<!-- Selecteur Formation Light -->
 	<SPAN style="position: absolute; left: 215px; top: 70px; width: 40px; height: 100px">
-	<img src="images/switch/Switch-Metal-C4V.png" width="40" height="100" id="E_Form_L" usemap="#Form_L"> </SPAN>
+	<img src="images/switch/Switch-Metal-C4V.png" width="40" height="100" id="E_Form_L" usemap="#Form_L"> 
 	<map name="Form_L">	
 	<area shape="rect" coords="0,0,40,32"  href="javascript:CmdDCSRaw('44500203')"> 
 	<area shape="rect" coords="0,33,40,66"  href="javascript:CmdDCSRaw('44500200')"> 
@@ -1254,7 +1276,7 @@
 	
 	<!-- Selecteur Blade Tip -->
 	<SPAN style="position: absolute; left: 290px; top: 70px; width: 40px; height: 100px">
-	<img src="images/switch/Switch-Metal-D4.png" width="40" height="100" id="E_Blade_L" usemap="#Blade_L"> </SPAN>
+	<img src="images/switch/Switch-Metal-D4.png" width="40" height="100" id="E_Blade_L" usemap="#Blade_L">
 	<map name="Blade_L">	
 	<area shape="rect" coords="0,0,40,49"  href="javascript:CmdDCSRaw('14500101')"> 
 	<area shape="rect" coords="0,50,40,100"  href="javascript:CmdDCSRaw('14500100')"> 
@@ -1263,7 +1285,7 @@
 	
 	<!-- Selecteur Beacon Light -->
 	<SPAN style="position: absolute; left: 340px; top: 70px; width: 40px; height: 100px">
-	<img src="images/switch/Switch-Metal-D4.png" width="40" height="100" id="E_Beacon_L" usemap="#Beacon_L"> </SPAN>
+	<img src="images/switch/Switch-Metal-D4.png" width="40" height="100" id="E_Beacon_L" usemap="#Beacon_L">
 	<map name="Beacon_L">	
 	<area shape="rect" coords="0,0,40,49"  href="javascript:CmdDCSRaw('14500301')"> 
 	<area shape="rect" coords="0,50,40,100"  href="javascript:CmdDCSRaw('14500300')"> 
@@ -1272,7 +1294,7 @@
 
 	<!-- Selecteur Landing Lights -->
 	<SPAN style="position: absolute; left: 420px; top: 70px; width: 40px; height: 100px">
-	<img src="images/switch/Switch-Metal-C4V.png" width="40" height="100" id="E_Landing_L" usemap="#Landing_L"> </SPAN>
+	<img src="images/switch/Switch-Metal-C4V.png" width="40" height="100" id="E_Landing_L" usemap="#Landing_L"> 
 	<map name="Landing_L">	
 	<area shape="rect" coords="0,0,40,32"  href="javascript:CmdSiocDCS3('14400101','14400200','0')"> 
 	<area shape="rect" coords="0,33,40,66"  href="javascript:CmdDCSRaw('14400100')"> 
@@ -1382,7 +1404,7 @@
 	
 	<!-- Selecteur Inu/Update -->
 	<SPAN style="position: absolute; left: 266px; top: 610px; width: 40px; height: 100px">
-	<img src="images/switch/Switch-Metal-D4.png" width="40" height="100" id="SW_pvi_inu" usemap="#pvi_inu"> </SPAN>
+	<img src="images/switch/Switch-Metal-D4.png" width="40" height="100" id="SW_pvi_inu" usemap="#pvi_inu"> 
 	<map name="pvi_inu">	
 	<area shape="rect" coords="0,0,40,49"  href="javascript:CmdDCSRaw('12002801')"> 
 	<area shape="rect" coords="0,50,40,100"  href="javascript:CmdDCSRaw('12002800')"> 
@@ -1391,7 +1413,7 @@
 	
 	<!-- Selecteur D-Link On/Off Update -->
 	<SPAN style="position: absolute; left: 332px; top: 610px; width: 40px; height: 100px">
-	<img src="images/switch/Switch-Metal-D4.png" width="40" height="100" id="SW_pvi_dlink" usemap="#pvi_dlink"> </SPAN>
+	<img src="images/switch/Switch-Metal-D4.png" width="40" height="100" id="SW_pvi_dlink" usemap="#pvi_dlink"> 
 	<map name="pvi_dlink">	
 	<area shape="rect" coords="0,0,40,49"  href="javascript:CmdDCSRaw('12501601')"> 
 	<area shape="rect" coords="0,50,40,100"  href="javascript:CmdDCSRaw('12501600')"> 
@@ -1456,14 +1478,13 @@
 	<SPAN style="position: absolute; left: 337px; top: 36px; width: 40px; height: 50px ; color:red;  text-align:center; font-size:340%" id="PVI_T3"> </SPAN>
 	<SPAN style="position: absolute; left: 337px; top: 106px; width: 40px; height: 50px ; color:red;  text-align:center; font-size:340%" id="PVI_T4"> </SPAN>
 	
+	</div>		
 	
-	
-	
-	
-	
-	
-</div>		
+	<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
 
+	
+	
+	
 
 
 </body>

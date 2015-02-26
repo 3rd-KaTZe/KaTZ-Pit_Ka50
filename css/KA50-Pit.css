@@ -225,8 +225,8 @@ p {
 
 #Panel_Pilototo {
 	position: absolute;
-	top: 1000px;
-	left: 1150px;
+	top: 10px;
+	left: 2550px;
 	/* Dimension 775 x 10			              */
 	font-family:arial, sans-serif;
 	font-size:100%;
@@ -292,6 +292,15 @@ p {
 #Panel_PVI800 {
 	position: absolute;
 	top: 240px;
+	left: 1150px;
+	/* Dimension 500 x 180			              */
+	font-family:arial, sans-serif;
+		
+}
+
+#Panel_DLINK_Select {
+	position: absolute;
+	top: 1000px;
 	left: 1150px;
 	/* Dimension 500 x 180			              */
 	font-family:arial, sans-serif;

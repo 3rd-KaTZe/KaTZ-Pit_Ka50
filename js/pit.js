@@ -69,8 +69,6 @@ function pit_main(){
 	
 	if (Panel_On["Oil"]==1){panel_oil_update(KaTZPit_data)}
 	
-	if (Panel_On["Datalink"]==1){panel_datalink_update(KaTZPit_data)}
-	
 	if (Panel_On["Pilototo"]==1){panel_pilototo_update(KaTZPit_data)}
 	
 	if (Panel_On["Radio_360"]==1){panel_radio_update(KaTZPit_data)}
@@ -86,6 +84,10 @@ function pit_main(){
 	if (Panel_On["UV26"]==1){panel_uv26_update(KaTZPit_data)}	
 	
 	if (Panel_On["PVI800"]==1){panel_pvi_update(KaTZPit_data)}	
+	
+	if (Panel_On["Datalink"]==1){panel_datalink_update(KaTZPit_data)}
+	
+	if (Panel_On["PVT800"]==1){panel_datalink_pvt800(KaTZPit_data)}
 	
 	CmdSend()
 }

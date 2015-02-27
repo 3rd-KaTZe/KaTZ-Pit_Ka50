@@ -106,7 +106,7 @@
 		
 		<area shape="rect" coords="10,20,90,80" href="javascript:menu_Toggle('Light')">
 		<area shape="rect" coords="10,80,90,120" href="javascript:menu_Toggle('Vierge')">
-		<area shape="rect" coords="10,120,90,180" href="javascript:menu_Toggle('Electric_DC')">
+		<area shape="rect" coords="10,120,90,180" href="javascript:menu_Toggle('Vierge')">
 		<area shape="rect" coords="10,180,90,220" href="javascript:menu_Toggle('Start')">
 		<area shape="rect" coords="10,220,90,280" href="javascript:menu_Toggle('Vierge')">
 		<area shape="rect" coords="10,280,90,320" href="javascript:menu_Toggle('Vierge')">		
@@ -115,8 +115,8 @@
 		<area shape="rect" coords="10,420,90,480" href="javascript:menu_Toggle('Abris')">
 		<area shape="rect" coords="10,480,90,520" href="javascript:menu_Toggle('Vierge')">
 		<area shape="rect" coords="10,520,90,580" href="javascript:menu_Toggle('Datalink')">
-		<area shape="rect" coords="10,580,90,620" href="javascript:menu_Toggle('Weapon')">
-		<area shape="rect" coords="10,620,90,680" href="javascript:menu_Toggle('UV26')">
+		<area shape="rect" coords="10,580,90,620" href="javascript:menu_Toggle('Vierge')">
+		<area shape="rect" coords="10,620,90,680" href="javascript:menu_Toggle('Combat')">
 		<area shape="rect" coords="10,680,90,720" href="javascript:menu_Toggle('Vierge')">
 		<area shape="rect" coords="10,720,90,780" href="javascript:menu_Toggle('Vierge')">
 		<area shape="rect" coords="10,780,90,820" href="javascript:menu_Toggle('Vierge')">
@@ -1086,9 +1086,7 @@
 			<!-- Bouton Mun,Tir,Ammo,Rafale -->
 			<area shape="rect" coords="40,300,100,335" href="javascript:CmdDCSRaw('11200501')">
 			<area shape="rect" coords="40,430,100,465" href="javascript:CmdDCSRaw('11200500')">
-			<area shape="rect" coords="185,300,240,335" href="javascript:CmdDCSRaw('41200402')">
-			<area shape="rect" coords="130,360,190,400" href="javascript:CmdDCSRaw('41200401')">
-			<area shape="rect" coords="185,430,240,465" href="javascript:CmdDCSRaw('41200400')">
+
 			<area shape="rect" coords="290,300,350,335" href="javascript:CmdDCSRaw('11200601')">
 			<area shape="rect" coords="290,430,350,465" href="javascript:CmdDCSRaw('11200600')">
 			<area shape="rect" coords="400,300,460,335" href="javascript:CmdDCSRaw('11202001')">
@@ -1156,21 +1154,152 @@
 	<SPAN style="position: absolute; left: 280px; top: 230px; width: 70px; height: 50px ; color:green; text-align:right; font-size:300%" id="Ammo_remain"> </SPAN>
 	<SPAN style="position: absolute; left: 400px; top: 230px; width: 70px; height: 50px ; color:green; text-align:right; font-size:300%" id="Ammo_rnds"> </SPAN>
 	
+		
+	<!-- Switch Master Arm -->
+	<SPAN style="position: absolute; left: 40px; top: 340px; width: 40px; height: 100px">
+	<img src="images/switch/Switch-Metal-D4.png" width="40" height="100" id="SW_Master" usemap="#wpn_marm"> 
+	<map name="wpn_marm">	
+	<area shape="rect" coords="0,0,40,49"  href="javascript:CmdDCSRaw('11200101')"> 
+	<area shape="rect" coords="0,50,40,100"  href="javascript:CmdDCSRaw('11200100')"> 
+	</map>
+	</SPAN>
+	
+	<SPAN style="position: absolute; left: 140px; top: 340px; width: 40px; height: 100px">
+	<img src="images/switch/Switch-Metal-U4.png" width="40" height="100" id="Wpn_Man" usemap="#SWpn_Man"> 
+	<map name="SWpn_Man">	
+	<area shape="rect" coords="0,0,40,49"  href="javascript:CmdDCSRaw('11200501')"> 
+	<area shape="rect" coords="0,50,40,100"  href="javascript:CmdDCSRaw('11200500')"> 
+	</map>
+	</SPAN>
+	
+	<SPAN style="position: absolute; left: 260px; top: 340px; width: 40px; height: 100px">
+	<img src="images/switch/Switch-Metal-C4V.png" width="40" height="100" id="Wpn_Burst" usemap="#SWpn_Burst"> 
+	<map name="SWpn_Burst">	
+	<area shape="rect" coords="0,0,40,32"  href="javascript:CmdDCSRaw('41200402')"> 
+	<area shape="rect" coords="0,33,40,66"  href="javascript:CmdDCSRaw('41200401')"> 
+	<area shape="rect" coords="0,67,40,100"  href="javascript:CmdDCSRaw('41200400')"> 
+	</map>
+	</SPAN>
+	
+	<SPAN style="position: absolute; left: 341px; top: 340px; width: 40px; height: 100px">
+	<img src="images/switch/Switch-Metal-D4.png" width="40" height="100" id="Wpn_Ammo" usemap="#SWpn_Ammo"> 
+	<map name="SWpn_Ammo">	
+	<area shape="rect" coords="0,0,40,49"  href="javascript:CmdDCSRaw('11200601')"> 
+	<area shape="rect" coords="0,50,40,100"  href="javascript:CmdDCSRaw('11200600')"> 
+	</map>
+	</SPAN>
+	
+	<SPAN style="position: absolute; left: 420px; top: 340px; width: 40px; height: 100px">
+	<img src="images/switch/Switch-Metal-D4.png" width="40" height="100" id="Wpn_Rof" usemap="#SWpn_Rof"> 
+	<map name="SWpn_Rof">	
+	<area shape="rect" coords="0,0,40,49"  href="javascript:CmdDCSRaw('11202001')"> 
+	<area shape="rect" coords="0,50,40,100"  href="javascript:CmdDCSRaw('11202000')"> 
+	</map>
+	</SPAN>
+	
+
+</div>
+
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+
+<div id="Panel_Weapon_2">
+
+	<img src="images/weapon/Weapon_Panel_2.png" width="500" height="300" usemap="#Weapon2_P">
+
+	<map name="Weapon2_P">
+
+			<!-- Bouton Autoturn, AAHO, AA, MOV, RESET -->
+			<area shape="rect" coords="120,15,190,85" href="javascript:CmdDCSRaw('51201001')">
+			<area shape="rect" coords="220,15,290,85" href="javascript:CmdDCSRaw('51201201')">
+			<area shape="rect" coords="120,95,190,165" href="javascript:CmdDCSRaw('51201101')">
+			<area shape="rect" coords="220,95,290,165" href="javascript:CmdDCSRaw('51201301')">
+			<area shape="rect" coords="400,200,470,270" href="javascript:CmdDCSRaw('51201601')">
+			
+			
+			<!-- Selecteur du mode Canon-->
+			<area shape="circle" coords="360,40,20" href="javascript:CmdDCSRaw('41201400')">
+			<area shape="circle" coords="415,40,20" href="javascript:CmdDCSRaw('41201401')">
+			<area shape="circle" coords="450,70,20" href="javascript:CmdDCSRaw('41201402')">
+			<area shape="circle" coords="470,100,20" href="javascript:CmdDCSRaw('41201403')">
+			<area shape="circle" coords="475,145,20" href="javascript:CmdDCSRaw('41201404')">
+		
+	</map> 
+	
+	<!-- Voyant Mode de Tir -->
+	
+	<SPAN style="position: absolute; left: 130px; top: 60px; width: 50px; height: 16px">
+	<img src="images/navigation/Led_Btn_Vert.png" width="50" height="16" id="wpn_autoturn">
+	</SPAN>
+	<SPAN style="position: absolute; left: 230px; top: 60px; width: 50px; height: 16px">
+	<img src="images/navigation/Led_Btn_Vert.png" width="50" height="16" id="wpn_AAHO">
+	</SPAN>
+	<SPAN style="position: absolute; left: 130px; top: 140px; width: 50px; height: 16px">
+	<img src="images/navigation/Led_Btn_Vert.png" width="50" height="16" id="wpn_AA">
+	</SPAN>
+	<SPAN style="position: absolute; left: 230px; top: 140px; width: 50px; height: 16px">
+	<img src="images/navigation/Led_Btn_Vert.png" width="50" height="16" id="wpn_MOVGRND">
+	</SPAN>
+	<SPAN style="position: absolute; left: 410px; top: 245px; width: 50px; height: 16px">
+	<img src="images/navigation/Led_Btn_Vert.png" width="50" height="16" id="wpn_RESET">
+	</SPAN>
+		
 	<!-- Selecteur Man/Auto-->
-	<SPAN style="position: absolute; left: 32px; top: 345px; width: 80px; height: 80px">
-	<img src="images/Switch-Metal-U3.gif" width="80" height="80" id="Wpn_Man"> </SPAN>
+	<!-- Selecteur Train/Off -->
+	<SPAN style="position: absolute; left: 40px; top: 35px; width: 40px; height: 100px">
+	<img src="images/switch/Switch-Metal-D4.png" width="40" height="100" id="SW_wpn_train" usemap="#wpn_train"> 
+	<map name="wpn_train">	
+	<area shape="rect" coords="0,0,40,49"  href="javascript:CmdDCSRaw('11200901')"> 
+	<area shape="rect" coords="0,50,40,100"  href="javascript:CmdDCSRaw('11200900')"> 
+	</map>
+	</SPAN>
 	
-	<SPAN style="position: absolute; left: 172px; top: 345px; width: 80px; height: 80px">
-	<img src="images/Switch-Metal-D3.gif" width="80" height="80" id="Wpn_Burst"> </SPAN>
+	<!-- Selecteur K-041 -->
+	<SPAN style="position: absolute; left: 40px; top: 185px; width: 40px; height: 100px">
+	<img src="images/switch/Switch-Metal-D4.png" width="40" height="100" id="SW_wpn_k041" usemap="#wpn_k041"> 
+	<map name="wpn_k041">	
+	<area shape="rect" coords="0,0,40,49"  href="javascript:CmdDCSRaw('15900201')"> 
+	<area shape="rect" coords="0,50,40,100"  href="javascript:CmdDCSRaw('15900200')"> 
+	</map>
+	</SPAN>
 	
-	<SPAN style="position: absolute; left: 282px; top: 345px; width: 80px; height: 80px">
-	<img src="images/Switch-Metal-D3.gif" width="80" height="80" id="Wpn_Ammo"> </SPAN>
+	<!-- Selecteur HMS -->
+	<SPAN style="position: absolute; left: 135px; top: 185px; width: 40px; height: 100px">
+	<img src="images/switch/Switch-Metal-D4.png" width="40" height="100" id="SW_wpn_hms" usemap="#wpn_hms"> 
+	<map name="wpn_hms">	
+	<area shape="rect" coords="0,0,40,49"  href="javascript:CmdDCSRaw('12300201')"> 
+	<area shape="rect" coords="0,50,40,100"  href="javascript:CmdDCSRaw('12300200')"> 
+	</map>
+	</SPAN>
 	
-	<SPAN style="position: absolute; left: 392px; top: 345px; width: 80px; height: 80px">
-	<img src="images/Switch-Metal-D3.gif" width="80" height="80" id="Wpn_Rof"> </SPAN>
+	<!-- Selecteur Canon Auto -->
+	<SPAN style="position: absolute; left: 235px; top: 185px; width: 40px; height: 100px">
+	<img src="images/switch/Switch-Metal-D4.png" width="40" height="100" id="SW_wpn_canmod" usemap="#wpn_canmod"> 
+	<map name="wpn_canmod">	
+	<area shape="rect" coords="0,0,40,49"  href="javascript:CmdDCSRaw('11201701')"> 
+	<area shape="rect" coords="0,50,40,100"  href="javascript:CmdDCSRaw('11201700')"> 
+	</map>
+	</SPAN>
+	
+	<!-- Selecteur LAS -->
+	<SPAN style="position: absolute; left: 340px; top: 185px; width: 40px; height: 100px">
+	<img src="images/switch/Switch-Metal-D4.png" width="40" height="100" id="SW_wpn_las" usemap="#wpn_las"> 
+	<map name="wpn_las">	
+	<area shape="rect" coords="0,0,40,49"  href="javascript:CmdDCSRaw('11100101')"> 
+	<area shape="rect" coords="0,50,40,100"  href="javascript:CmdDCSRaw('11100100')"> 
+	</map>
+	</SPAN>
+	
+	<!-- Molette du Selecteur Canon -->
+	<SPAN style="position: absolute; left: 360px; top: 55px; width: 60px; height: 150px">
+	<img src="images/navigation/Selecteur_demi.gif" width="60" height="150" id="wpn_Selec_can">
+	</SPAN>
+	
+	
+	
 
 
 </div>
+
 
 <!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
 

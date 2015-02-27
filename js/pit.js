@@ -60,10 +60,10 @@ function pit_main(){
 	if (Panel_On["Light"]==1){panel_electric_light(KaTZPit_data)}	
 
 	// Electric Panel
-	if (Panel_On["Electric_DC"]==1) {panel_electric_update(KaTZPit_data)}
+	//if (Panel_On["Electric_DC"]==1) {panel_electric_update(KaTZPit_data)}
 		
-	// Start Panel
-	if (Panel_On["Start"]==1){panel_fuel_update(KaTZPit_data)}
+	// Start  : Start panel et Electric Panel
+	if (Panel_On["Start"]==1){panel_fuel_update(KaTZPit_data) ; panel_electric_update(KaTZPit_data)} 
 	
 	if (Panel_On["Rotor"]==1){panel_instrument_rotor(KaTZPit_data)}
 	
@@ -79,9 +79,9 @@ function pit_main(){
 	
 	if (Panel_On["Abris"]==1){panel_device_abris(KaTZPit_data)}	
 	
-	if (Panel_On["Weapon"]==1){panel_weapon_update(KaTZPit_data)}	
+	if (Panel_On["Weapon"]==1){panel_weapon_update(KaTZPit_data) ; panel_weapon2_update(KaTZPit_data); panel_uv26_update(KaTZPit_data)  }	
 
-	if (Panel_On["UV26"]==1){panel_uv26_update(KaTZPit_data)}	
+	//if (Panel_On["UV26"]==1){panel_uv26_update(KaTZPit_data)}	
 	
 	if (Panel_On["PVI800"]==1){panel_pvi_update(KaTZPit_data)}	
 	

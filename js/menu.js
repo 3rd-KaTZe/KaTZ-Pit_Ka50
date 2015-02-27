@@ -35,8 +35,8 @@ function menu_Toggle(panel){
 	//if (Panel_On["APU"] == 0) {document.getElementById("Panel_APU").style.display = "none"}
 	//else {document.getElementById("Panel_APU").style.display = "block"}
 
-	if (Panel_On["Start"] == 0) {document.getElementById("Panel_Start").style.display = "none"}
-	else {document.getElementById("Panel_Start").style.display = "block"}
+	if (Panel_On["Start"] == 0) {document.getElementById("Panel_Start").style.display = "none" ; document.getElementById("Panel_Electric").style.display = "none"}
+	else {document.getElementById("Panel_Start").style.display = "block" ; document.getElementById("Panel_Electric").style.display = "block"}
 	
 	if (Panel_On["Oil"] == 0) {document.getElementById("Panel_Oil").style.display = "none"}
 	else {document.getElementById("Panel_Oil").style.display = "block"}
@@ -65,14 +65,22 @@ function menu_Toggle(panel){
 	else {document.getElementById("Panel_Navigation").style.display = "block"}
 
 		
-	if (Panel_On["Electric_DC"] == 0) {document.getElementById("Panel_Electric").style.display = "none"}
-	else {document.getElementById("Panel_Electric").style.display = "block"}
+	//if (Panel_On["Electric_DC"] == 0) {document.getElementById("Panel_Electric").style.display = "none"}
+	//else {document.getElementById("Panel_Electric").style.display = "block"}
 	
-	if (Panel_On["Weapon"] == 0) {document.getElementById("Panel_Weapon").style.display = "none"}
-	else {document.getElementById("Panel_Weapon").style.display = "block"}
+	if (Panel_On["Combat"] == 0) {
+	document.getElementById("Panel_Weapon").style.display = "none" ;
+	document.getElementById("Panel_Weapon_2").style.display = "none" ;
+	document.getElementById("Panel_UV26").style.display = "none"
+	}
+	else {
+	document.getElementById("Panel_Weapon").style.display = "block" ; 
+	document.getElementById("Panel_Weapon_2").style.display = "block" ;
+	document.getElementById("Panel_UV26").style.display = "block"
+	document.getElementById("Panel_Start").style.display = "none" ;
+	document.getElementById("Panel_Electric").style.display = "none"
+	}
 
-	if (Panel_On["UV26"] == 0) {document.getElementById("Panel_UV26").style.display = "none"}
-	else {document.getElementById("Panel_UV26").style.display = "block"}
 	
 	if (Panel_On["Doc"] == 0) {document.getElementById("Panel_Doc").style.display = "none"}
 	else {document.getElementById("Panel_Doc").style.display = "block"}

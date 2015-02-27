@@ -279,7 +279,7 @@ p {
 
 #Panel_Abris {
 	position: absolute;
-	top: 880px;
+	top: 1020px;
 	left: 2010px;
 	/* Dimension 500 x 180			              */
 	font-family:arial, sans-serif;
@@ -310,15 +310,23 @@ p {
 
 #Panel_Weapon {
 	position: absolute;
-	top: 630px;
+	top: 220px;
 	left: 2010px;
-	/* Dimension 500 x 200			              */
+	/* Dimension 500 x 480			              */
+	
+}
+
+#Panel_Weapon_2 {
+	position: absolute;
+	top: 710px;
+	left: 2010px;
+	/* Dimension 500 x 300			              */
 	
 }
 
 #Panel_UV26 {
 	position: absolute;
-	top: 630px;
+	top: 220px;
 	left: 2520px;
 	/* Dimension 500 x 200			              */
 	

@@ -71,14 +71,19 @@ function menu_Toggle(panel){
 	if (Panel_On["Combat"] == 0) {
 	document.getElementById("Panel_Weapon").style.display = "none" ;
 	document.getElementById("Panel_Weapon_2").style.display = "none" ;
+	document.getElementById("Panel_Shkval").style.display = "none";
 	document.getElementById("Panel_UV26").style.display = "none"
+
 	}
 	else {
 	document.getElementById("Panel_Weapon").style.display = "block" ; 
 	document.getElementById("Panel_Weapon_2").style.display = "block" ;
-	document.getElementById("Panel_UV26").style.display = "block"
+	document.getElementById("Panel_Shkval").style.display = "block";
+	document.getElementById("Panel_UV26").style.display = "block" ;
 	document.getElementById("Panel_Start").style.display = "none" ;
-	document.getElementById("Panel_Electric").style.display = "none"
+	document.getElementById("Panel_Electric").style.display = "none" ; 
+	document.getElementById("Panel_Light").style.display = "none"
+
 	}
 
 	

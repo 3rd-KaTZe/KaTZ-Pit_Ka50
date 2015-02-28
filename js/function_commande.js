@@ -173,3 +173,33 @@ function Door(){
 		CmdDCSRaw('11701600')}
 
 }
+
+function Cmd_HMS(increment){
+	// On incremente la valeur de HMS rotactor
+	var hms = (dataread_posit(KaTZPit_data["Shkval_1"],6) + 5) * 10 + dataread_posit(KaTZPit_data["Shkval_1"],5) + 5
+	var valcmd = hms + increment
+	
+	if (valcmd > 9) { CmdDCSRaw(12300101)}
+	else if (valcmd < 1) { CmdDCSRaw(12300100)}
+	else { cmd = 42300100 + hms + increment ; CmdDCSRaw(cmd) }
+}
+
+function Cmd_Shkval_Brt(increment){
+	// On incremente la valeur de HMS rotactor
+	var brt = (dataread_posit(KaTZPit_data["Shkval_1"],4) + 5) * 10 + dataread_posit(KaTZPit_data["Shkval_1"],3) + 5
+	var valcmd = brt + increment
+	
+	if (valcmd > 9) { CmdDCSRaw(10800201)}
+	else if (valcmd < 1) { CmdDCSRaw(10800200)}
+	else { cmd = 40800200 + brt + increment ; CmdDCSRaw(cmd) }
+}
+
+function Cmd_Shkval_Cont(increment){
+	// On incremente la valeur de HMS rotactor
+	var cont = (dataread_posit(KaTZPit_data["Shkval_1"],2) + 5) * 10 + dataread_posit(KaTZPit_data["Shkval_1"],1) + 5
+	var valcmd = cont + increment
+	
+	if (valcmd > 9) { CmdDCSRaw(10800301)}
+	else if (valcmd < 1) { CmdDCSRaw(10800300)}
+	else { cmd = 40800300 + cont + increment ; CmdDCSRaw(cmd) }
+}

@@ -102,6 +102,53 @@ function switch_Canon(pos){
 
 }
 
+function panel_weapon_shkval(KaTZPit_data){
+		
+		
+	// Switch Hud Light
+	if (dataread_posit(KaTZPit_data["Shkval_1"],8) ==1) {$("#Shkv_Hud").attr('src','images/switch/Switch-Metal-U4.png')} 
+	else {$("#Shkv_Hud").attr('src','images/switch/Switch-Metal-D4.png')}
+	
+	// Switch TV Black
+	if (dataread_posit(KaTZPit_data["Shkval_1"],7) ==1) {$("#Shkv_Black").attr('src','images/switch/Switch-Metal-U4.png')} 
+	else {$("#Shkv_Black").attr('src','images/switch/Switch-Metal-D4.png')}
+
+	// Rotator HMS sur position 6-5
+	var hms = (dataread_posit(KaTZPit_data["Shkval_1"],6) + 5) * 10 + dataread_posit(KaTZPit_data["Shkval_1"],5) + 5
+	var shkval_b = (dataread_posit(KaTZPit_data["Shkval_1"],4) + 5) * 10 + dataread_posit(KaTZPit_data["Shkval_1"],3) + 5
+	var shkval_c = (dataread_posit(KaTZPit_data["Shkval_1"],2) + 5) * 10 + dataread_posit(KaTZPit_data["Shkval_1"],1) + 5
+
+	rotate_shkval(hms,shkval_b,shkval_c)
+	
+}
+
+function rotate_shkval(h,b,c){
+	var c_origine = -120
+	var c_gain = 24
+
+	$("#shkval_hud").css({
+		'-moz-transform':'rotate('+(c_origine+c_gain*h)+'deg)',
+		'-webkit-transform':'rotate('+(c_origine+c_gain*h)+'deg)',
+		'-ms-transform':'rotate('+(c_origine+c_gain*h)+'deg)',
+	})
+
+	$("#shkval_brt").css({
+		'-moz-transform':'rotate('+(c_origine+c_gain*b)+'deg)',
+		'-webkit-transform':'rotate('+(c_origine+c_gain*b)+'deg)',
+		'-ms-transform':'rotate('+(c_origine+c_gain*b)+'deg)',
+	})
+	
+	$("#shkval_cont").css({
+		'-moz-transform':'rotate('+(c_origine+c_gain*c)+'deg)',
+		'-webkit-transform':'rotate('+(c_origine+c_gain*c)+'deg)',
+		'-ms-transform':'rotate('+(c_origine+c_gain*c)+'deg)',
+	})
+
+}
+
+
+
+
 
 function panel_uv26_update(KaTZPit_data){
 		

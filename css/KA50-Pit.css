@@ -324,6 +324,15 @@ p {
 	
 }
 
+#Panel_Shkval {
+	position: absolute;
+	top: 010px;
+	left: 2010px;
+	/* Dimension 500 x 200			              */
+	
+}
+
+
 #Panel_UV26 {
 	position: absolute;
 	top: 220px;

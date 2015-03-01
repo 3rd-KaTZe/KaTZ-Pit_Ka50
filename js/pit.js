@@ -66,6 +66,8 @@ function pit_main(){
 	if (Panel_On["Start"]==1){panel_fuel_update(KaTZPit_data) ; panel_electric_update(KaTZPit_data)} 
 	
 	if (Panel_On["Rotor"]==1){panel_instrument_rotor(KaTZPit_data)}
+
+	if (Panel_On["Stick"]==1){panel_pilototo_input(KaTZPit_data)}
 	
 	if (Panel_On["Oil"]==1){panel_oil_update(KaTZPit_data)}
 	

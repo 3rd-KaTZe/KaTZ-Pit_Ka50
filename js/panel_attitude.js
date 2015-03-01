@@ -98,4 +98,3 @@ function Translate_Yaw(val){
 	})
 }
 
-	

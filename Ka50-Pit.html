@@ -583,57 +583,60 @@
 <div id="Panel_Pilototo">
 
 
-	<img src="images/pilototo/Autopilot_Panel_50.png" width="400" height="140"  > 
+	<img src="images/pilototo/Autopilot_Panel_50.png" width="500" height="200"  > 
 
 	<!-- Voyant Auto Pilote -->
-	<SPAN style="position: absolute; left: 15px; top: 15px; width: 50px; height: 50px ">
-	<img src="images/pilototo/PA_Bank.gif" width="50" height="50"  id="PA-Bank" usemap="#P_Bank"> 
-	<map name="P_Bank">	<area shape="rect" coords="0,0,50,50" href="javascript:CmdDCSRaw(53300101)"> </map> </SPAN>
+	<SPAN style="position: absolute; left: 30px; top: 20px; width: 70px; height: 70px ">
+	<img src="images/pilototo/PA_Bank.png" width="70" height="70"  id="PA-Bank" usemap="#P_Bank"> 
+	<map name="P_Bank">	<area shape="rect" coords="0,0,70,70" href="javascript:CmdDCSRaw(53300101)"> </map> </SPAN>
 	
 	
-	<SPAN style="position: absolute; left: 75px; top: 15px; width: 50px; height: 50px">
-	<img src="images/pilototo/PA_Pitch.gif" width="50" height="50"  id="PA-Pitch" usemap="#P_Pitch">
-	<map name="P_Pitch">	<area shape="rect" coords="0,0,50,50" href="javascript:CmdDCSRaw(53300301)"> </map> </SPAN>
+	<SPAN style="position: absolute; left: 120px; top: 20px; width: 70px; height: 70px">
+	<img src="images/pilototo/PA_Pitch.png" width="70" height="70"  id="PA-Pitch" usemap="#P_Pitch">
+	<map name="P_Pitch">	<area shape="rect" coords="0,0,70,70" href="javascript:CmdDCSRaw(53300301)"> </map> </SPAN>
 	
-	<SPAN style="position: absolute; left: 15px; top: 75px; width: 50px; height: 50px">
-	<img src="images/pilototo/PA_Hdg.gif" width="50" height="50"  id="PA-Hdg" usemap="#P_Hdg">
-	<map name="P_Hdg">	<area shape="rect" coords="0,0,50,50" href="javascript:CmdDCSRaw(53300201)"> </map> </SPAN>
+	<SPAN style="position: absolute; left: 30px; top: 110px; width: 70px; height: 70px">
+	<img src="images/pilototo/PA_Hdg.png" width="70" height="70"  id="PA-Hdg" usemap="#P_Hdg">
+	<map name="P_Hdg">	<area shape="rect" coords="0,0,70,70" href="javascript:CmdDCSRaw(53300201)"> </map> </SPAN>
 	
-	<SPAN style="position: absolute; left: 75px; top: 75px; width: 50px; height: 50px">
-	<img src="images/pilototo/PA_Alt.gif" width="50" height="50"  id="PA-Alt" usemap="#P_Alt">
-	<map name="P_Alt">	<area shape="rect" coords="0,0,50,50" href="javascript:CmdDCSRaw(53300401)"> </map> </SPAN>
+	<SPAN style="position: absolute; left: 120px; top: 110px; width: 70px; height: 70px">
+	<img src="images/pilototo/PA_Alt.png" width="70" height="70"  id="PA-Alt" usemap="#P_Alt">
+	<map name="P_Alt">	<area shape="rect" coords="0,0,70,70" href="javascript:CmdDCSRaw(53300401)"> </map> </SPAN>
 	
-	<SPAN style="position: absolute; left: 170px; top: 15px; width: 50px; height: 50px">
-	<img src="images/pilototo/PA_FD.gif" width="50" height="50"  id="PA-FD" usemap="#P_FD">
-	<map name="P_FD">	<area shape="rect" coords="0,0,50,50" href="javascript:CmdDCSRaw(53300501)"> </map> </SPAN>
+	<SPAN style="position: absolute; left: 210px; top: 65px; width: 70px; height: 70px">
+	<img src="images/pilototo/PA_FD.png" width="70" height="70"  id="PA-FD" usemap="#P_FD">
+	<map name="P_FD">	<area shape="rect" coords="0,0,70,70" href="javascript:CmdDCSRaw(53300501)"> </map> </SPAN>
 	
 	
-	<SPAN style="position: absolute; left: 335px; top: 15px; width: 50px; height: 50px">
-	<img src="images/pilototo/P_Hover-v.gif" width="50" height="50"  id="PA-Hover">
+	<SPAN style="position: absolute; left: 400px; top: 40px; width: 80px; height: 50px">
+	<img src="images/pilototo/Auto_Hover_8050_V.png" width="80" height="50"  id="PA-Hover">
 	</SPAN>
-	<SPAN style="position: absolute; left: 335px; top: 75px; width: 50px; height: 50px">
-	<img src="images/pilototo/P_Descent-v.gif" width="50" height="50"  id="PA-Descent">
+	<SPAN style="position: absolute; left: 400px; top: 110px; width: 80px; height: 50px">
+	<img src="images/pilototo/Auto_Descent_8050_V.png" width="80" height="50"  id="PA-Descent">
 	</SPAN>
-
-	<SPAN style="position: absolute; left: 270px; top: 15px; width: 50px; height: 50px">
-	<img src="images/z_Led-Bouton_Vert.gif" width="50" height="50"  id="PA-TgtTurn">
+	
+	<!-- Selecteur PA Baro - Rad -->
+	<SPAN style="position: absolute; left: 295px; top: 50px; width: 40px; height: 100px">
+	<img src="images/switch/Switch-Metal-D4.png" width="40" height="100" id="PA_baro" usemap="#PAbaro_SW"> 
+	<map name="PAbaro_SW">	
+	<area shape="rect" coords="0,0,40,49"  href="javascript:CmdDCSRaw('13300600')"> 
+	<area shape="rect" coords="0,50,40,100"  href="javascript:CmdDCSRaw('13300601')"> 
+	</map>
 	</SPAN>
-
-
-
-
+	
+	<!-- Selecteur PA Heading Course -->
+	<SPAN style="position: absolute; left: 346px; top: 50px; width: 40px; height: 100px">
+	<img src="images/switch/Switch-Metal-D4.png" width="40" height="100" id="PA_hdg" usemap="#PAhdg_SW"> 
+	<map name="PAhdg_SW">	
+	<area shape="rect" coords="0,0,40,49"  href="javascript:CmdDCSRaw('12800300')"> 
+	<area shape="rect" coords="0,50,40,100"  href="javascript:CmdDCSRaw('12800301')"> 
+	</map>
+	</SPAN>
 
 </div>
 
-
 <!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
-
-
-
-
 <!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
-
-
 <!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
 <div id="Panel_Electric">
 
@@ -694,13 +697,7 @@
 	<SPAN style="position: absolute; left: 219px; top: 228px; width: 50px; height: 50px">
 	<img src="images/electric/E_Inverter-On.gif" width="50" height="50"  id="EV-ACDC">
 	</SPAN>
-	
-	
-
-	
-
 </div>
-
 
 <!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
 <div id="Panel_Start">
@@ -803,8 +800,7 @@
 	<img src="images/fuel/FV_START.gif" width="60" height="30"  id="F-Start-ON" data-internal-id="0" onclick="javascript:CmdSiocDCS('F-Start-ON')">
 	</SPAN>
 	
-	
-		<!-- Commande EEG type 2 -->
+	<!-- Commande EEG type 2 -->
 	<SPAN style="position: absolute; left: 410px; top: 340px; width: 60px; height: 30px">
 	<img src="images/fuel/FV_EEG.gif" width="60" height="30"  id="F-EEG-G" data-internal-id="0" onclick="javascript:CmdSiocDCS('F-EEG-G')">
 	</SPAN>
@@ -820,15 +816,8 @@
 	<!--<SPAN style="position: absolute; left: 410px; top: 235px; width: 50px; height: 50px">
 	<img src="images/T_WarnOn.gif" width="50" height="50"  id="FW-Collectif">
 	</SPAN>-->
-	
-	
-
 
 </div>
-
-
-
-
 <!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
 
 
@@ -904,13 +893,9 @@
 	<SPAN style="position: absolute; left: 180px; top: 202px; width: 40px; height: 25px ; color:yellow" id="TGT3_deg"> </SPAN>
 	<SPAN style="position: absolute; left: 10px; top: 252px; width: 50px; height: 20px ; background-color:#004411; color:yellow; text-align:center" id="TGT_keyin"> </SPAN>
 
-
-
 </div>
 
 <!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
-
-
 
 <div id="Panel_Radio">
 
@@ -1033,8 +1018,6 @@
 	<SPAN style="position: absolute; left: 1000px; top: 1000px; width: 0px; height: 0px ; text-align:center; font-size:10%" id="R_Centi1">	</SPAN>
 	<SPAN style="position: absolute; left: 1000px; top: 1000px; width: 0px; height: 0px ; text-align:center; font-size:10%" id="R_Centi2">	</SPAN>
 
-	
-
 </div>
 
 <!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
@@ -1045,10 +1028,7 @@
 
 	<map name="Abris_P">
 
-			<!-- Start / Off -->
-			<area shape="rect" coords="10,15,70,45" href="javascript:CmdDCSRaw('10900901')">
-			<area shape="rect" coords="10,145,70,175" href="javascript:CmdDCSRaw('10900900')">
-			
+						
 			<!-- Bouton 1,2,3,4,5 -->
 			<area shape="rect" coords="70,100,140,170" href="javascript:CmdDCSRaw('50900101')">
 			<area shape="rect" coords="155,100,225,170" href="javascript:CmdDCSRaw('50900201')">
@@ -1058,8 +1038,14 @@
 	</map> 
 	
 	<!-- Selecteur On/Off -->
-	<SPAN style="position: absolute; left: -4px; top: 58px; width: 80px; height: 80px">
-	<img src="images/Switch-Metal-D3.gif" width="80" height="80" id="On_Abris">	</SPAN>
+	<SPAN style="position: absolute; left: 17px; top: 46px; width: 40px; height: 100px">
+	<img src="images/switch/Switch-Metal-D4.png" width="40" height="100" id="On_Abris" usemap="#On_Abris_SW"> 
+	<map name="On_Abris_SW">	
+	<area shape="rect" coords="0,0,40,49"  href="javascript:CmdDCSRaw('10900901')"> 
+	<area shape="rect" coords="0,50,40,100"  href="javascript:CmdDCSRaw('10900900')"> 
+	</map>
+	</SPAN>
+
 	
 	<!-- Option Menu -->
 	<SPAN style="position: absolute; left: 70px; top: 60px; width: 70px; height: 35px" id="Abris_1"> </SPAN>

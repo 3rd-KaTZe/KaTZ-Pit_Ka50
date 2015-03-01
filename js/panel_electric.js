@@ -89,11 +89,11 @@ function panel_electric_light(KaTZPit_data){
 
 		// Selecteur Dome L
 		if (dataread_posit(KaTZPit_data["E_NavLight"],6) ==1) {$("#E_Dome_L").attr('src','images/switch/Switch-Metal-U4.png')}	
-		if (dataread_posit(KaTZPit_data["E_NavLight"],6) ==0) {$("#E_Dome_L").attr('src','images/switch/Switch-Metal-D4.png')}	
+		else {$("#E_Dome_L").attr('src','images/switch/Switch-Metal-D4.png')}	
 		
 		// Selecteur Panel Instrument
 		if (dataread_posit(KaTZPit_data["E_NavLight"],5) ==1) {$("#E_Panel_L").attr('src','images/switch/Switch-Metal-U4.png')}	
-		if (dataread_posit(KaTZPit_data["E_NavLight"],5) ==0) {$("#E_Panel_L").attr('src','images/switch/Switch-Metal-D4.png')}	
+		else {$("#E_Panel_L").attr('src','images/switch/Switch-Metal-D4.png')}	
 		
 		// Selecteur Nav Light
 		if (dataread_posit(KaTZPit_data["E_NavLight"],4) ==3) {$("#E_Nav_L").attr('src','images/switch/Switch-Metal-U4.png')}	

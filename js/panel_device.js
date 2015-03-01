@@ -16,8 +16,8 @@ function panel_device_abris(KaTZPit_data){
 	document.getElementById('Abris_5').innerHTML = Abris_Menu[AbrisL3[0]]
 	
 	// Bouton On/Off
-	if (AbrisL3[1] == 1) {$("#On_Abris").attr('src','images/Switch-Metal-U3.gif')} 
-	else {$("#On_Abris").attr('src','images/Switch-Metal-D3.gif')}
+	if (AbrisL3[1] == 1) {$("#On_Abris").attr('src','images/switch/Switch-Metal-U4.png')} 
+	else {$("#On_Abris").attr('src','images/switch/Switch-Metal-D4.png')}
 	
 	
 }

@@ -42,14 +42,14 @@ function panel_pilototo_input(KaTZPit_data){
 	document.getElementById('PosData_Pitch').innerHTML = (Stick_Data[0]/10).toFixed(0)
 	document.getElementById('PosData_Roll').innerHTML = (Stick_Data[1]/10).toFixed(0)
 	document.getElementById('PosData_Rudder').innerHTML = (Rudder_Data[1]/10).toFixed(0)
-	document.getElementById('PosData_Cyclic').innerHTML = (Rudder_Data[0]/10).toFixed(0)
+	document.getElementById('PosData_Collectif').innerHTML = (Rudder_Data[0]/10).toFixed(0)
 
 	Translate_Cmd(Rudder_Data[1]/10,(Rudder_Data[0]/10))
 	Locate_Stick(Stick_Data[1]/10,Stick_Data[0]/10)
 
 }
 
-function Translate_Cmd(rudder,cyclic){
+function Translate_Cmd(rudder,collec){
 	
 	var a_origine = 0
 	var a_gain = 1
@@ -66,10 +66,10 @@ function Translate_Cmd(rudder,cyclic){
 	var c_gain = 2
 	
 	//  positif = Translation vers le bas , changement du signe DCS
-	$("#Position_Cyclic").css({
-	'-moz-transform':'translate(0px,'+(a_origine - c_gain * cyclic)+'px)',
-	'-webkit-transform':'translate(0px,'+(a_origine - c_gain * cyclic)+'px)',
-	'-ms-transform':'translate(0px,'+(a_origine - c_gain * cyclic)+'px)',
+	$("#Position_Collectif").css({
+	'-moz-transform':'translate(0px,'+(a_origine - c_gain * collec)+'px)',
+	'-webkit-transform':'translate(0px,'+(a_origine - c_gain * collec)+'px)',
+	'-ms-transform':'translate(0px,'+(a_origine - c_gain * collec)+'px)',
 
 	})
 }

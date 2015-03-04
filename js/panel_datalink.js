@@ -91,7 +91,7 @@ function panel_datalink_update(KaTZPit_data){
 function panel_datalink_pvt800(KaTZPit_data){
 	
 	// Selecteurs Rotatif Datalink (ID et Data)
-	switch_PVT(dataread_posit(KaTZPit_data["DLinkL3"],6),dataread_posit(KaTZPit_data["DLinkL3"],5))
+	switch_PVT(dataread_posit(KaTZPit_data["DlinkL3"],6),dataread_posit(KaTZPit_data["DlinkL3"],5))
 }
 
 function switch_PVT(id,data){

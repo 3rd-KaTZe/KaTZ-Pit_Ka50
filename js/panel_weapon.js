@@ -174,20 +174,13 @@ function panel_uv26_update(KaTZPit_data){
 		document.getElementById("UV26_flare").style.display = "block"
 		// Affichage Flare restantes
 		document.getElementById('UV26_flare').innerHTML = dataread_split_2(KaTZPit_data["UV26_Data"])[0]
-		
-	
-} 
+	} 
 	else {
 		// Affichage du switch en position off (pas encore implémenté sur KA)
 		$("#UV_SW_On").attr('src','images/switch/Switch-Metal-L4.png')
 		// Extinction de l'affichage digital
 		document.getElementById("UV26_flare").style.display = "none"
 	}
-	
-	
-	// Affichage Flare restantes
-	//document.getElementById('UV26_flare').innerHTML = dataread_split_2(KaTZPit_data["UV26_Data"])[0]
-	
 
 }
 

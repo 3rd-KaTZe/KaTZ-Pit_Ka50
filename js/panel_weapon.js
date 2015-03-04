@@ -32,7 +32,7 @@ function panel_weapon_update(KaTZPit_data){
 	document.getElementById('Ammo_rnds').innerHTML = dataread_split_2(KaTZPit_data["Wpn_Ammo"])[0]
 	
 	// Switch Master Arm
-	if (dataread_posit(KaTZPit_data["Wpn_Ka_1"],7) ==1) {$("#SW_Master").attr('src','images/switch/Switch-Metal-U4.png')} 
+	if (dataread_posit(KaTZPit_data["Wpn_1"],7) ==1) {$("#SW_Master").attr('src','images/switch/Switch-Metal-U4.png')} 
 	else {$("#SW_Master").attr('src','images/switch/Switch-Metal-D4.png')}
 	
 	// Switch Man/auto
@@ -59,34 +59,34 @@ function panel_weapon_update(KaTZPit_data){
 function panel_weapon2_update(KaTZPit_data){
 		
 	// Touche Autoturn, AAHO, AA, Mov, Reset
-	if (dataread_posit(KaTZPit_data["Wpn_Ka_2"],5) ==1) {$("#wpn_autoturn").fadeIn()} else {$("#wpn_autoturn").fadeOut()}
-	if (dataread_posit(KaTZPit_data["Wpn_Ka_2"],4) ==1) {$("#wpn_AAHO").fadeIn()} else {$("#wpn_AAHO").fadeOut()}
-	if (dataread_posit(KaTZPit_data["Wpn_Ka_2"],3) ==1) {$("#wpn_AA").fadeIn()} else {$("#wpn_AA").fadeOut()}
-	if (dataread_posit(KaTZPit_data["Wpn_Ka_2"],2) ==1) {$("#wpn_MOVGRND").fadeIn()} else {$("#wpn_MOVGRND").fadeOut()}
-	if (dataread_posit(KaTZPit_data["Wpn_Ka_2"],1) ==1) {$("#wpn_RESET").fadeIn()} else {$("#wpn_RESET").fadeOut()}
+	if (dataread_posit(KaTZPit_data["Wpn_2"],5) ==1) {$("#wpn_autoturn").fadeIn()} else {$("#wpn_autoturn").fadeOut()}
+	if (dataread_posit(KaTZPit_data["Wpn_2"],4) ==1) {$("#wpn_AAHO").fadeIn()} else {$("#wpn_AAHO").fadeOut()}
+	if (dataread_posit(KaTZPit_data["Wpn_2"],3) ==1) {$("#wpn_AA").fadeIn()} else {$("#wpn_AA").fadeOut()}
+	if (dataread_posit(KaTZPit_data["Wpn_2"],2) ==1) {$("#wpn_MOVGRND").fadeIn()} else {$("#wpn_MOVGRND").fadeOut()}
+	if (dataread_posit(KaTZPit_data["Wpn_2"],1) ==1) {$("#wpn_RESET").fadeIn()} else {$("#wpn_RESET").fadeOut()}
 	
 	// Switch Train
-	if (dataread_posit(KaTZPit_data["Wpn_Ka_1"],6) ==1) {$("#SW_wpn_train").attr('src','images/switch/Switch-Metal-U4.png')} 
+	if (dataread_posit(KaTZPit_data["Wpn_1"],6) ==1) {$("#SW_wpn_train").attr('src','images/switch/Switch-Metal-U4.png')} 
 	else {$("#SW_wpn_train").attr('src','images/switch/Switch-Metal-D4.png')}
 	
 	// Switch K041
-	if (dataread_posit(KaTZPit_data["Wpn_Ka_1"],5) ==1) {$("#SW_wpn_k041").attr('src','images/switch/Switch-Metal-U4.png')} 
+	if (dataread_posit(KaTZPit_data["Wpn_1"],5) ==1) {$("#SW_wpn_k041").attr('src','images/switch/Switch-Metal-U4.png')} 
 	else {$("#SW_wpn_k041").attr('src','images/switch/Switch-Metal-D4.png')}
 	
 	// Switch HMS
-	if (dataread_posit(KaTZPit_data["Wpn_Ka_1"],4) ==1) {$("#SW_wpn_hms").attr('src','images/switch/Switch-Metal-U4.png')} 
+	if (dataread_posit(KaTZPit_data["Wpn_1"],4) ==1) {$("#SW_wpn_hms").attr('src','images/switch/Switch-Metal-U4.png')} 
 	else {$("#SW_wpn_hms").attr('src','images/switch/Switch-Metal-D4.png')}
 	
 	// Switch Autotrack
-	if (dataread_posit(KaTZPit_data["Wpn_Ka_1"],3) ==1) {$("#SW_wpn_canmod").attr('src','images/switch/Switch-Metal-U4.png')} 
+	if (dataread_posit(KaTZPit_data["Wpn_1"],3) ==1) {$("#SW_wpn_canmod").attr('src','images/switch/Switch-Metal-U4.png')} 
 	else {$("#SW_wpn_canmod").attr('src','images/switch/Switch-Metal-D4.png')}
 	
 	// Switch Laser
-	if (dataread_posit(KaTZPit_data["Wpn_Ka_1"],2) ==1) {$("#SW_wpn_las").attr('src','images/switch/Switch-Metal-U4.png')} 
+	if (dataread_posit(KaTZPit_data["Wpn_1"],2) ==1) {$("#SW_wpn_las").attr('src','images/switch/Switch-Metal-U4.png')} 
 	else {$("#SW_wpn_las").attr('src','images/switch/Switch-Metal-D4.png')}
 	
 	// Selecteur Canon
-	switch_Canon(dataread_posit(KaTZPit_data["Wpn_Ka_1"],1),1)
+	switch_Canon(dataread_posit(KaTZPit_data["Wpn_1"],1))
 
 }
 

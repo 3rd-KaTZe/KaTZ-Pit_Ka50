@@ -30,12 +30,42 @@ function panel_pvi_update(KaTZPit_data){
 	switch_PVI(dataread_posit(KaTZPit_data["Pvi800_6"],1)+5,1)
 	
 	// Affichage PVI
-	document.getElementById('PVI_T1').innerHTML = KaTZPit_data["Pvi800_1"]
-	document.getElementById('PVI_T2').innerHTML = KaTZPit_data["Pvi800_2"]
-	document.getElementById('PVI_T3').innerHTML = dataread_split_2(KaTZPit_data["Pvi800_3"])[1]
-	document.getElementById('PVI_T4').innerHTML = dataread_split_2(KaTZPit_data["Pvi800_3"])[0]
-		
-		
+	var num1 = KaTZPit_data["Pvi800_1"].toString()
+	var num2 = KaTZPit_data["Pvi800_2"].toString()
+	
+	if (KaTZPit_data["Pvi800_1"] > 999){
+	document.getElementById('PVI_T13').style.display = "block"; document.getElementById('PVI_T13').innerHTML = num1.substr(-1,1)
+	document.getElementById('PVI_T12').style.display = "block"; document.getElementById('PVI_T12').innerHTML = num1.substr(-3,2)
+	document.getElementById('PVI_T11').innerHTML = Math.floor(KaTZPit_data["Pvi800_1"].toString() / 1000)}
+	
+	else {
+	document.getElementById('PVI_T11').innerHTML = (KaTZPit_data["Pvi800_1"] + 1000).toString().substring(1, 4)
+	document.getElementById('PVI_T12').style.display = "none"
+	document.getElementById('PVI_T13').style.display = "none"
+	}
+	
+	if (KaTZPit_data["Pvi800_2"] > 999){
+	document.getElementById('PVI_T23').style.display = "block"; document.getElementById('PVI_T23').innerHTML = num2.substr(-1,1)
+	document.getElementById('PVI_T22').style.display = "block"; document.getElementById('PVI_T22').innerHTML = num2.substr(-3,2)
+	document.getElementById('PVI_T21').innerHTML = Math.floor(KaTZPit_data["Pvi800_2"].toString() / 1000)}
+	
+	else {
+	document.getElementById('PVI_T21').innerHTML = (KaTZPit_data["Pvi800_2"] + 1000).toString().substring(1, 4)
+	document.getElementById('PVI_T22').style.display = "none"
+	document.getElementById('PVI_T23').style.display = "none"
+	}
+	
+	var num3 = dataread_chiffre(KaTZPit_data["Pvi800_3"],2)
+	var num4 = dataread_chiffre(KaTZPit_data["Pvi800_3"],1)
+	console.log(num3)
+	
+	if (num3 == 0){document.getElementById('PVI_T3').style.display = "none"}
+	else {document.getElementById('PVI_T3').style.display = "block"; document.getElementById('PVI_T3').innerHTML = num3}
+	
+	if (num4 == 0){document.getElementById('PVI_T4').style.display = "none"}
+	else {document.getElementById('PVI_T4').style.display = "block"; document.getElementById('PVI_T4').innerHTML = num4}
+			
+			
 }
 
 function switch_PVI(pos){

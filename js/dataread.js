@@ -37,3 +37,18 @@ function dataread_posit(data,position){
 	return c;
 
 }
+
+function dataread_chiffre(data,position){
+	// Fonction de lecture d'une valeur 0-9, contenue dans une export_data_chaine de 8 chiffres
+	// Les valeures réelles ont été encapsulé dans DCS export avec +5
+	// pour gestion zero et négatif, on enlève donc 5
+	// Appel de la fonction sous la forme :
+	// Chiffre = dataread_posit(data,x)  où x est le xieme chiffre en partant de la droite (1 pour unité, 2 pour dizaine ...)
+	
+	var c = Math.floor (data % Math.pow(10,position) / Math.pow(10,position-1))
+	
+	//console.log("c= ",c)
+	
+	return c;
+
+}

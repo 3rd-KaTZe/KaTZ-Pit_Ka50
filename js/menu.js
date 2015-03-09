@@ -49,9 +49,7 @@ function menu_Toggle(panel){
 	if (Panel_On["Pilototo"] == 0) {document.getElementById("Panel_Pilototo").style.display = "none"}
 	else {document.getElementById("Panel_Pilototo").style.display = "block"}
 
-	if (Panel_On["Target"] == 0) {document.getElementById("Panel_Target").style.display = "none"}
-	else {document.getElementById("Panel_Target").style.display = "block"}
-
+	
 	if (Panel_On["Datalink"] == 0) {document.getElementById("Panel_Datalink").style.display = "none"}
 	else {document.getElementById("Panel_Datalink").style.display = "block"}
 	
@@ -73,7 +71,8 @@ function menu_Toggle(panel){
 	document.getElementById("Panel_Weapon_2").style.display = "none" ;
 	document.getElementById("Panel_Shkval").style.display = "none";
 	document.getElementById("Panel_UV26").style.display = "none"
-
+	Panel_On["Target"]=0
+	
 	}
 	else {
 	document.getElementById("Panel_Weapon").style.display = "block" ; 
@@ -83,6 +82,7 @@ function menu_Toggle(panel){
 	document.getElementById("Panel_Start").style.display = "none" ;
 	document.getElementById("Panel_Electric").style.display = "none" ; 
 	document.getElementById("Panel_Light").style.display = "none"
+	Panel_On["Target"]=1
 
 	}
 
@@ -100,6 +100,9 @@ function menu_Toggle(panel){
 	if (Panel_On["Doc"] == 0) {document.getElementById("Panel_Doc").style.display = "none"}
 	else {document.getElementById("Panel_Doc").style.display = "block"}
 	
+	if (Panel_On["Target"] == 0) {document.getElementById("Panel_Target").style.display = "none"}
+	else {document.getElementById("Panel_Target").style.display = "block"}
+
 }	
 
 function menu_Affiche(num){

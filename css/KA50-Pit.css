@@ -240,7 +240,7 @@ p {
 #Panel_Pilototo {
 	position: absolute;
 	top: 10px;
-	left: 2510px;
+	left: 2520px;
 	/* Dimension 775 x 10			              */
 	font-family:arial, sans-serif;
 	font-size:100%;
@@ -364,13 +364,21 @@ p {
 }
 
 
-
 #Panel_Doc {
 	position: absolute;
 	top: 100px;
 	left: 2100px;
 	/* Dimension 500 x 200			              */
 	
+}
+
+#Panel_Target {
+	position: absolute;
+	top: 220px;
+	left: 2780px;
+
+	font-family:arial, sans-serif;
+	text-align: center; 
 }
 
 

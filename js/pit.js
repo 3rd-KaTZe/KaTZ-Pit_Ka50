@@ -75,13 +75,13 @@ function pit_main(){
 	
 	if (Panel_On["Radio_360"]==1){panel_radio_update(KaTZPit_data)}
 	
-	if (Panel_On["Target"]==1){panel_target_update(KaTZPit_data)}
+	if (Panel_On["Target"]==1){panel_target_update(KaTZPit_data);console.log("Target-On")}
 	
 	if (Panel_On["Navigation"]==1){panel_navigation_update(KaTZPit_data)}	
 	
 	if (Panel_On["Abris"]==1){panel_device_abris(KaTZPit_data)}	
 	
-	if (Panel_On["Weapon"]==1){panel_weapon_update(KaTZPit_data) ; panel_weapon2_update(KaTZPit_data); panel_uv26_update(KaTZPit_data); panel_weapon_shkval(KaTZPit_data)  }	
+	if (Panel_On["Weapon"]==1){panel_weapon_update(KaTZPit_data) ; panel_weapon2_update(KaTZPit_data); panel_uv26_update(KaTZPit_data); panel_weapon_shkval(KaTZPit_data)}	
 
 	//if (Panel_On["UV26"]==1){panel_uv26_update(KaTZPit_data)}	
 	

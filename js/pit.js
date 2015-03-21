@@ -35,8 +35,13 @@ window.onload = function(){
 
 function pit_main(){
 
+
 	// Iteration Principale, fréquence fixée dans mytimer
-		
+	// Verification de DCS_Focus
+	DCS_Focus_check(KaTZPit_data)
+
+
+	// Iteration Principale, fréquence fixée dans mytimer
 	panel_emergency_update(KaTZPit_data)
 	
 	
@@ -50,31 +55,41 @@ function pit_main(){
 	// SYSTEM PANEL ------------------------------------------------------
 	
 	// Lancement des subroutines en fonction des panneaux affichés dans le KaKZ_Pit
+
+	// Switch Eclairage
+	if (Panel_On["Light"]==1){panel_electric_light(KaTZPit_data)}	
+
 	// Electric Panel
-	if (Panel_On["Electric_DC"]==1) {panel_electric_update(KaTZPit_data)}
+	//if (Panel_On["Electric_DC"]==1) {panel_electric_update(KaTZPit_data)}
 		
-	// Start Panel
-	if (Panel_On["Start"]==1){panel_fuel_update(KaTZPit_data)}
+	// Start  : Start panel et Electric Panel
+	if (Panel_On["Start"]==1){panel_fuel_update(KaTZPit_data) ; panel_electric_update(KaTZPit_data)} 
 	
 	if (Panel_On["Rotor"]==1){panel_instrument_rotor(KaTZPit_data)}
+
+	if (Panel_On["Stick"]==1){panel_pilototo_input(KaTZPit_data)}
 	
 	if (Panel_On["Oil"]==1){panel_oil_update(KaTZPit_data)}
-	
-	if (Panel_On["Datalink"]==1){panel_datalink_update(KaTZPit_data)}
 	
 	if (Panel_On["Pilototo"]==1){panel_pilototo_update(KaTZPit_data)}
 	
 	if (Panel_On["Radio_360"]==1){panel_radio_update(KaTZPit_data)}
 	
-	if (Panel_On["Target"]==1){panel_target_update(KaTZPit_data)}
+	if (Panel_On["Target"]==1){panel_target_update(KaTZPit_data);console.log("Target-On")}
 	
 	if (Panel_On["Navigation"]==1){panel_navigation_update(KaTZPit_data)}	
 	
 	if (Panel_On["Abris"]==1){panel_device_abris(KaTZPit_data)}	
 	
-	if (Panel_On["Weapon"]==1){panel_weapon_update(KaTZPit_data)}	
+	if (Panel_On["Weapon"]==1){panel_weapon_update(KaTZPit_data) ; panel_weapon2_update(KaTZPit_data); panel_uv26_update(KaTZPit_data); panel_weapon_shkval(KaTZPit_data)}	
 
-	if (Panel_On["UV26"]==1){panel_uv26_update(KaTZPit_data)}	
+	//if (Panel_On["UV26"]==1){panel_uv26_update(KaTZPit_data)}	
+	
+	if (Panel_On["PVI800"]==1){panel_pvi_update(KaTZPit_data)}	
+	
+	if (Panel_On["Datalink"]==1){panel_datalink_update(KaTZPit_data)}
+	
+	if (Panel_On["PVT800"]==1){panel_datalink_pvt800(KaTZPit_data)}
 	
 	CmdSend()
 }

@@ -68,6 +68,20 @@ p {
 
 }
 
+#Panel_Stick {
+
+	position: absolute;
+	top: 860px;
+	left: 1580px;
+	/* Dimension 300 x 300			              */
+	font-family:arial, sans-serif;
+	font-size:100%;
+	color:white;
+	background-color:transparent;
+	text-align: center; 
+
+}
+
 #Cadran_Vario {
 	position: absolute;
 	top: 020px;
@@ -75,16 +89,37 @@ p {
 	/* Dimension 400 x 400			              */
 }
 
-#Cadran_AirSpeed {
+#Cadran_AltiRad {
 	position: absolute;
-	top: 250px;
-	left: 450px;
+	top: 230px;
+	left: 120px;
 	/* Dimension 400 x 400			              */
 }
 
-#Cadran_AltiRad {
+#Cadran_AirSpeed {
 	position: absolute;
-	top: 250px;
+	top: 230px;
+	left: 430px;
+	/* Dimension 400 x 400			              */
+}
+
+#Cadran_RPM {
+	position: absolute;
+	top: 550px;
+	left: 120px;
+	/* Dimension 400 x 400			              */
+}
+
+#Cadran_Altitude {
+	position: absolute;
+	top: 550px;
+	left: 430px;
+	/* Dimension 400 x 400			              */
+}
+
+#Cadran_Clock {
+	position: absolute;
+	top: 870px;
 	left: 120px;
 	/* Dimension 400 x 400			              */
 }
@@ -92,32 +127,16 @@ p {
 #Cadran_Pitch {
 	position: absolute;
 	top: 900px;
-	left: 540px;
+	left: 480px;
 	/* left: 500px; */
 	/* Dimension 400 x 400			              */
 }
 
-#Cadran_RPM {
-	position: absolute;
-	top: 570px;
-	left: 120px;
-	/* Dimension 400 x 400			              */
-}
-
-
-
-
-#Cadran_Altitude {
-	position: absolute;
-	top: 570px;
-	left: 450px;
-	/* Dimension 400 x 400			              */
-}
 
 #Cadran_ADI {
 	position: absolute;
-	top: 300px;
-	left: 800px;
+	top: 330px;
+	left: 720px;
 	/* Dimension 400 x 400			              */
 	text-align: center; 
 }
@@ -125,17 +144,33 @@ p {
 
 #Cadran_HSI {
 	position: absolute;
-	top: 700px;
-	left: 800px;
+	top: 780px;
+	left: 720px;
+	/* Dimension 400 x 400			              */
+}
+
+#Cadran_EngExTemp{
+	position: absolute;
+	top: 220px;
+	left: 1580px;
 	/* Dimension 400 x 400			              */
 }
 
 #Cadran_RPM2 {
 	position: absolute;
-	top: 250px;
+	top: 540px;
 	left: 1580px;
 	/* Dimension 400 x 400			              */
 }
+
+#Cadran_Fuel {
+	position: absolute;
+	top: 860px;
+	left: 1610px;
+	/* Dimension 400 x 400			              */
+}
+
+
 
 #Panel_Datalink {
 	position: absolute;
@@ -204,8 +239,8 @@ p {
 
 #Panel_Pilototo {
 	position: absolute;
-	top: 950px;
-	left: 120px;
+	top: 10px;
+	left: 2520px;
 	/* Dimension 775 x 10			              */
 	font-family:arial, sans-serif;
 	font-size:100%;
@@ -232,7 +267,7 @@ p {
 
 #Panel_Start {
 	position: absolute;
-	top: 10px;
+	top: 220px;
 	left: 2010px;
 	/* Dimension 775 x 400			              */
 	font-family:arial, sans-serif;
@@ -245,7 +280,7 @@ p {
 
 #Panel_Electric {
 	position: absolute;
-	top: 10px;
+	top: 220px;
 	left: 2600px;
 	/* Dimension 400 x 400			              */
 	font-family:arial, sans-serif;
@@ -258,7 +293,7 @@ p {
 
 #Panel_Abris {
 	position: absolute;
-	top: 880px;
+	top: 1020px;
 	left: 2010px;
 	/* Dimension 500 x 180			              */
 	font-family:arial, sans-serif;
@@ -268,8 +303,42 @@ p {
 	
 }
 
+#Panel_PVI800 {
+	position: absolute;
+	top: 240px;
+	left: 1150px;
+	/* Dimension 500 x 180			              */
+	font-family:arial, sans-serif;
+		
+}
+
+#Panel_DLINK_Select {
+	position: absolute;
+	top: 1000px;
+	left: 1150px;
+	/* Dimension 500 x 180			              */
+	font-family:arial, sans-serif;
+		
+}
+
 
 #Panel_Weapon {
+	position: absolute;
+	top: 220px;
+	left: 2010px;
+	/* Dimension 500 x 480			              */
+	
+}
+
+#Panel_Weapon_2 {
+	position: absolute;
+	top: 710px;
+	left: 2010px;
+	/* Dimension 500 x 300			              */
+	
+}
+
+#Panel_Shkval {
 	position: absolute;
 	top: 010px;
 	left: 2010px;
@@ -277,13 +346,41 @@ p {
 	
 }
 
+
 #Panel_UV26 {
 	position: absolute;
-	top: 010px;
-	left: 2510px;
+	top: 220px;
+	left: 2520px;
 	/* Dimension 500 x 200			              */
 	
 }
+
+#Panel_Light {
+	position: absolute;
+	top: 010px;
+	left: 2010px;
+	/* Dimension 500 x 200			              */
+	
+}
+
+
+#Panel_Doc {
+	position: absolute;
+	top: 100px;
+	left: 2100px;
+	/* Dimension 500 x 200			              */
+	
+}
+
+#Panel_Target {
+	position: absolute;
+	top: 220px;
+	left: 2780px;
+
+	font-family:arial, sans-serif;
+	text-align: center; 
+}
+
 
 
 

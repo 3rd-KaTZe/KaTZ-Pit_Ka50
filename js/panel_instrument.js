@@ -4,7 +4,20 @@
 
 function panel_instrument_flight(KaTZPit_data){
 		// Animation des jauges-----------------------------------------------------------------------
-				
+		// Montre de Bord
+		var hr = Math.floor(KaTZPit_data["Clock"] / 3600)
+		var mn = Math.floor(KaTZPit_data["Clock"] % 3600 / 60)
+		var sec = KaTZPit_data["Clock"] % 60
+			
+		var hrflt = Math.floor(KaTZPit_data["TimeFly"] / 3600)
+		var mnflt = Math.floor(KaTZPit_data["TimeFly"] % 3600 / 60)
+			
+		var mnchrono = Math.floor(KaTZPit_data["Chrono"] / 60)
+		var secchrono = KaTZPit_data["Chrono"] % 60
+			
+		instrument_Clock(hr,mn,sec,hrflt,mnflt,mnchrono,secchrono)
+		
+		
 		// Badin et Vario
 		instrument_Airspeed(KaTZPit_data["IAS"])
 		instrument_Vario(KaTZPit_data["Vario"])
@@ -62,11 +75,18 @@ function panel_instrument_engine(KaTZPit_data){
 		// RPM Moteurs  -----------------------------------------------------------------------------
 		var RPM_Eng = dataread_split_2(KaTZPit_data["Eng_rpm"])
 		instrument_RPM2(RPM_Eng[1]/10,RPM_Eng[0]/10)
+		
+		// Températures Moteurs  -----------------------------------------------------------------------------
+		var Temp_Eng = dataread_split_2(KaTZPit_data["Eng_temp"])
+		instrument_EngTemp(Temp_Eng[1],Temp_Eng[0])
 
 		// Pitch et RPM Rotor  -----------------------------------------------------------------------
 		instrument_Pitch(KaTZPit_data["Pitch_Rot"])
 		instrument_RPM(KaTZPit_data["RPM_Rot"]/10)
 		
+		// Jauge de Fuel
+		instrument_FuelGauge(KaTZPit_data["Fuel_1"],KaTZPit_data["Fuel_2"])
+				
 }
 
 function panel_instrument_rotor(KaTZPit_data){		

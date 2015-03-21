@@ -7,9 +7,9 @@ function panel_On_init(){
 
 	console.log("Initialisation des panels affichés")
 
-var Panel_On = { Init:0, Breakers:0, Electric_DC:0, Electric_AC:0, APU:0, Oil:1, Start:0, Rotor:1, Analog_1:0, Analog_2:0, 
-	ARK_9:0, ARK_UD:0, Doppler:0, Radio_360:1, Fuel:0, Vierge:0, Navigation:0, Target:0, Weapon:0, UV26:0,
-	Pilototo:1,Datalink:1, Abris:0}
+var Panel_On = { Init:0, Breakers:0, Stick:0 , Combat:0, Light:1, Electric_DC:1, Electric_AC:0, APU:0, Oil:1, Start:1, Rotor:1, Analog_1:0, Analog_2:0, 
+	ARK_9:0, ARK_UD:0, Doppler:0, Radio_360:1, Fuel:0, Vierge:0, Navigation:0, Target:0, Weapon:1, UV26:1,
+	Pilototo:1, Datalink:1, Abris:1, PVI800:1, PVT800:1, Doc:0}
 
 return (Panel_On);
 
@@ -19,25 +19,26 @@ function paneldata_init(){
 	
 	console.log("Initialisation des données du KaTZ-Pit")
 
-	var KaTZPit_data = {Error:0, Ping:0, Ping_old:0, Ordre1:0, Ordre2:0, PingBack:0, Plane_Id:50, Test_val:0,
-		Clock:0, TimeMis:0, TimeFly:0, Shoot_time:99, Chrono:0,
+	var KaTZPit_data = {Error:0, Ping:0, Ping_old:0, Ordre1:0, Ordre2:0, DCS_Focus:0, Plane_Id:50, Test_val:0,
+		Clock:0, TimeMis:0, TimeFly:0, Shoot_time:99, Chrono:0, My_lat:440000, My_lon:410000, Bull_lat:436247, Bull_lon:444397, My_Bull_dist:0, My_Bull_bear:0,
 		IAS:0, TAS:8888, QNH:0, QFE:0, AltiRad_DX:50005000, AltiRad_FI:555, Mach:"---", Vario:0, Vari_unit:1,
 		AoA:0, Acc_G:0, Acc_Gmax:0, Acc_Gmin:0, 
-		Pitch:0, Bank:00, Yaw:0, ADI_FI:50005000, 
+		Pitch:0, Bank:00, Yaw:0, ADI_FI:50005000, Stick_Pos:50005000, Rudder_Pos:50005000,
 		Way:90, Route:360, Cap:0, WP_dist:0, WP_num:88, Bullseye:0, EUP:50005000,
 		Eng_rpm:50005000, Eng_temp:50005000, Power_L:0, Power_R:0, Power_X:0, COff:0,
 		RPM_Rot:0, Pitch_Rot:1, Eng_Oil_deg:50005000, GB_Oil_deg:50005000, Eng_Oil_pre:50005000, GB_Oil_pre:50005000,
 		APU_Data:50005000, APU_Voyants:5555, APU_Typ:0,
 		Start_V:55, Start_Sel:0, Start_Typ:0,
-		Fuel_AV:0, Fuel_AR:0, Conso:0, Fuel_V:555, Fuel_P:555, Fuel_PE:5555,
+		Fuel_1:0, Fuel_2:0, Conso:0, Fuel_V:555, Fuel_P:555, Fuel_PE:5555,
 		E_DC_V:55555, E_AC_V:5555,	E_DC_SW:55555555, E_AC_SW:55555, 
 		AP_KA1:5555, AP_KA2:555, TGT_KA:55555,
 		Cockpit:0, Train:555555, WheelBrk:0, BrakePress:0,
 		ARKUD:55500555,	ARK9_SW:55555, ARK9_F: 51506290, ARK9_Data:50005000, ARK9_T_Main:150, ARK9_T_Stby:150,
 		Doppler_d1:50005000, Doppler_d2:50005000, Doppler_f:555,
 		D15_drift:50005000, D15_drift_V:55, Sling_2D:50005000, Sling_3D:50005000, 
-		DLinkL1:0, DLinkL2:0, DLinkL3:0, Tgt_Btn:5555, Wpn_Ka:55555555, Wpn_Lamp:55, Wpn_Flag:55555,Wpn_Ammo:50005000,Wpn_SW_1:555555,
-		UV26_Data:50005000, UV26_Flag:5555, Abris1:50005000, Abris2:50005000, Abris3:50005000,
+		DLinkL1:5555, DLinkL2:55555, DLinkL3:555555, Tgt_Btn:5555, Wpn_Ka:55555555, Wpn_Lamp:55, Wpn_Flag:55555,Wpn_Ammo:50005000,Wpn_SW_1:555555, Wpn_Ka_2:555555,Wpn_Ka_3:55555, Shkval_1: 55000000,
+		UV26_Data:50005000, UV26_Flag:5555, Abris1:50005000, Abris2:50005000, Abris3:50005000, 
+		Pvi800_1:999 , Pvi800_2:999, Pvi800_3:555500, Pvi800_4:55555555 , Pvi800_5:5555555 , Pvi800_6:550,
 		Collectif:0,
 		LowAlt:0,
 		FL_mode:0, FL_main:0, FL_main_old:0,
@@ -169,7 +170,7 @@ function abris_menu_init(){
 	0:"OFF",1:"ACTIV",2:"ADD",3:"ADD LIN",4:"ADD PNT",5:"ARC",6:"AUTO",7:"CALC",8:"CANCEL",9:"CLEAR",
 	10:"CTRL",11:"DELETE",12:"DRAW",13:"EDIT",14:"ENTER",15:"ERBL",16:"FPL",17:"GNSS",18:"HSI",19:"INFO",
 	20:"LOAD",21:"MAP",22:"MARKER",23:"MENU",24:"MOVE",25:"NAME",26:"NAV",27:"NE",28:"REST",29:"OPTION",
-	30:"PLAN",31:"PLAN",32:"SAVE",33:"SCALE -",34:"SCALE +",35:"SEARCH",36:"SELECT",37:"SETUP",38:"SUSP",39:"SYST",
+	30:"PLAN",31:"PLAN",32:"SAVE",33:"SCALE-",34:"SCALE+",35:"SEARCH",36:"SELECT",37:"SETUP",38:"SUSP",39:"SYST",
 	40:"TEST",41:"TGT VS",42:"TO",43:"TYPE",44:"USER",45:"VNAV",46:"VNAV TO",47:"WPT",48:""}
 	
 	

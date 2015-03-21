@@ -88,4 +88,27 @@ function panel_datalink_update(KaTZPit_data){
 		
 }
 
+function panel_datalink_pvt800(KaTZPit_data){
 	
+	// Selecteurs Rotatif Datalink (ID et Data)
+	switch_PVT(dataread_posit(KaTZPit_data["DlinkL3"],6),dataread_posit(KaTZPit_data["DlinkL3"],5))
+}
+
+function switch_PVT(id,data){
+	var i_origine = 0
+	var i_gain = 30
+	
+	var d_origine = -45
+	var d_gain = 45
+	
+	$("#Selec_dlink_1").css({
+		'-moz-transform':'rotate('+(i_origine+i_gain*id)+'deg)',
+		'-webkit-transform':'rotate('+(i_origine+i_gain*id)+'deg)',
+		'-ms-transform':'rotate('+(i_origine+i_gain*id)+'deg)',
+	})
+	$("#Selec_dlink_2").css({
+		'-moz-transform':'rotate('+(d_origine+d_gain*data)+'deg)',
+		'-webkit-transform':'rotate('+(d_origine+d_gain*data)+'deg)',
+		'-ms-transform':'rotate('+(d_origine+d_gain*data)+'deg)',
+	})
+}

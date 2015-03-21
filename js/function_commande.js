@@ -11,7 +11,7 @@ function CmdSend(){
 	//console.log(KaTZPit_data["Ordre2"])
 	//console.log(KaTZPit_data["PingBack"])
 	// Les ordres en cours sont stocké dans l'array Order_List
-	if (KaTZPit_data["Ordre1"]==0 && KaTZPit_data["Ordre2"]==0 && KaTZPit_data["PingBack"]==0) {
+	//if (KaTZPit_data["Ordre1"]==0 && KaTZPit_data["Ordre2"]==0 && KaTZPit_data["PingBack"]==0) {
 		
 		// Si la list des ordres en cours est non vide, on envoi l'ordre zero, et on décale la list vers le bas
 		if (Order_List.length > 0) {
@@ -22,19 +22,25 @@ function CmdSend(){
 			// Envoi de l'ordre -------------------------------------------------->>>			
 			serverws_send(nextorder)
 			
+			// Fonction flag desactivée avec KaTZ-Link_V3
 			// Blockage des flags d'emission pour éviter l'overflow
-			if (typeordre==1){KaTZPit_data["Ordre1"]=1}
-			if (typeordre==2){KaTZPit_data["Ordre2"]=1}
-			if (typeordre>2){KaTZPit_data["PingBack"]=1}
+			//if (typeordre==1){KaTZPit_data["Ordre1"]=1}
+			//if (typeordre==2){KaTZPit_data["Ordre2"]=1}
+			//if (typeordre>2){KaTZPit_data["PingBack"]=1}
 			
 			//console.log("CmdSend, Position des Flags de Sortie",KaTZPit_data["Ordre1"],KaTZPit_data["Ordre2"],KaTZPit_data["PingBack"])
 						
 		}			
-	}
 }
 
-
-
+function DCS_Focus() {
+	
+	// Commande de Controle de DCS (channel 1 + Valeur)
+	var commande_DCS = "7=1"
+	
+	CmdStack(commande_DCS)
+	console.log("Envoi au buffer de la commande ..", commande_DCS);
+}
 
 
 function CmdSioc(Val) {
@@ -93,6 +99,37 @@ function CmdSiocDCS2(Element) {
 		
 }
 
+// Fonction de commande multiple (en rafale de trois) usage possible pour les Switches avec un capot
+function CmdSiocDCS3(Cmd1,Cmd2,Cmd3) {
+
+	// Ouverture du Capot
+	if (Cmd1>0) {CmdDCSRaw(Cmd1)}
+	
+	// Basculement de l'interrupteur
+	if (Cmd2>0) {CmdDCSRaw(Cmd2)}
+	
+	// Fermeture du capot
+	if (Cmd3>0) {CmdDCSRaw(Cmd3)}
+
+}
+
+// To be modified in the futur with n data table
+function CmdSiocDCS4(Cmd1,Cmd2,Cmd3,Cmd4) {
+
+	// Ouverture du Capot
+	if (Cmd1>0) {CmdDCSRaw(Cmd1)}
+	
+	// Basculement de l'interrupteur
+	if (Cmd2>0) {CmdDCSRaw(Cmd2)}
+	
+	// Fermeture du capot
+	if (Cmd3>0) {CmdDCSRaw(Cmd3)}
+	
+	// Fermeture du capot
+	if (Cmd4>0) {CmdDCSRaw(Cmd4)}
+
+}
+
 function CmdDCSRaw(Cmd){
 
 var commande_DCS = "2="+ Cmd
@@ -135,4 +172,34 @@ function Door(){
 		CmdDCSRaw('11701500')
 		CmdDCSRaw('11701600')}
 
+}
+
+function Cmd_HMS(increment){
+	// On incremente la valeur de HMS rotactor
+	var hms = (dataread_posit(KaTZPit_data["Shkval_1"],6) + 5) * 10 + dataread_posit(KaTZPit_data["Shkval_1"],5) + 5
+	var valcmd = hms + increment
+	
+	if (valcmd > 9) { CmdDCSRaw(12300101)}
+	else if (valcmd < 1) { CmdDCSRaw(12300100)}
+	else { cmd = 42300100 + hms + increment ; CmdDCSRaw(cmd) }
+}
+
+function Cmd_Shkval_Brt(increment){
+	// On incremente la valeur de HMS rotactor
+	var brt = (dataread_posit(KaTZPit_data["Shkval_1"],4) + 5) * 10 + dataread_posit(KaTZPit_data["Shkval_1"],3) + 5
+	var valcmd = brt + increment
+	
+	if (valcmd > 9) { CmdDCSRaw(10800201)}
+	else if (valcmd < 1) { CmdDCSRaw(10800200)}
+	else { cmd = 40800200 + brt + increment ; CmdDCSRaw(cmd) }
+}
+
+function Cmd_Shkval_Cont(increment){
+	// On incremente la valeur de HMS rotactor
+	var cont = (dataread_posit(KaTZPit_data["Shkval_1"],2) + 5) * 10 + dataread_posit(KaTZPit_data["Shkval_1"],1) + 5
+	var valcmd = cont + increment
+	
+	if (valcmd > 9) { CmdDCSRaw(10800301)}
+	else if (valcmd < 1) { CmdDCSRaw(10800300)}
+	else { cmd = 40800300 + cont + increment ; CmdDCSRaw(cmd) }
 }
